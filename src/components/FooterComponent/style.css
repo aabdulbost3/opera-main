@@ -58,10 +58,10 @@
 }
 .FooterCompInbox input{
     outline: none;
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     border-radius: 1vw;
     border: .1vw solid var(--black);
-    padding: 2vw;
+    padding: 1vw;
     margin: 1vw;
     width:  130%;
     
@@ -69,10 +69,6 @@
 .FooterCompInbox input:hover{
     border: .1vw solid var(--gold);
 }
-/* .FooterCompInbox input::placeholder{
-    color: #242424;
-    
-} */
 .FooterCompInbox button{
     color: var(--black);
     border: 0.2vw solid var(--gold);
