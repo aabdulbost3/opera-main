@@ -1,4 +1,4 @@
-import { GetMessage } from "../../../redux/message";
+import { GetMessage } from "../../../../redux/message";
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import './style.css';
