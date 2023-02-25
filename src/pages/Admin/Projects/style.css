@@ -1,0 +1,134 @@
+.Projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.ProjectsNav{
+    background-color: var(--black-gray);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    top: 0;
+    left: 0;
+}
+.ProjectsNav h1{
+    font-size: 28px;
+}
+.ProjectsNav button{
+    color: var(--white);
+    background-color: var(--card);
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 10px;
+}
+.ProjectsNav button:hover{
+    opacity: .6;
+}
+.Projects ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+.Projects li{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--card);
+    height: 320px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.Projects li:hover{
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.Projects li img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+.Projects li h3{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.AdBtnBox{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.AdBtnBox button{
+    font-size: 16px;
+    padding: 8px;
+    background-color: var(--black-gray);
+    margin: 0 5px;
+    color: white;
+    border-radius: 5px;
+}
+.AdBtnBox button:nth-child(1):hover{
+    background: red;
+}
+.AdBtnBox button:nth-child(2):hover{
+    background: greenyellow;
+}
+.loading{
+    color: white;
+    font-size: 30px;
+}
+.Error{
+    color: white;
+    font-size: 30px;
+}
+.Error i{
+    margin-right: 5px;
+}
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.projectModal{
+    width: 400px;
+    padding: 20px;
+    background-color: var(--black-gray);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    z-index: 4;
+}
+.projectModal h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.projectModal input{
+    background-color: var(--card);
+    padding: 10px;
+    margin: 5px 0;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+}
+.projectModal button{
+    background-color: var(--card);
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: white;
+}
+.projectModal button:hover{
+    opacity: .6;
+}

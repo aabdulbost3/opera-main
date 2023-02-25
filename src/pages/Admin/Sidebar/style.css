@@ -1,0 +1,59 @@
+.Sidebar{
+    padding: 20px;
+    background: var(--black-gray);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    color: white;
+}
+.Sidebar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(69, 69, 79);
+    width: 10px;
+    color: white;
+    padding: 10px 24px;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+.Sidebar .SideTT{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgb(69, 69, 79);
+    width: 10px;
+    color: white;
+    padding: 10px 24px;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    display: none;
+}
+.Sidebar ul{
+    display: flex;
+    flex-direction: column;
+}
+.Sidebar li, .Linker{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+.Sidebar li:hover, .Linker:hover{
+    opacity: .8;
+}
+.Sidebar li i, .Linker i{
+    font-size: 22px;
+    margin-right: 5px;
+}
