@@ -19,7 +19,7 @@ function Message() {
             <h5>{elem.email}</h5>
             <p>{elem.message}</p>
           </li>)
-          : dataMessage.getMessage.Loading == true ? <i class="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataMessage.getMessage.Error == true ? <h3 className='Error'><i class="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
+          : dataMessage.getMessage.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataMessage.getMessage.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
       </ul>
     </div>
   );

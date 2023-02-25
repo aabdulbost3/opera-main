@@ -98,11 +98,11 @@ function Projects() {
                 <img src={elem.img} alt="img" />
                 <h3>{elem.name}</h3>
                 <div className="AdBtnBox">
-                    <button value={elem.id} onClick={projectDelete}><i class="fa-solid fa-trash"></i>Delete</button>
-                    <button value={elem.id} ref={editor} onClick={projectEdit}><i class="fa-solid fa-edit"></i>Edit</button>
+                    <button value={elem.id} onClick={projectDelete}><i className="fa-solid fa-trash"></i>Delete</button>
+                    <button value={elem.id} ref={editor} onClick={projectEdit}><i className="fa-solid fa-edit"></i>Edit</button>
                 </div>
             </li>)
-            :dataProject.getProject.Loading == true ? <i class="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i class="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
+            :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
         </ul>
     </div>
   );
