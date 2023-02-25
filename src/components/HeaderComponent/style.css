@@ -23,9 +23,6 @@
 }
 .HeaderInbox img{
     width: 90%;
-    position: absolute;
-    top: -280%;
-    left: -6%;
 }
 .HeaderInbox p{
     font-size: 2.1vw;
