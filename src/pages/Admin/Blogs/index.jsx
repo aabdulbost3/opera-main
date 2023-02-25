@@ -109,11 +109,11 @@ const HandleSubmit1 = (e) => {
               <h5>{elem.date}</h5>
             </div>
             <div className="AdBtnBox">
-                <button value={elem.id} onClick={blogDelete}><i class="fa-solid fa-trash"></i>Delete</button>
-                <button value={elem.id} ref={editor1} onClick={() => {SetBlogModal1(true);SetBlogOverlay(true);}}><i class="fa-solid fa-edit"></i>Edit</button>
+                <button value={elem.id} onClick={blogDelete}><i className="fa-solid fa-trash"></i>Delete</button>
+                <button value={elem.id} ref={editor1} onClick={() => {SetBlogModal1(true);SetBlogOverlay(true);}}><i className="fa-solid fa-edit"></i>Edit</button>
             </div>
         </li>)
-        :dataBlog.getBlog.Loading == true ? <i class="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataBlog.getBlog.Error == true ? <h3 className='Error'><i class="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
+        :dataBlog.getBlog.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataBlog.getBlog.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
       </ul>
     </div>
   );
