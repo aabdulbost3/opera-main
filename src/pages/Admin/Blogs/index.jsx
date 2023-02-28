@@ -65,7 +65,6 @@ const HandleSubmit1 = (e) => {
     name: Name.current.value,
     date: Date.current.value
   }
-  console.log(body);
   const id = editor1.current.value
   dispatch(PutBlog({body, id}))
   dispatch(GetBlog())

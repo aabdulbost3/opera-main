@@ -2,33 +2,31 @@
     width: 100%;
 }
 .Message h1{
-    padding: 20px;
+    padding: 1.3vw;
     width: 100%;
-    background-color: var(--black-gray);
+    background-color: #2d2d2d;
     margin-bottom: 30px;
-    top: 0;
-    z-index: 4;
-    position: fixed;
+    color: #FFF;
 }
 .Message ul{
-    margin-top: 100px;
+    margin-top: 2vw;
 }
 .Message li{
-    padding: 15px;
-    border: 1px solid white;
+    padding: 0.3vw;
+    border: 0.2vw solid white;
     margin: 20px;
     width: fit-content;
 }
 .Message li h4{
-    font-size: 22px;
+    font-size: 1vw;
 }
 .Message li h5{
-    font-size: 13px;
+    font-size: 0.8vw;
     opacity: .6;
-    margin-bottom: 8x;
+    margin-bottom: 0.5vw;
 }
 .Message li p{
-    font-size: 16px;
+    font-size: 0.6vw;
     opacity: .9;
-    margin: 7px;
+    margin: 1vw;
 }

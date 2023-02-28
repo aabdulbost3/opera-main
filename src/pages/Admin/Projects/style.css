@@ -40,12 +40,12 @@
 }
 .Projects li{
     display: flex;
-    flex-direction: column;
-    width: 3vw;
-    background-color: var(--card);
-    height: 3vw;
-    margin: 1vw;
-    border-radius: 1vw;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+    margin-top: 3vw;
 }
 .Projects li:hover{
     box-shadow: 0 2vw 2vw 0 rgba(0, 0, 0, 0.4);
@@ -99,7 +99,8 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 10vw;
+    top: 3vw;
+    left: 33vw; 
     z-index: 4;
 }
 .projectModal h3{
