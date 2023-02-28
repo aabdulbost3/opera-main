@@ -35,7 +35,8 @@ body{
     height: 10000vw;
     z-index: 1;
     position: fixed;
-    display: none;
+    left: 0;
+    top: 0;
 }
 :root{
     --black: #000;
