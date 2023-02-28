@@ -20,7 +20,8 @@
     transform: scale(1.01);
 }
 .projectComp ul li img{
-    width: 100%;
+    width: 97.5%;
+    padding: 0 0 0 2.5%;
 }
 .projectComp ul li h4{
     font-size: 1.6vw;
