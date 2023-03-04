@@ -1,0 +1,11 @@
+.SignPage input{
+    outline: none;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    border: .1vw solid var(--black);
+    padding: 1vw;
+    width:  100%;
+}
+.SignPage input:hover{
+    border: .1vw solid var(--gold);
+}
