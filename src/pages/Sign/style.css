@@ -6,6 +6,7 @@
     height: 100vh;
     background-color: dimgrey;
     color: white;
+    overflow: hidden;
 }
 .SignModal{
     background-color: #1d1d1d;
@@ -51,4 +52,24 @@
 .SignPage button:hover{
     background: var(--gold);
     color: var(--white);
+}
+@media screen and (max-width: 650px) {
+    .SignModal{
+        width: 60%;
+        padding: 3vw;
+    }
+    .SignModal h1{
+        font-size: 6vw;
+    }
+    .SignModal p{
+        font-size: 3vw;
+    }
+    .SignModal input{
+        font-size: 4vw;
+        margin: 1vw;
+    }
+    .SignModal button{
+        font-size: 4vw;
+        margin: 1vw;
+    }
 }
