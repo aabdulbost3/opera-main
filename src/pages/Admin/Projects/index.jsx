@@ -10,7 +10,7 @@ function Projects() {
     const editor = useRef();
     const [projectModal, SetProjectModal] = useState(false)
     const [projectModal1, SetProjectModal1] = useState(false)
-    const [projectOverlay, SetProjectOverlay] = useState(false)
+    const projectOverlay = useRef(false)
     const [imgUpload, setImgUpload] = useState();
     const [loading, setLoading] = useState();
     const dispatch = useDispatch()
@@ -42,11 +42,12 @@ function Projects() {
         // dispatch(DeleteProject(e.target.value))
         // dispatch(GetProject())
         SetProjectModal1(true)
-        SetProjectOverlay(true)
+        projectOverlay.current.style.display = "block"
     }
     const AddProject = () => {
         SetProjectModal(true)
-        SetProjectOverlay(true)
+        projectOverlay.current.style.display = "block"
+
     }
     const HandleSubmit = (e) => {
         e.preventDefault();
@@ -57,7 +58,7 @@ function Projects() {
         dispatch(PostProject(body))
         dispatch(GetProject())
         SetProjectModal(false)
-        SetProjectOverlay(false)
+        projectOverlay.current.style.display = "none"
         setImgUpload(null)
     }
     const HandleSubmit1 = (e) => {
@@ -70,12 +71,12 @@ function Projects() {
         dispatch(PutProject({body, id}))
         dispatch(GetProject())
         SetProjectModal1(false)
-        SetProjectOverlay(false)
+        projectOverlay.current.style.display = "none"
         setImgUpload(null)
     }
   return (
     <div className="Projects">
-        {projectOverlay ? <div className="overlay" onClick={() => {SetProjectModal(false);SetProjectOverlay(false);SetProjectModal1(false)}}></div> :null}
+        <div className="overlay" ref={projectOverlay} onClick={() => {SetProjectModal(false);projectOverlay.current.style.display = "none";SetProjectModal1(false)}}></div>
         {projectModal ? <form onSubmit={HandleSubmit} className="projectModal">
             <h3>Add Project</h3>
             <input type="text" ref={name} placeholder='Enter Project Name' required/>
