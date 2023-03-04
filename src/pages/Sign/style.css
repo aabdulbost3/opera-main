@@ -34,6 +34,7 @@
     padding: 1vw;
     width:  100%;
     margin: .5vw;
+    color: #fff;
 }
 .SignPage input:hover{
     border: .1vw solid var(--gold);
