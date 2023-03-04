@@ -96,7 +96,7 @@ function Projects() {
         <ul>
             {dataProject.getProject.Success == true ? dataProject.getProject?.Data.map((elem, index) => 
             <li key={index}>
-                <img src={elem.img} alt="img" />
+                <img src={elem.mainImg} alt="img" />
                 <h3>{elem.title}</h3>
                 <div className="AdBtnBox">
                     <button value={elem.id} onClick={projectDelete}><i className="fa-solid fa-trash"></i>Delete</button>

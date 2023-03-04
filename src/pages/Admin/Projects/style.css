@@ -40,12 +40,13 @@
 .Projects li{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2vw;
-    margin-top: 3vw;
-    border: 0.3vw solid #2d2d2d;
+    margin: 3vw;
+    border: 0.3vw solid #979696;
+    border-top-left-radius: 1.1vw;
+    border-top-right-radius: 1.1vw;
 }
 .Projects li:hover{
     box-shadow: 0 2vw 2vw 0 rgba(0, 0, 0, 0.4);
@@ -53,7 +54,7 @@
 .Projects li img{
     border-top-left-radius: 1vw;
     border-top-right-radius: 1vw;
-    width: 30vw;
+    width: 15vw;
     margin-bottom: 1vw;
 }
 .Projects li h3{
@@ -64,6 +65,7 @@
     display: flex;
     align-items: center;
     padding: 1vw;
+    margin: 1vw;
 }
 .AdBtnBox button{
     font-size: 1vw;
