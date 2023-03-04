@@ -10,23 +10,25 @@
 }
 .Message ul{
     margin-top: 2vw;
+    margin-left: 3vw;
 }
 .Message li{
     padding: 0.3vw;
     border: 0.2vw solid white;
     margin: 20px;
     width: fit-content;
+    border: 0.2vw solid #4d4d4d;
 }
 .Message li h4{
-    font-size: 1vw;
+    font-size: 2vw;
 }
 .Message li h5{
-    font-size: 0.8vw;
+    font-size: 1.3vw;
     opacity: .6;
     margin-bottom: 0.5vw;
 }
 .Message li p{
-    font-size: 0.6vw;
+    font-size: 1.3vw;
     opacity: .9;
     margin: 1vw;
 }

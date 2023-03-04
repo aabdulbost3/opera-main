@@ -4,19 +4,19 @@ import axios from "axios"
 import { API_URL } from "../../utils";
 
 export const GetBlogMore = createAsyncThunk("bloger/get" , async (id) => {
-    return await axios.get(`${API_URL}/blogs/${id}`).then(res => res.data)
+    return await axios.get(`${API_URL}/admin/${id}`).then(res => res.data)
 })
 export const GetBlog = createAsyncThunk("blog/get" , async () => {
-    return await axios.get(`${API_URL}/blogs`).then(res => res.data)
+    return await axios.get(`${API_URL}/admin`).then(res => res.data)
 })
 export const DeleteBlog = createAsyncThunk("blog/delete" , async (id) => {
-    return await axios.delete(`${API_URL}/blogs/${id}`).then(res => res.data)
+    return await axios.delete(`${API_URL}/admin/${id}`).then(res => res.data)
 })
-export const PostBlog = createAsyncThunk("blog/post" , async (body) => {
-    return await axios.post(`${API_URL}/blogs`,body).then(res => res.data)
+export const PostBlog = createAsyncThunk("admin/post" , async (body) => {
+    return await axios.post(`${API_URL}/admin`,body).then(res => res.data)
 })
 export const PutBlog = createAsyncThunk("blog/put" , async ({body, id}) => {
-    return await axios.put(`${API_URL}/blogs/${id}`,body).then(res => res.data)
+    return await axios.put(`${API_URL}/admin/${id}`,body).then(res => res.data)
 })
 const BlogSlice = createSlice({
     name: "blog",
