@@ -1,4 +1,5 @@
 import './style.css';
+import {NavLink} from "react-router-dom"
 
 function FooterComponent() {
   return (
@@ -8,7 +9,7 @@ function FooterComponent() {
         <div className="FooterCompBox">
             <div className="FooterCompTexts">
                 <h2>+998 99 020 52 60</h2>
-                <h4><NavLink to='admin'>Bizning manzilimiz:</NavLink></h4>
+                <h4><NavLink to='/admin'>Bizning manzilimiz:</NavLink></h4>
                 <p>Tashkent shaxar, Olmazor tumani, Kichik halqa yo'li, 72 A uy.</p>
                 <div className="FooterCompIcons">
                     <i className='fa-brands fa-facebook'></i>
