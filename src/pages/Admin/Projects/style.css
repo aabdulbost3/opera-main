@@ -4,7 +4,6 @@
     justify-content: center;
     width: 100%;
     align-items: center;
-    color: white;
 }
 .ProjectsNav{
     background-color: #2d2d2d;
@@ -46,6 +45,7 @@
     align-items: center;
     padding: 2vw;
     margin-top: 3vw;
+    border: 0.3vw solid #2d2d2d;
 }
 .Projects li:hover{
     box-shadow: 0 2vw 2vw 0 rgba(0, 0, 0, 0.4);
@@ -68,7 +68,7 @@
 .AdBtnBox button{
     font-size: 1vw;
     padding: 0.5vw;
-    background-color: var(--black-gray);
+    background-color: #2d2d2d;
     margin: 0 0.5vw;
     color: white;
     border-radius: 1vw;
