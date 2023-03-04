@@ -1,5 +1,6 @@
 import Admin from "../pages/Admin";
 import { Home } from "../pages/Home";
+import SignPage from "../pages/Sign";
 
 
 export const DataRouter = [
@@ -12,5 +13,10 @@ export const DataRouter = [
         id : 2,
         path : '/admin',
         Element : <Admin/>
+    },
+    {
+        id : 3,
+        path : '/sign',
+        Element : <SignPage/>
     }
 ]
