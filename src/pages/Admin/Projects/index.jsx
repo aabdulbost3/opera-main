@@ -2,7 +2,7 @@ import './style.css';
 import { DeleteProject, GetProject, PostProject, PutProject } from "../../../redux/project";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useRef, useState } from 'react';
-import { IMAGE_URL } from '../../../utils';
+import { IMAGE_URL } from '../../../utils/index';
 import axios from 'axios';
 
 function Projects() {
