@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 function Blog() {
   const editor1 = useRef();
   const Title = useRef();
+  const Password = useRef();
   const [BlogModal, SetBlogModal] = useState(false)
   const [BlogModal1, SetBlogModal1] = useState(false)
   const BlogOverlay = useRef()
@@ -21,7 +22,8 @@ function Blog() {
   const HandleSubmit = (e) => {
     e.preventDefault();
     const body = {
-        name: Title.current.value
+        name: Title.current.value,
+        password: Password.current.value
     }
     dispatch(PostBlog(body))
     dispatch(GetBlog())
@@ -31,7 +33,8 @@ function Blog() {
 const HandleSubmit1 = (e) => {
   e.preventDefault();
   const body = {
-    title: Title.current.value
+    name: Title.current.value,
+    password: Password.current.value
   }
   const id = editor1.current.value
   dispatch(PutBlog({body, id}))
@@ -45,11 +48,13 @@ const HandleSubmit1 = (e) => {
         {BlogModal ? <form onSubmit={HandleSubmit} className="projectModal">
             <h3>Add Admin</h3>
             <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
+            <input ref={Password} type="text" placeholder='Enter Admin Password' required/>
             <button type="submit">Add</button>
         </form> :null}
         {BlogModal1 ? <form onSubmit={HandleSubmit1} className="projectModal">
             <h3>Edit Admin</h3>
             <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
+            <input ref={Password} type="text" placeholder='Enter Admin Password' required/>
             <button type="submit">Edit</button>
         </form> :null}
         <div className="BlogNav">

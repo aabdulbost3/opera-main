@@ -1,5 +1,5 @@
 {
-  "project":[
+  "project": [
     {
       "id": 1,
       "title": "Project 1",
@@ -31,7 +31,7 @@
       ]
     }
   ],
-  "contact":[
+  "contact": [
     {
       "id": 1,
       "title": "Bekzod",
@@ -47,14 +47,9 @@
   ],
   "admin": [
     {
-      "id": 1,
-      "name": "Admin",
-      "password": "12345678sa"
-    },
-    {
-      "id": 2,
-      "name": "Admin 2",
-      "password": "12345678sa"
+      "name": "Admin 6",
+      "password": "0707",
+      "id": 1
     },
     {
       "id": 1,
@@ -62,9 +57,9 @@
       "password": "12345678sa"
     },
     {
-      "id": 2,
-      "name": "Admin 2",
-      "password": "12345678sa"
+      "name": "Ok",
+      "password": "0000",
+      "id": 2
     }
   ]
 }
