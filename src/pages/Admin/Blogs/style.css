@@ -1,0 +1,70 @@
+.Blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    color: white;
+}
+.BlogNav{
+    background-color: #2d2d2d;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8vw;
+    top: 0;
+    left: 0;
+}
+.BlogNav h1{
+    font-size: 2.6vw;
+    color: #FFF;
+}
+.BlogNav button{
+    color: var(--white);
+    background-color: #1d1d1d;
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    border-radius: 1vw;
+}
+.BlogNav button:hover{
+    opacity: .6;
+}
+.Blog ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+    margin-top: 3vw;
+}
+.Blog li{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--black);
+    height: 400px;
+    margin: 10px;
+    padding: 15px;
+}
+.Blog li:hover{
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.Blog li h3{
+    margin: 1vw 0;
+    font-size: 2.2vw;
+}
+.Blog li p{
+    font-size: 1vw;
+}
+.BlogDate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vw 0;
+}
+.BlogDate h5{
+    font-weight: 400;
+    font-size: 1.3vw;
+    color: #F1D9D9;
+}

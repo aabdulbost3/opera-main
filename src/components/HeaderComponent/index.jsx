@@ -5,7 +5,7 @@ function Header() {
     <div className="Header">
         <div className="HeaderBox">
         <div className="HeaderInbox">
-        <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675871898/ddvgdgvgv_dz7vaj.webp" alt="" />
+        <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1677329603/IMG_20230225_175225_045_jhpksg.jpg" alt="" />
         <p>Biz bizneslarni rivojlantiramiz,
 korxonalarga bozorda emotsional
 imij yaratishda yordam beramiz.</p>

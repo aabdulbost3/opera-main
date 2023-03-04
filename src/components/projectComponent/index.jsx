@@ -1,13 +1,7 @@
-import axios from "axios"
-import { useEffect } from "react";
-import { API_URL } from "../../utils/api"
 import "./style.css"
 import img from "../../windows.jpg"
 
 function ProjectComponent(props) {
-    // useEffect(()=> {
-
-    // },[])
     return(
         <div className="projectComp">
             <div className="container">

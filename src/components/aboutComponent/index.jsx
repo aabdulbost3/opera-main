@@ -21,7 +21,6 @@ function AboutComponent() {
         <div className="aboutComp"> 
             <i onClick={closeModal} ref={closeModalBtn} className="fa-solid fa-xmark overP"></i> 
             <div onClick={closeModal} ref={closeOverlayBtn} className="overlay"></div> 
-            <div className="ModalUpOl"> 
                 <div ref={modal} className="aboutModal"> 
                 <div>
                         <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675861456/OPERA_olbqhc.png" alt="img" /> 
@@ -41,7 +40,6 @@ function AboutComponent() {
                         <p>— Maksimallik va professionallik</p> 
                         </div>
                 </div>  
-            </div> 
             <div className="container"> 
                 <h1>Biz haqimizda</h1> 
                 <p>Biz har doim tanish narsalarga yangicha nazar tashlaydigan va nostandart yechimlar tufayli mijoz byudjetini tejaydigan mustaqil ijodiy agentligimiz.</p> 

@@ -1,0 +1,32 @@
+.Message{
+    width: 100%;
+}
+.Message h1{
+    padding: 1.3vw;
+    width: 100%;
+    background-color: #2d2d2d;
+    margin-bottom: 30px;
+    color: #FFF;
+}
+.Message ul{
+    margin-top: 2vw;
+}
+.Message li{
+    padding: 0.3vw;
+    border: 0.2vw solid white;
+    margin: 20px;
+    width: fit-content;
+}
+.Message li h4{
+    font-size: 1vw;
+}
+.Message li h5{
+    font-size: 0.8vw;
+    opacity: .6;
+    margin-bottom: 0.5vw;
+}
+.Message li p{
+    font-size: 0.6vw;
+    opacity: .9;
+    margin: 1vw;
+}

@@ -22,6 +22,9 @@
     display: none; 
     position: fixed; 
 } 
+.overlay{
+    display: none;
+}
 .aboutComp button{ 
     color: var(--black); 
     border: 0.2vw solid var(--gold); 
