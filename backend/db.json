@@ -2,45 +2,69 @@
   "project":[
     {
       "id": 1,
-      "title": "undefined title",
-      "img": "https://picsum.photos/300",
-      "moreImg": "https://picsum.photos/301"
-    },
-    {
-      "id": 1,
-      "title": "undefined title",
-      "img": "https://picsum.photos/300",
-      "moreImg": "https://picsum.photos/301"
-    },
-    {
-      "id": 1,
-      "title": "undefined title",
-      "img": "https://picsum.photos/300",
-      "moreImg": "https://picsum.photos/301"
-    },
-    {
-      "id": 1,
-      "title": "undefined title",
-      "img": "https://picsum.photos/300",
-      "moreImg": "https://picsum.photos/301"
-    },
-    {
-      "id": 1,
-      "title": "undefined title",
-      "img": "https://picsum.photos/300",
-      "moreImg": "https://picsum.photos/301"
-    },
+      "title": "Project 1",
+      "img": "https://picsum.photos/300=1",
+      "moreImg": [
         {
-      "id": 1,
-      "title": "undefined title",
-      "img": "https://picsum.photos/300",
-      "moreImg": "https://picsum.photos/301"
-    },
+          "id": 1,
+          "img": "https://picsum.photos/300?rand=2"
+        },
         {
+          "id": 2,
+          "img": "https://picsum.photos/300?rand=3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Project 2",
+      "img": "https://picsum.photos/300=4",
+      "moreImg": [
+        {
+          "id": 1,
+          "img": "https://picsum.photos/300?rand=5"
+        },
+        {
+          "id": 2,
+          "img": "https://picsum.photos/300?rand=6"
+        }
+      ]
+    }
+  ],
+  "contact":[
+    {
       "id": 1,
-      "title": "undefined title",
-      "img": "https://picsum.photos/300",
-      "moreImg": "https://picsum.photos/301"
+      "title": "Bekzod",
+      "phone": "+998 90 000 00 00",
+      "text": "Manga bitta Brend kere. lorem10 ishlamaskan botta shu yomon shuni to'g'irlash kere oka iloji bosa"
+    },
+    {
+      "id": 2,
+      "title": "Dilshod",
+      "phone": "+998 90 000 00 01",
+      "text": "Manga bitta Brend kere. lorem10 ishlamaskan botta shu yomon shuni to'g'irlash kere oka iloji bosa"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "password": "12345678sa"
+    },
+    {
+      "id": 2,
+      "name": "Admin 2",
+      "password": "12345678sa"
+    },
+    {
+      "id": 1,
+      "name": "Admin",
+      "password": "12345678sa"
+    },
+    {
+      "id": 2,
+      "name": "Admin 2",
+      "password": "12345678sa"
     }
   ]
 }

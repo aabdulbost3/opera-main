@@ -4,16 +4,16 @@ import axios from "axios"
 import { API_URL } from "../../utils";
 
 export const GetProject = createAsyncThunk("project/get" , async () => {
-    return await axios.get(`${API_URL}/projects`).then(res => res.data)
+    return await axios.get(`${API_URL}/project`).then(res => res.data)
 })
 export const DeleteProject = createAsyncThunk("project/delete" , async (id) => {
-    return await axios.delete(`${API_URL}/projects/${id}`).then(res => res.data)
+    return await axios.delete(`${API_URL}/project/${id}`).then(res => res.data)
 })
 export const PostProject = createAsyncThunk("project/post" , async (body) => {
-    return await axios.post(`${API_URL}/projects`,body).then(res => res.data)
+    return await axios.post(`${API_URL}/project`,body).then(res => res.data)
 })
 export const PutProject = createAsyncThunk("project/put" , async ({body, id}) => {
-    return await axios.put(`${API_URL}/projects/${id}`,body).then(res => res.data)
+    return await axios.put(`${API_URL}/project/${id}`,body).then(res => res.data)
 })
 const ProjectSlice = createSlice({
     name: "project",

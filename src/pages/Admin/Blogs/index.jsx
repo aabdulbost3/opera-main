@@ -43,24 +43,24 @@ const HandleSubmit1 = (e) => {
     <div className="Blog">
       <div className="overlay" ref={BlogOverlay} onClick={() => {SetBlogModal(false);BlogOverlay.current.style.display = "none";SetBlogModal1(false)}}></div>
         {BlogModal ? <form onSubmit={HandleSubmit} className="projectModal">
-            <h3>Add Blog</h3>
-            <input ref={Title} type="text" placeholder='Enter Blog Title' required/>
-            <button type="submit">Add </button>
+            <h3>Add Admin</h3>
+            <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
+            <button type="submit">Add</button>
         </form> :null}
         {BlogModal1 ? <form onSubmit={HandleSubmit1} className="projectModal">
-            <h3>Edit Blog</h3>
-            <input ref={Title} type="text" placeholder='Enter Blog Title' required/>
+            <h3>Edit Admin</h3>
+            <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
             <button type="submit">Edit</button>
         </form> :null}
         <div className="BlogNav">
-        <h1>Blogs</h1>
-        <button onClick={() => {SetBlogModal(true);BlogOverlay.current.style.display="block"}}>+ Add Blog</button>
+        <h1>Admins</h1>
+        <button onClick={() => {SetBlogModal(true);BlogOverlay.current.style.display="block"}}>+ Add Admin</button>
         </div>
       <ul>
       {dataBlog.getBlog.Success == true ? dataBlog.getBlog?.Data.map((elem, index) => 
         <li key={index}>
-            <img src="" alt="" />
-            <h3>{elem.title}</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
+            <h3>{elem.name}</h3>
             <p>{elem.password}</p>
             <div className="AdBtnBox">
                 <button value={elem.id} onClick={blogDelete}><i className="fa-solid fa-trash"></i>Delete</button>
