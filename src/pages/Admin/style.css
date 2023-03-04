@@ -1,6 +1,7 @@
 .Admin{
     display: flex;
     justify-content: flex-start;
+    /* xato chiqard flex-start qldm */
     align-items: center;
     width: 100%;
 }
