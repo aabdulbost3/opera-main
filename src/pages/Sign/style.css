@@ -1,3 +1,31 @@
+.SignPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: dimgrey;
+    color: white;
+}
+.SignModal{
+    background-color: #1d1d1d;
+    padding: 2vw 3vw;
+    border-radius: 2vw;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SignModal h1{
+    font-size: 3vw;
+    text-align: center;
+}
+.SignModal p{
+    text-align: center;
+    font-size: 1.5vw;
+    margin: 1vw;
+}
 .SignPage input{
     outline: none;
     font-size: 1.3vw;
@@ -5,7 +33,21 @@
     border: .1vw solid var(--black);
     padding: 1vw;
     width:  100%;
+    margin: .5vw;
 }
 .SignPage input:hover{
     border: .1vw solid var(--gold);
+}
+.SignPage button{
+    color: var(--black);
+    border: 0.2vw solid var(--gold);
+    padding: .8vw 1.8vw;
+    border-radius: 2vw;
+    font-size: 1.5vw;
+    color: var(--gold);
+    margin-top: .4vw;
+}
+.SignPage button:hover{
+    background: var(--gold);
+    color: var(--white);
 }
