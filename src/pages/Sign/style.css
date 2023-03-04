@@ -23,7 +23,7 @@
 }
 .SignModal p{
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     margin: 1vw;
 }
 .SignPage input{
@@ -34,6 +34,7 @@
     padding: 1vw;
     width:  100%;
     margin: .5vw;
+    color: white;
 }
 .SignPage input:hover{
     border: .1vw solid var(--gold);
