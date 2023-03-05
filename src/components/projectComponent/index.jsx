@@ -1,49 +1,31 @@
 import "./style.css"
-import img from "../../windows.jpg"
+import { useEffect, useState } from "react";
+function ProjectComponent() {
+    const [data, setData] = useState([]);
+    const getData = () => {
+        fetch("http://localhost:8000/projectComponent")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) { setData(myJson); });
+    };
+    useEffect(() => { getData(); }, [data]);
 
-function ProjectComponent(props) {
-    return(
+
+    return (
         <div className="projectComp">
             <div className="container">
                 <h1>Bajarilgan ishlar</h1>
                 <ul>
-                    <li>
-                        <button value="1"></button>
-                        <img src={img} alt="img" />
-                        <h4>Another title</h4>
-                    </li>
-                    <li>
-                        <button value="1"></button>
-                        <img src={img} alt="img" />
-                        <h4>Another title</h4>
-                    </li>
-                    <li>
-                        <button value="1"></button>
-                        <img src={img} alt="img" />
-                        <h4>Another title</h4>
-                    </li>
-                    <li>
-                        <button value="1"></button>
-                        <img src={img} alt="img" />
-                        <h4>Another title</h4>
-                    </li>
-                    <li>
-                        <button value="1"></button>
-                        <img src={img} alt="img" />
-                        <h4>Another title</h4>
-                    </li>
-                    <li>
-                        <button value="1"></button>
-                        <img src={img} alt="img" />
-                        <h4>Another title</h4>
-                    </li>
-                    {/* {data.map(e => {
-                        <li key={e.id}>
-                            <button value={e.id}></button>
-                            <img src={e.img} alt="img" />
-                            <h4>{e.title}</h4>
-                        </li>
-                    })} */}
+                    {data.map((post) => {
+                        return (
+                            <li key={post.id}>
+                                <button value={post.id}></button>
+                                <img src={post.imgSrc} alt="EROR401" />
+                                <h4>{post.title}</h4>
+                            </li>
+                        );
+                    })}
                 </ul>
                 <button>Barchasini ko'rish</button>
             </div>
