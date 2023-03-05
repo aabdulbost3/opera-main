@@ -1,7 +1,9 @@
 import { useRef } from 'react';
 import './style.css';
-
+import Select from '../Select/Select';
+import { useTranslation } from "react-i18next";
 function Navbar() {
+    const { t, i18n } = useTranslation();
     const barsSide = useRef();
     const btnOpen = useRef();
     const btnClose = useRef();
@@ -17,26 +19,25 @@ function Navbar() {
         btnOpen.current.style.display = 'block'
         barsSide.current.style.transform = 'translateX(-200%)'
     }
-    const Uz = () => {
-        stP.current.style.color = "var(--gold)";
-        ndP.current.style.color = "var(--black)";
-    }
-    const Ru = () => {
-        ndP.current.style.color = "var(--gold)";
-        stP.current.style.color = "var(--black)";
-    }
+    // const Uz = () => {
+    //     stP.current.style.color = "var(--gold)";
+    //     ndP.current.style.color = "var(--black)";
+    // }
+    // const Ru = () => {
+    //     ndP.current.style.color = "var(--gold)";
+    //     stP.current.style.color = "var(--black)";
+    // }
   return (
     <>
     <div className="Navbar">
         <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675857963/download_fimwgc.png" alt="" />
         <ul>
-            <li><h3><button>BOSH SAHIFA</button></h3></li>
-            <li><h3><button>BIZ HAQIMIZDA</button></h3></li>
-            <li><h3><button>BAJARILGAN ISHLAR</button></h3></li>
-            <li><h3><button>KONTAKTLAR</button></h3></li>
+            <li><h3><button>{t("Navbar.0")}</button></h3></li>
+            <li><h3><button>{t("Navbar.1")}</button></h3></li>
+            <li><h3><button>{t("Navbar.2")}</button></h3></li>
+            <li><h3><button>{t("Navbar.3")}</button></h3></li>
             <li>
-                <p ref={stP} onClick={Uz}>UZ</p>
-                <p ref={ndP} onClick={Ru}>RU</p>
+                <Select/>
             </li>
         </ul>
     </div>
@@ -47,13 +48,12 @@ function Navbar() {
     </div>
     <div className="BarsSide" ref={barsSide}>
         <ul>
-            <li><h3><button>BOSH SAHIFA</button></h3></li>
-            <li><h3><button>BIZ HAQIMIZDA</button></h3></li>
-            <li><h3><button>BAJARILGAN ISHLAR</button></h3></li>
-            <li><h3><button>KONTAKTLAR</button></h3></li>
+            <li><h3><button>{t("Navbar.0")}</button></h3></li>
+            <li><h3><button>{t("Navbar.1")}</button></h3></li>
+            <li><h3><button>{t("Navbar.2")}</button></h3></li>
+            <li><h3><button>{t("Navbar.3")}</button></h3></li>
             <li>
-                <p ref={stP} onClick={Uz}>UZ</p>
-                <p ref={ndP} onClick={Ru}>RU</p>
+                <Select/>
             </li>
         </ul>
     </div>

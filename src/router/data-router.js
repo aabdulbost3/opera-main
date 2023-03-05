@@ -1,7 +1,7 @@
-import Admin from "../pages/Admin";
-import { Home } from "../pages/Home";
-import SignPage from "../pages/Sign";
-
+import { lazy } from 'react'
+const  Home  = lazy(() => import ('../pages/Home/index'))
+const SignPage = lazy(() => import ('../pages/Sign/index'))
+const Admin = lazy(() => import ('../pages/Admin/index'))
 
 export const DataRouter = [
     {

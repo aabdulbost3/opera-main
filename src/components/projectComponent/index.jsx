@@ -1,6 +1,8 @@
 import "./style.css"
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 function ProjectComponent() {
+    const { t, i18n } = useTranslation();
     const [data, setData] = useState([]);
     const getData = () => {
         fetch("http://localhost:8000/projectComponent")
@@ -15,7 +17,7 @@ function ProjectComponent() {
     return (
         <div className="projectComp">
             <div className="container">
-                <h1>Bajarilgan ishlar</h1>
+                <h1>{t("Navbar.2")}</h1>
                 <ul>
                     {data.map((post) => {
                         return (
@@ -27,7 +29,7 @@ function ProjectComponent() {
                         );
                     })}
                 </ul>
-                <button>Barchasini ko'rish</button>
+                <button>{t("ProjectComponent.0")}</button>
             </div>
         </div>
     )

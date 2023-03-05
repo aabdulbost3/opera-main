@@ -8,7 +8,7 @@ import ProjectComponent from "../../components/projectComponent/index";
 import "./style.css"
 import { useRef } from 'react';
 
-export function Home() {
+ function Home() {
     const OpenModalUp = useRef()
     const ModalTel = useRef()
     const CloseModalUp = useRef()
@@ -49,3 +49,5 @@ export function Home() {
         </>
     )
 }
+
+export default Home

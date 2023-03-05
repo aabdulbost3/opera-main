@@ -1,0 +1,42 @@
+{
+    "Navbar": {
+        "0": "BOSH SAHIFA",
+        "1": "BIZ HAQIMIZDA",
+        "2": "BAJARILGAN ISHLAR",
+        "3": "KONTAKTLAR"
+    },
+    "aboutComp": {
+        "0": "BOSH SAHIFA",
+        "1": "Opera brendni rivojlantirish, strategiya bilan ishlash, yangidan-yangi nyuanslarga tayangan holda biznes muammolarini yechish, tahlil qilish va tadqiqot o'tkazishga qaratilgan jamoa.",
+        "2": "Missiyamiz",
+        "3": "Biznes egalarini mahsulot yoki xizmat emas, balki emotsiya sotish darajasiga olib chiqish",
+        "4": "Maqsadimiz",
+        "5": "Endi kirib kelmoqchi bo'lgan mahsulot yoki xizmatdan iborat bizneslarni bozorga qiymatli tarzda taqdim etish.",
+        "6": "Rivojlanishda to'siqqa uchragan va raqobatdan orqada qolgan bizneslarni bozorda saqlab qolish.",
+        "7": "Mahsulot yoki xizmati tobora kengayib borayotgan biznesni katta masshtabga chiqarish.",
+        "8": "Asosiy qadriyatlarimiz",
+        "9": "Haqiqiylik",
+        "10": "Kreativlik",
+        "11": "G'amxo'rlik",
+        "12": "Maksimallik va professionallik",
+        "13": "Biz har doim tanish narsalarga yangicha nazar tashlaydigan va nostandart yechimlar tufayli mijoz byudjetini tejaydigan mustaqil ijodiy agentligimiz.",
+        "14" : "Batafsil"
+    },
+    "header": {
+        "0": "Biz bizneslarni rivojlantiramiz, korxonalarga bozorda emotsional imij yaratishda yordam beramiz."
+    },
+    "HelpComponent": {
+        "0": "XIZMATLAR",
+        "1": "Brending",
+        "2": "Marketing",
+        "3": "Dizayn"
+    },
+    "MensComponent":
+     {
+        "0": "BIZGA ISHONISHADI"
+    },
+    "ProjectComponent":
+     {
+        "0": "Barchasini ko'rish"
+    }
+}
