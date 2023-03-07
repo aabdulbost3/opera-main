@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import "./Portfolio.css"
-import PortfolioMap from './PortfolioMap/PortfolioMap';
 import Navbar from '../../components/NavbarComponent';
+import ProjectComponent from '../../components/projectComponent';
 import FooterComponent from '../../components/FooterComponent';
 function Portfolio() {
     const OpenModalUp = useRef()
@@ -25,7 +25,7 @@ function Portfolio() {
     return (
         <div>
             <Navbar/>
-            <PortfolioMap/>
+            <ProjectComponent/>
             <FooterComponent/>
             <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
             <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
