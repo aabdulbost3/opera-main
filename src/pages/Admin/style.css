@@ -1,12 +1,8 @@
 .Admin{
     display: flex;
-    justify-content: flex-start;
-    /* xato chiqard flex-start qldm */
-    align-items: center;
     width: 100%;
 }
 .AdminMain{
-    width: 100%;
     margin-left: 148px;
 }
 .Error, .loading{
