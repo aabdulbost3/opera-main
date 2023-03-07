@@ -52,7 +52,7 @@ function Projects() {
     const HandleSubmit = (e) => {
         e.preventDefault();
         const body = {
-            img: imgUpload,
+            mainImg: imgUpload,
             name: name.current.value
         }
         dispatch(PostProject(body))
@@ -64,7 +64,7 @@ function Projects() {
     const HandleSubmit1 = (e) => {
         e.preventDefault();
         const body = {
-            img: imgUpload,
+            mainImg: imgUpload,
             name: name.current.value
         }
         const id = editor.current.value
