@@ -8,6 +8,20 @@
     color: white;
     overflow: hidden;
 }
+.SignPagePath{
+    background-color: #1d1d1d;
+    padding: 1vw 1.2vw;
+    font-size: 2vw;
+    border-radius: 50%;
+    transition: .1s;
+    position: fixed;
+    z-index: 2;
+    top: 3%;
+    left: 2%;
+}
+.SignPagePath:hover{
+    color: var(--gold);
+}
 .SignModal{
     background-color: #1d1d1d;
     padding: 2vw 3vw;
@@ -36,7 +50,6 @@
     width:  100%;
     margin: .5vw;
     color: white;
-
 }
 .SignPage input:hover{
     border: .1vw solid var(--gold);
@@ -62,6 +75,7 @@
         width: 85%;
         height: 55vh;
         padding: 5vw;
+        border-radius: 4vw;
     }
     .SignModal h1{
         font-size: 9.5vw;
@@ -74,6 +88,7 @@
         font-size: 4vw;
         margin: 1.3vw;
         padding: 3vw;
+        border-radius: 2vw;
     }
     .SignModal button{
         font-size: 4.5vw;

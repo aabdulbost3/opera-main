@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import './style.css';
-import Select from '../Select/Select'
+import Select from '../Select/Select.jsx'
 
 import { useTranslation } from "react-i18next";
 function Navbar() {
