@@ -7,12 +7,13 @@
 }
 .ProjectsNav{
     background-color: #2d2d2d;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 1.8vw;
     top: 0;
-    left: 0;
+    left: 10%;
+    position: fixed;
 }
 .ProjectsNav h1{
     font-size: 2.6vw;

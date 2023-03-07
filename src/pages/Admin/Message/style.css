@@ -7,6 +7,9 @@
     background-color: #2d2d2d;
     margin-bottom: 30px;
     color: #FFF;
+    top: 0;
+    left: 10%;
+    position: fixed;
 }
 .Message ul{
     margin-top: 2vw;

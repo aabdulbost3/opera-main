@@ -1,36 +1,28 @@
 import "./style.css"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-function ProjectComponent() {
+import { GetProject } from "../../redux/project"; 
+import { useSelector, useDispatch } from "react-redux";
+
+function ProjectComponent(props) {
     const { t, i18n } = useTranslation();
-    const [data, setData] = useState([]);
-    const getData = () => {
-        fetch("http://localhost:8000/projectComponent")
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) { setData(myJson); });
-    };
-    useEffect(() => { getData(); }, [data]);
-
-
+    const dispatch = useDispatch()
+    const dataProject = useSelector(state => state.project)
+    useEffect(() => {
+        dispatch(GetProject())
+    },[])
     return (
         <div className="projectComp">
-            <div className="container">
                 <h1>{t("Navbar.2")}</h1>
                 <ul>
-                    {data.map((post) => {
-                        return (
-                            <li key={post.id}>
-                                <button value={post.id}></button>
-                                <img src={post.imgSrc} alt="EROR401" />
-                                <h4>{post.title}</h4>
-                            </li>
-                        );
-                    })}
+                {dataProject.getProject.Success == true ? dataProject.getProject?.Data.map((elem, index) => 
+                    <li key={index}>
+                        <img src={elem.mainImg} alt="img" />
+                        <h4>{elem.title}</h4>
+                    </li>)
+                :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
                 </ul>
                 <button>{t("ProjectComponent.0")}</button>
-            </div>
         </div>
     )
 }
