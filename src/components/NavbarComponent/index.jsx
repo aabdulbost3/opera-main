@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import './style.css';
-import Select from '../Select/Select';
+import Select from '../Select/Select'
+
 import { useTranslation } from "react-i18next";
 function Navbar() {
     const { t, i18n } = useTranslation();
@@ -45,7 +46,7 @@ function Navbar() {
                     <li><h3><button onClick={(e) => {e.preventDefault(); window.location.href = '/Portfolio';}}>{t("Navbar.2")}</button></h3></li>
                     <li><h3><button>{t("Navbar.3")}</button></h3></li>
                     <li>
-                        <Select />
+                        <Select/>
                     </li>
                 </ul>
             </div>
