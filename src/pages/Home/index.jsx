@@ -32,7 +32,7 @@ import { useRef } from 'react';
             <Navbar />
             <Header />
             <AboutComponent />
-            <ProjectComponent />
+            <ProjectComponent number="6"/>
             <HelpComponent />
             <MensComponent />
             <FooterComponent />
