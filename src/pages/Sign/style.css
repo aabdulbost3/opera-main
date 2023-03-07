@@ -71,11 +71,15 @@
     .SignPage{
         overflow: hidden;
     }
+    .SignPagePath{
+        font-size: 5vw;
+        padding: 3.5vw 3.9vw;
+    }
     .SignModal{
         width: 85%;
-        height: 55vh;
-        padding: 5vw;
-        border-radius: 4vw;
+        /* height: 55vh; */
+        padding: 6vw;
+        border-radius: 8vw;
     }
     .SignModal h1{
         font-size: 9.5vw;
@@ -88,10 +92,11 @@
         font-size: 4vw;
         margin: 1.3vw;
         padding: 3vw;
-        border-radius: 2vw;
+        border-radius: 4vw;
     }
     .SignModal button{
         font-size: 4.5vw;
+        border-radius: 4vw;
         margin: 2vw;
         padding: 2vw 10vw;
     }

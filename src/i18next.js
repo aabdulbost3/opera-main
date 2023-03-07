@@ -8,11 +8,11 @@ i18next
 .use(LanguageDetector)
 .init({
   resources:{
-    ru:{
-      translation:ru,
-    },
     uz:{
       translation: uz
+    },
+    ru:{
+      translation:ru,
     }
   },
   lng: window.localStorage.getItem('i18nextLng'),
