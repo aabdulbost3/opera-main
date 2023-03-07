@@ -55,22 +55,29 @@
     color: var(--white);
 }
 @media screen and (max-width: 650px) {
+    .SignPage{
+        overflow: hidden;
+    }
     .SignModal{
-        width: 60%;
-        padding: 3vw;
+        width: 85%;
+        height: 55vh;
+        padding: 5vw;
     }
     .SignModal h1{
-        font-size: 6vw;
+        font-size: 9.5vw;
     }
     .SignModal p{
-        font-size: 3vw;
+        font-size: 4vw;
+        margin: 3vw;
     }
     .SignModal input{
         font-size: 4vw;
-        margin: 1vw;
+        margin: 1.3vw;
+        padding: 3vw;
     }
     .SignModal button{
-        font-size: 4vw;
-        margin: 1vw;
+        font-size: 4.5vw;
+        margin: 2vw;
+        padding: 2vw 10vw;
     }
 }
