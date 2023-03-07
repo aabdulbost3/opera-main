@@ -19,15 +19,6 @@ function Navbar() {
         btnOpen.current.style.display = 'block'
         barsSide.current.style.transform = 'translateX(-200%)'
     }
-
-    // const Uz = () => {
-    //     stP.current.style.color = "var(--gold)";
-    //     ndP.current.style.color = "var(--black)";
-    // }
-    // const Ru = () => {
-    //     ndP.current.style.color = "var(--gold)";
-    //     stP.current.style.color = "var(--black)";
-    // }
     return (
         <>
             <div className="Navbar">
