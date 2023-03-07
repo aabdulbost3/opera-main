@@ -47,19 +47,19 @@
   ],
   "admin": [
     {
-      "name": "Admin 6",
-      "password": "0707",
-      "id": 0
-    },
-    {
       "id": 1,
-      "name": "Admin",
-      "password": "12345678sa"
+      "name": "Abdulbosit",
+      "password": "Kolmolkol"
     },
     {
-      "name": "Ok",
-      "password": "0000",
-      "id": 2
+      "id": 2,
+      "name": "Abdulloh",
+      "password": "okokay"
+    },
+    {
+      "id": 3,
+      "name": "Abdurahmon",
+      "password": "0000"
     }
   ]
 }

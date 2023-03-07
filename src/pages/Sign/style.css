@@ -67,6 +67,9 @@
     background: var(--gold);
     color: var(--white);
 }
+.SignP{
+    color: red;
+}
 @media screen and (max-width: 650px) {
     .SignPage{
         overflow: hidden;

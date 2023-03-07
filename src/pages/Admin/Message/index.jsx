@@ -13,13 +13,13 @@ function Message() {
     <div className="Message">
       <h1>Messages</h1>
       <ul>
-        {dataMessage.getMessage.Success == true ? dataMessage.getMessage?.Data.map((elem, index) =>
+        {/* {dataMessage.getMessage.Success == true ? dataMessage.getMessage?.Data.map((elem, index) =>
           <li key={index}>
             <h4>{elem.title}</h4>
             <h5>{elem.phone}</h5>
             <p>{elem.text}</p>
           </li>)
-          : dataMessage.getMessage.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataMessage.getMessage.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
+          : dataMessage.getMessage.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataMessage.getMessage.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null} */}
       </ul>
     </div>
   );
