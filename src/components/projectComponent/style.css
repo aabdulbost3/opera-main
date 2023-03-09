@@ -35,8 +35,17 @@
 .projectComp ul li img{
     height: 100%;
     width: 97.5%;
-    padding: 0 0 0 2.5%;
-    
+    padding: 0 0 0 2.5%;   
+}
+@keyframes excample{
+    from{
+        margin-top: 240px;
+        overflow: scroll;
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .projectComp ul li h4{
     font-size: 2vw;
