@@ -31,11 +31,11 @@ import { useRef } from 'react';
         <>
             <Navbar />
             <Header />
-            <AboutComponent />
+            <AboutComponent/>
             <ProjectComponent number="6" button="true" />
             <HelpComponent />
             <MensComponent />
-            <FooterComponent />
+            <FooterComponent/>
             <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
             <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
             <form className='modalTel' onSubmit={HandleSubmt} ref={ModalTel}>
