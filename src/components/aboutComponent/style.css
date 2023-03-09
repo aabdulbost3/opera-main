@@ -50,7 +50,6 @@
     background: var(--white); 
     z-index: 4; 
     width: 40%; 
-    margin-bottom: 20%; 
     animation-duration: 2s; 
     height: 80vh; 
     overflow-y: scroll;

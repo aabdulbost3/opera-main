@@ -17,13 +17,13 @@ function ProjectComponent(props) {
                 <h1>{t("Navbar.2")}</h1>
                 <ul>
                 {dataProject.getProject.Success == true ? dataProject.getProject?.Data.slice(0,props.number).map((elem, index) => 
-                    <li key={index} id={elem.id} onClick={window.localStorage.setItem("moreId" , e.target.id)}>
+                    <li key={index} id={elem.id} onClick={(e) => {window.location.href = '/more';window.localStorage.setItem("moreId" , e.target.id);}}>
                         <img src={elem.mainImg} alt="img" />
                         <h4>{elem.title}</h4>
                     </li>)
                 :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
                 </ul>
-                {props.button == "true" ? <NavLink to="/portfolio">{t("ProjectComponent.0")}</NavLink> : null}
+                {props.button == "true" ? <button onClick={() => window.location.href = '/Portfolio'} class="NavLink" to="/portfolio">{t("ProjectComponent.0")}</button> : null}
         </div>
     )
 }
