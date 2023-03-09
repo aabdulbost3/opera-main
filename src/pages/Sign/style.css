@@ -13,14 +13,14 @@
     padding: 1vw 1.2vw;
     font-size: 2vw;
     border-radius: 50%;
-    transition: .1s;
     position: fixed;
     z-index: 2;
     top: 3%;
     left: 2%;
 }
 .SignPagePath:hover{
-    color: var(--gold);
+    background-color: var(--gold);
+    color: #1d1d1d;
 }
 .SignModal{
     background-color: #1d1d1d;
