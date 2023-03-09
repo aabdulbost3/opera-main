@@ -21,7 +21,7 @@ function Navbar() {
         barsSide.current.style.transform = 'translateX(-200%)'
     }
     return (
-        <>
+        <div className='NavbarImportant'>
             <div className="Navbar">
                 <img src="https://res.cloudinary.com/dnuh1ejtz/image/upload/v1675857963/download_fimwgc.png" alt="" />
                 <ul>
@@ -50,7 +50,7 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-        </>
+        </div>
     );
 }
 
