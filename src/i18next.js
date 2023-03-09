@@ -15,7 +15,7 @@ i18next
       translation:ru,
     }
   },
-  lng: window.localStorage.getItem('i18nextLng'),
+  lng: window.localStorage.getItem('OperaLang'),
   fallbackLng: 'ru',
   detection:{
     order:['htmlTag' , 'cookie', 'localStorage', 'path', 'subdomain'],
