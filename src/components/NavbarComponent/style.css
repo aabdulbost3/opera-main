@@ -48,7 +48,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 88.4%;
     position: fixed;
     box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.2);
     padding: 1vw 2.5vw;
@@ -68,8 +68,8 @@
 .BarsSide{
     position: fixed;
     background-color: var(--white);
-    width: 100%;
-    height: 100vh;
+    width: 88.4%;
+    height: 100%;
     padding-top: 25vw;
     color: var(--black);
     transform: translateX(-200%);
@@ -88,12 +88,13 @@
     color: var(--black);
 }
 .BarsSide li h3 button{
-    font-size: 2.6vw;
+    font-size: 5.5vw;
     font-weight: 450;
     color: var(--black);
+    margin: 3vw;
 }
 .BarsSide li button{
-    font-size: 3.6vw;
+    font-size: 5.5vw;
     margin: .6vw 2vw;
     font-weight: 400;
     margin-top: 0.5vw;

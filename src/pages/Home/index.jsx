@@ -36,7 +36,7 @@ import { useRef } from 'react';
             <HelpComponent />
             <MensComponent />
             <FooterComponent />
-            <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
+            {/* <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
             <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
             <form className='modalTel' onSubmit={HandleSubmt} ref={ModalTel}>
                 <h3>Telefon raqamingizni qoldiring va biz sizga tez orada aloqaga chiqamiz</h3>
@@ -45,7 +45,7 @@ import { useRef } from 'react';
                 <button type='submit'>Yuborish</button>
                 <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
                 <h4>+99893 535 00 44</h4>
-            </form>
+            </form> */}
         </div>
     )
 }
