@@ -2,11 +2,11 @@ import React from 'react'
 import "./Select.css"
 function Select() {
     const selectChange = async (e) => {
-        await window.localStorage.setItem("i18nextLng", e.target.value)
+        await window.localStorage.setItem("OperaLang", e.target.value)
         window.location.reload();
     }
     function GetLanguage() {
-        return window.localStorage.getItem("i18nextLng")
+        return window.localStorage.getItem("OperaLang")
     }
     return (
         <>
