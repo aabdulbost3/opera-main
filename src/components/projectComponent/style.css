@@ -2,18 +2,19 @@
     font-size: 2.7vw;
     color: var(--black);
     margin: 5%;
+    margin-top: 10%;
 }
 .projectComp ul{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 5%;
 }
 .projectComp ul li{
-    width: 30%;
+    width: 31%;
     margin: 1.5% 1%;
     border-radius: 1.1vw;
     position: relative;
+    cursor: pointer;
 }
 .projectComp ul li:hover{
     box-shadow: var(--box-shadow);
@@ -30,27 +31,23 @@
     color: var(--black);
     margin: 5%;
 }
-.projectComp button:last-child{
+.projectComp .NavLink{
     color: var(--black);
     border: 0.2vw solid var(--gold);
     padding: 1.5% 3.8%;
     border-radius: 2vw;
     font-size: 1.4vw;
-    margin: 2% 37.7%;
+    margin: 2% 43%;
     width: max-content;
 }
-.projectComp button:last-child:hover{
+.projectComp .NavLink:hover{
     background: var(--gold);
     color: var(--white);
 }
-.projectComp ul li button{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
 .Error, .loading{
     color: #2d2d2d;
-    margin: 17%;
+    margin: 0 auto;
+    font-size: 1.5vw;
 }
 @media (max-width: 650px) {
     .projectComp ul li{
@@ -61,8 +58,9 @@
     }
     .projectComp h1{
         font-size: 4vw;
+        margin-top: 5%;
     }
-    .projectComp button:last-child{
+    .projectComp .NavLink{
         font-size: 2.5vw;
     }
 }
