@@ -25,7 +25,7 @@ function Portfolio() {
     return (
         <div>
             <Navbar/>
-            <ProjectComponent/>
+            <ProjectComponent button="false"/>
             <FooterComponent/>
             <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
             <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
