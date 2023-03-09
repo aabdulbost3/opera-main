@@ -64,7 +64,7 @@
     text-align: center;
 }
 
-.modalTel input {
+.modalTel input, .modalTel textarea {
     border: none;
     outline: none;
     font-size: 1.6vw;

@@ -25,6 +25,7 @@ function FooterComponent() {
             <form className="FooterCompInbox">
                 <input type="text" placeholder='Ism/Familiya' className='ins'/>
                 <input type="tel" placeholder='+998 (__) _ _ _-_ _-_ _' className='ins'/>
+                <textarea className='ins' placeholder='Enter a message'></textarea>
                 <button>{t("Footer.4")}</button>
             </form>
         </div>

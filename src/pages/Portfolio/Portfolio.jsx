@@ -33,6 +33,7 @@ function Portfolio() {
                 <h3>Telefon raqamingizni qoldiring va biz sizga tez orada aloqaga chiqamiz</h3>
                 <input placeholder='Ismingizni kiriting.' required type="text" />
                 <input placeholder='+998 (__) _ _ _-_ _-_ _' required type="tel" />
+                <textarea className='ins' placeholder='Enter a message'></textarea>
                 <button type='submit'>Yuborish</button>
                 <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
                 <h4>+99893 535 00 44</h4>
