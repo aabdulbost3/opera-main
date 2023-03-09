@@ -28,7 +28,7 @@ import { useRef } from 'react';
         ModalTel.current.style.transform = 'scale(0)'
     }
     return (
-        <>
+        <div className="Home">
             <Navbar />
             <Header />
             <AboutComponent />
@@ -46,7 +46,7 @@ import { useRef } from 'react';
                 <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
                 <h4>+99893 535 00 44</h4>
             </form>
-        </>
+        </div>
     )
 }
 
