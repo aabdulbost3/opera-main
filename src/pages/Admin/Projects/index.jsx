@@ -18,7 +18,7 @@ function Projects() {
     const HandleFile = (e) => {
         const formData = new FormData()
         formData.append('file', e.target.files[0])
-        formData.append('upload_preset', 'images')
+        formData.append('upload_preset', 'aozyh8sm')
         setLoading(true)
         const postImage = async () => {
             try {
@@ -52,8 +52,8 @@ function Projects() {
     const HandleSubmit = (e) => {
         e.preventDefault();
         const body = {
-            mainImg: imgUpload,
-            name: name.current.value
+            mainImg: imgUpload,//Logo uchun keyin qoshimcha bolishi kere moreImg db.jsonda yozilga uni fayli bilan oladi
+            title: name.current.value
         }
         dispatch(PostProject(body))
         dispatch(GetProject())
