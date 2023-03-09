@@ -8,7 +8,7 @@ function FooterComponent() {
         navlink('admin')
     }
   return (
-    <div className="FooterComponent">
+    <div className="FooterComponent" id="2">
         <h1>{t("Footer.0")}</h1>
         <p>{t("Footer.1")}</p>
         <div className="FooterCompBox">
