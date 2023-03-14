@@ -1,0 +1,194 @@
+.Tel {
+    color: #FFF;
+    background-color: rgb(26, 163, 26);
+    padding: 1.3vw 1.4vw;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    width: 100%;
+    height: 10000vw;
+    z-index: 2;
+    position: fixed;
+}
+.TelUp {
+    color: gray;
+    background-color: white;
+    padding: 1.3vw 1.8vw;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    display: none;
+}
+
+.Tel {
+    animation-name: TelOnHover;
+    z-index: 2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.modalTel {
+    background-color: white;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vw;
+    z-index: 2;
+    border-radius: 1vw;
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 8%;
+    bottom: 13%;
+    animation-duration: .6s;
+    transform: scale(0);
+}
+
+.modalTel h3 {
+    font-size: 1.7vw;
+    text-align: center;
+}
+
+.modalTel input, .modalTel textarea {
+    border: none;
+    outline: none;
+    font-size: 1.6vw;
+    margin: .6vw 0;
+    color: black;
+    width: 80%;
+    border: .09vw solid black;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.modalTel input::-webkit-outer-spin-button,
+.modalTel input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.modalTel input[type=number] {
+    -moz-appearance: textfield;
+}
+.modalTel input::placeholder {
+    color: black;
+}
+
+.modalTel button {
+    background-color: rgb(26, 163, 26);
+    color: white;
+    padding: 1vw;
+    width: 80%;
+    border-radius: 1vw;
+    font-size: 1.6vw;
+}
+
+.modalTel button:hover {
+    opacity: .8;
+}
+
+.modalTel p {
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.modalTel h4 {
+    font-size: 1.55vw;
+    text-align: center;
+}
+
+@keyframes TelOnHover {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    25% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .Tel {
+        font-size: 6vw;
+        padding: 3.5vw 3.6vw;
+        right: 5%;
+    }
+
+    .TelUp {
+        font-size: 6vw;
+        padding: 3.5vw 5vw;
+        right: 5%;
+    }
+
+    .modalTel {
+        width: 60%;
+        padding: 3vw;
+        right: 10%;
+        bottom: 14%;
+    }
+
+    .modalTel h3 {
+        font-size: 3.7vw;
+        text-align: center;
+    }
+
+    .modalTel input {
+        font-size: 3.5vw;
+        margin: 1vw 0;
+        color: black;
+        width: 80%;
+        border: .09vw solid black;
+        padding: 1.8vw;
+        border-radius: 1vw;
+    }
+
+    .modalTel input::placeholder {
+        color: black;
+    }
+
+    .modalTel button {
+        background-color: rgb(26, 163, 26);
+        padding: 2vw;
+        font-size: 3.5vw;
+    }
+
+    .modalTel button:hover {
+        opacity: .8;
+    }
+
+    .modalTel p {
+        font-size: 3vw;
+        text-align: center;
+        margin-top: 1.5vw;
+    }
+
+    .modalTel h4 {
+        font-size: 3.05vw;
+        text-align: center;
+    }
+}
