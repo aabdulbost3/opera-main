@@ -58,7 +58,7 @@ import { useTranslation } from "react-i18next";
             <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
             <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
             <form className='modalTel' onSubmit={HandleSubmt} ref={ModalTel}>
-                <h3>Telefon raqamingizni qoldiring va biz sizga tez orada aloqaga chiqamiz</h3>
+                <h3>{t("Message.3")}</h3>
                 <input ref={MesName} placeholder={t("Message.0")} required type="text" />
                 <input ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _' required type="tel" />
                 <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
