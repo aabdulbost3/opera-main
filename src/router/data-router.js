@@ -1,5 +1,6 @@
 import { lazy } from 'react'
 const  Home  = lazy(() => import ('../pages/Home/index'))
+const  NotFoundPage  = lazy(() => import ('../pages/NotFoundPage/NotFoundPage'))
 const SignPage = lazy(() => import ('../pages/Sign/index'))
 const MorePage = lazy(() => import ('../pages/More/index'))
 const Admin = lazy(() => import ('../pages/Admin/index'))
@@ -30,5 +31,10 @@ export const DataRouter = [
         id : 5,
         path : '/more',
         Element : <MorePage/>
+    },
+    {
+        id : 5,
+        path : '/*',
+        Element : <NotFoundPage/>
     }
 ]

@@ -1,0 +1,41 @@
+.NotFoundPagee {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: center;
+}
+
+.NotFoundPagee h2 {
+    font-size: 2vw;
+    color: #000 !important;
+    padding: 1%;
+}
+.NotFoundPage {
+    padding-top: 8%;
+    width: 100vw;
+}
+
+
+@media (max-width: 650px) {
+    .NotFoundPage {
+        padding-top: -22%;
+    }
+    .NotFoundPagee {
+        width: 100%;
+    }    
+    .NotFoundPagee h2 {
+        font-size: 6vw;
+    }
+}
+@media (max-width: 350px) {
+    .NotFoundPage {
+        margin-top: 15%;
+    }
+}
+@media (max-width: 300px) {
+    .NotFoundPage {
+        margin-top:0%;
+    }
+}

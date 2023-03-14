@@ -10,11 +10,23 @@
     flex-wrap: wrap;
 }
 .projectComp ul li{
+    animation-name: excample;
+    animation-duration: 1s;
     width: 31%;
     margin: 1.5% 1%;
     border-radius: 1.1vw;
     position: relative;
     cursor: pointer;
+}
+@keyframes excample{
+    from{
+        margin-top: 240px;
+        overflow: scroll;
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .projectComp ul li:hover{
     box-shadow: var(--box-shadow);
@@ -23,8 +35,19 @@
 .projectComp ul li img{
     height: 100%;
     width: 97.5%;
-    padding: 0 0 0 2.5%;
-    
+    padding: 0 0 0 2.5%;  
+    animation-name: excamplee;
+    animation-duration: 5s; 
+}
+@keyframes excamplee{
+    from{
+
+        overflow: scroll;
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .projectComp button{
     
