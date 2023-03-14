@@ -15,7 +15,8 @@ function FooterComponent() {
     const HandleNav = () => {
         navlink('admin')
     }
-    const Post = () => {
+    const Post = (e) => {
+        e.preventdefault()
         const body = {
             title: MesName.current.value,
             phone: MesPhone.current.value,
@@ -42,7 +43,7 @@ function FooterComponent() {
                             <p className='ErrorMessageModalText'>{t("Message.7")}</p>
                         </div>
                         <i className="fa-sharp fa-regular fa-face-frown-open"></i>
-                    </div> : null}
+                </div> : null}
             <h1>{t("Footer.0")}</h1>
             <p className='FooterComP'>{t("Footer.1")}</p>
             <div className="FooterCompBox">
@@ -56,11 +57,11 @@ function FooterComponent() {
                         <i className='fa-brands fa-telegram'></i>
                     </div>
                 </div>
-                <form className="FooterCompInbox">
+                <form className="FooterCompInbox" onSubmit={Post}>
                     <input type="text" ref={MesName} placeholder={t("Message.0")} className='ins' />
                     <input type="tel" ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _' className='ins' />
                     <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
-                    <button onClick={Post}>{t("Footer.4")}</button>
+                    <button type='submit'>{t("Footer.4")}</button>
                 </form>
             </div>
         </div>
