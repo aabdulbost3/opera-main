@@ -19,7 +19,7 @@ function AboutComponent() {
         closeOverlayBtn.current.style.display = 'none'
     }
     return (
-        <div className="aboutComp">
+        <div className="aboutComp" id ="1">
             <i onClick={closeModal} ref={closeModalBtn} className="fa-solid fa-xmark overP"></i>
             <div onClick={closeModal} ref={closeOverlayBtn} className="overlay"></div>
             <div ref={modal} className="aboutModal">
