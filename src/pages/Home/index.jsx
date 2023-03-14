@@ -7,6 +7,7 @@ import Navbar from "../../components/NavbarComponent/index";
 import ProjectComponent from "../../components/projectComponent/index";
 import "./style.css"
 import { useRef } from 'react';
+import { PostMessage } from "../../redux/message";
 
  function Home() {
     const OpenModalUp = useRef()
@@ -26,6 +27,7 @@ import { useRef } from 'react';
         OpenModalUp.current.style.display = 'block'
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
+        PostMessage()
     }
     return (
         <div className="Home">
@@ -44,7 +46,7 @@ import { useRef } from 'react';
                 <input placeholder='+998 (__) _ _ _-_ _-_ _' required type="tel" />
                 <textarea className='ins' placeholder='Enter a message'></textarea>
                 <button type='submit'>Yuborish</button>
-                <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
+                <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumki</p>
                 <h4>+99893 535 00 44</h4>
             </form>
         </div>
