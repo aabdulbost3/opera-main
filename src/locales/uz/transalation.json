@@ -48,6 +48,7 @@
     },
     "Message":{
         "0": "Ism/Familiya",
-        "1": "Xabaringizni kiriting ..."
+        "1": "Xabaringizni kiriting ...",
+        "2": "Yoki siz bizga o'zingiz aloqaga chiqishingiz mumkin"
     }
 }

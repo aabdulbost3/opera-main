@@ -1,11 +1,30 @@
 import './style.css';
 import { useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next";
+import { useRef } from 'react';
+import { PostMessage } from "../../redux/message";
+import { useDispatch } from "react-redux";
 function FooterComponent() {
     const { t, i18n } = useTranslation();
     const navlink = useNavigate();
+    const MesName = useRef()
+    const MesPhone = useRef()
+    const MesMessage = useRef()
+    const dispatch = useDispatch()
     const HandleNav = () => {
         navlink('admin')
+    }
+    const Post = ()=>{
+    const body = {
+        title: MesName.current.value,
+        phone: MesPhone.current.value,
+        text: MesMessage.current.value
+    }
+    dispatch(PostMessage(body))
+    MesName.current.value = null
+    MesPhone.current.value = null
+    MesMessage.current.value = null
+
     }
   return (
     <div className="FooterComponent" id="2">
@@ -23,10 +42,10 @@ function FooterComponent() {
                 </div>
             </div>
             <form className="FooterCompInbox">
-                <input type="text" placeholder='Ism/Familiya' className='ins'/>
-                <input type="tel" placeholder='+998 (__) _ _ _-_ _-_ _' className='ins'/>
-                <textarea className='ins' placeholder='Enter a message'></textarea>
-                <button>{t("Footer.4")}</button>
+                <input type="text" ref={MesName} placeholder={t("Message.0")} className='ins'/>
+                <input type="tel" ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _' className='ins'/>
+                <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
+                <button onClick={Post}>{t("Footer.4")}</button>
             </form>
         </div>
     </div>

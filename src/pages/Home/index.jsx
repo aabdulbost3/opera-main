@@ -62,8 +62,8 @@ import { useTranslation } from "react-i18next";
                 <input ref={MesName} placeholder={t("Message.0")} required type="text" />
                 <input ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _' required type="tel" />
                 <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
-                <button type='submit' onClick={Post()}>Yuborish</button>
-                <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
+                <button type='submit' onClick={Post}>{t("Footer.4")}</button>
+                <p>{t("Message.2")}</p>
                 <h4>+99893 535 00 44</h4>
             </form>
         </div>
