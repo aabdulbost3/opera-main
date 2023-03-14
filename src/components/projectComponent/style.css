@@ -49,6 +49,9 @@
         opacity: 1;
     }
 }
+.projectComp button{
+    
+}
 .projectComp ul li h4{
     font-size: 2vw;
     color: var(--black);

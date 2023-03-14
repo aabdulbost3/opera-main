@@ -30,8 +30,13 @@
         }
       ]
     },
+<<<<<<< HEAD
+        {
+      "id": 3,
+=======
     {
       "id": 1,
+>>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -46,7 +51,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [
@@ -60,8 +65,13 @@
         }
       ]
     },
+<<<<<<< HEAD
+        {
+      "id": 5,
+=======
     {
       "id": 1,
+>>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -76,7 +86,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [
@@ -90,8 +100,13 @@
         }
       ]
     },
+<<<<<<< HEAD
+        {
+      "id": 7,
+=======
     {
       "id": 1,
+>>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -106,7 +121,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [
@@ -120,8 +135,13 @@
         }
       ]
     },
+<<<<<<< HEAD
+        {
+      "id": 9,
+=======
     {
       "id": 1,
+>>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -136,7 +156,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 10,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [
