@@ -31,7 +31,7 @@
       ]
     },
         {
-      "id": 1,
+      "id": 3,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [
@@ -61,7 +61,7 @@
       ]
     },
         {
-      "id": 1,
+      "id": 5,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [
@@ -91,7 +91,7 @@
       ]
     },
         {
-      "id": 1,
+      "id": 7,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [
@@ -121,7 +121,7 @@
       ]
     },
         {
-      "id": 1,
+      "id": 9,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 10,
       "title": "Project 2",
       "mainImg": "https://picsum.photos/300?rand=4",
       "moreImg": [

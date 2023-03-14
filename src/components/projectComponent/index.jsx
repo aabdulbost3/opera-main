@@ -3,23 +3,30 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { GetProject } from "../../redux/project"; 
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function ProjectComponent(props) {
     const { t, i18n } = useTranslation();
     const dispatch = useDispatch()
     const dataProject = useSelector(state => state.project)
+    const navigate = useNavigate()
     useEffect(() => {
         dispatch(GetProject())
     },[])
+    const ProjectOptional = (e) => {
+        navigate('/more')
+        window.localStorage.setItem('moreId', e.target.value)
+    }
     return (
         <div className="projectComp">
                 <h1>{t("Navbar.2")}</h1>
                 <ul>
                 {dataProject.getProject.Success == true ? dataProject.getProject?.Data.slice(0,props.number).map((elem, index) => 
-                    <li key={index} id={elem.id} onClick={(e) => {window.location.href = '/more';window.localStorage.setItem("moreId" , e.target.id);}}>
-                        <img src={elem.mainImg} alt="img" />
-                        <h4>{elem.title}</h4>
+                    <li key={index} >
+                        <button value={elem.id} onClick={ProjectOptional}>
+                            <img src={elem.mainImg} alt="img" />
+                            <h4>{elem.title}</h4>
+                        </button>
                     </li>)
                 :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
                 </ul>

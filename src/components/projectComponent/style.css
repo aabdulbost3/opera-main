@@ -26,6 +26,9 @@
     padding: 0 0 0 2.5%;
     
 }
+.projectComp button{
+    
+}
 .projectComp ul li h4{
     font-size: 2vw;
     color: var(--black);
