@@ -7,6 +7,12 @@ import Navbar from "../../components/NavbarComponent/index";
 import ProjectComponent from "../../components/projectComponent/index";
 import "./style.css"
 import { useRef } from 'react';
+import { PostMessage } from "../../redux/message";
+<<<<<<< HEAD
+=======
+import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
+>>>>>>> b13be151462b245fc3fa5b61f8dce8e369ecba7f
 
  function Home() {
     const MesName = useRef()
@@ -56,12 +62,12 @@ import { useRef } from 'react';
             <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
             <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
             <form className='modalTel' onSubmit={HandleSubmt} ref={ModalTel}>
-                <h3>Telefon raqamingizni qoldiring va biz sizga tez orada aloqaga chiqamiz</h3>
-                <input placeholder='Ismingizni kiriting.' required type="text" />
-                <input placeholder='+998 (__) _ _ _-_ _-_ _' required type="tel" />
-                <textarea className='ins' placeholder='Enter a message'></textarea>
-                <button type='submit'>Yuborish</button>
-                <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
+                <h3>{t("Message.3")}</h3>
+                <input ref={MesName} placeholder={t("Message.0")} required type="text" />
+                <input ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _ ' required type="tel" />
+                <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
+                <button type='submit' onClick={Post}>{t("Footer.4")}</button>
+                <p>{t("Message.2")}</p>
                 <h4>+99893 535 00 44</h4>
             </form>
         </div>
