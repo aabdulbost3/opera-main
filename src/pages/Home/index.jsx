@@ -7,12 +7,16 @@ import Navbar from "../../components/NavbarComponent/index";
 import ProjectComponent from "../../components/projectComponent/index";
 import "./style.css"
 import { useRef } from 'react';
-import { PostMessage } from "../../redux/message";
 
  function Home() {
+    const MesName = useRef()
+    const MesPhone = useRef()
+    const MesMessage = useRef()
     const OpenModalUp = useRef()
     const ModalTel = useRef()
     const CloseModalUp = useRef()
+    const dispatch = useDispatch()
+    const { t, i18n } = useTranslation();
     const OpenModal = () => {
         OpenModalUp.current.style.display = 'none'
         CloseModalUp.current.style.display = 'block'
@@ -28,6 +32,17 @@ import { PostMessage } from "../../redux/message";
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
         PostMessage()
+    }
+    const Post = ()=>{
+        const body = {
+            title: MesName.current.value,
+            phone: MesPhone.current.value,
+            text: MesMessage.current.value
+        }
+        dispatch(PostMessage(body))
+        MesName.current.value = null
+        MesPhone.current.value = null
+        MesMessage.current.value = null
     }
     return (
         <div className="Home">
@@ -46,7 +61,7 @@ import { PostMessage } from "../../redux/message";
                 <input placeholder='+998 (__) _ _ _-_ _-_ _' required type="tel" />
                 <textarea className='ins' placeholder='Enter a message'></textarea>
                 <button type='submit'>Yuborish</button>
-                <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumki</p>
+                <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
                 <h4>+99893 535 00 44</h4>
             </form>
         </div>

@@ -52,7 +52,7 @@ function Projects() {
     const HandleSubmit = (e) => {
         e.preventDefault();
         const body = {
-            mainImg: imgUpload,//Logo uchun keyin qoshimcha bolishi kere moreImg db.jsonda yozilga uni fayli bilan oladi
+            mainImg: imgUpload,//Logo uchun keyin qoshimcha bolishi kere moreImg db.jsonda yozilgan uni fayli bilan oladi
             title: name.current.value
         }
         dispatch(PostProject(body))

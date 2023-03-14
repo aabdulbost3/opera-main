@@ -45,5 +45,11 @@
     "ProjectComponent":
      {
         "0": "Barchasini ko'rish"
+    },
+    "Message":{
+        "0": "Ism/Familiya",
+        "1": "Xabaringizni kiriting ...",
+        "2": "Yoki siz bizga o'zingiz aloqaga chiqishingiz mumkin",
+        "3": "Telefon raqamingizni qoldiring va biz sizga tez orada aloqaga chiqamiz"
     }
 }
