@@ -22,7 +22,8 @@ function ProjectComponent(props) {
                 <h1>{t("Navbar.2")}</h1>
                 <ul>
                 {dataProject.getProject.Success == true ? dataProject.getProject?.Data.slice(0,props.number).map((elem, index) => 
-                    <li key={index} id={elem.id} onClick={(e) => {window.location.href = '/more';window.localStorage.setItem("moreId" , e.target.id);}}>
+                    <li key={index}>
+                        <button value={elem.id} onClick={ProjectOptional}></button>
                         <img src={elem.mainImg} alt="img" />
                         <h4>{elem.title}</h4>
                     </li>)

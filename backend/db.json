@@ -30,13 +30,8 @@
         }
       ]
     },
-<<<<<<< HEAD
-        {
-      "id": 3,
-=======
     {
-      "id": 1,
->>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
+      "id": 3,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -65,13 +60,8 @@
         }
       ]
     },
-<<<<<<< HEAD
-        {
-      "id": 5,
-=======
     {
-      "id": 1,
->>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
+      "id": 5,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -100,13 +90,8 @@
         }
       ]
     },
-<<<<<<< HEAD
-        {
+    {
       "id": 7,
-=======
-    {
-      "id": 1,
->>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -119,61 +104,6 @@
           "img": "https://picsum.photos/300?rand=3"
         }
       ]
-    },
-    {
-      "id": 8,
-      "title": "Project 2",
-      "mainImg": "https://picsum.photos/300?rand=4",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=5"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=6"
-        }
-      ]
-    },
-<<<<<<< HEAD
-        {
-      "id": 9,
-=======
-    {
-      "id": 1,
->>>>>>> 8da32028b958ca568c7a97067aafb40568ed7df7
-      "title": "Project 1",
-      "mainImg": "https://picsum.photos/300?rand=1",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=2"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=3"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "title": "Project 2",
-      "mainImg": "https://picsum.photos/300?rand=4",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=5"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=6"
-        }
-      ]
-    },
-    {
-      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1678373690/psjeossckw40v8glaxsq.jpg",
-      "title": "ok",
-      "id": 3
     }
   ],
   "contact": [

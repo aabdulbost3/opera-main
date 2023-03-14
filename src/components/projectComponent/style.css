@@ -18,6 +18,12 @@
     position: relative;
     cursor: pointer;
 }
+.projectComp ul li button{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
 @keyframes excample{
     from{
         margin-top: 240px;
