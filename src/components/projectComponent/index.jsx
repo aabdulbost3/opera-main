@@ -22,18 +22,10 @@ function ProjectComponent(props) {
                 <h1>{t("Navbar.2")}</h1>
                 <ul>
                 {dataProject.getProject.Success == true ? dataProject.getProject?.Data.slice(0,props.number).map((elem, index) => 
-<<<<<<< HEAD
-                    <li key={index} >
-                        <button value={elem.id} onClick={ProjectOptional}>
-                            <img src={elem.mainImg} alt="img" />
-                            <h4>{elem.title}</h4>
-                        </button>
-=======
                     <li key={index}>
                         <button value={elem.id} onClick={ProjectOptional}></button>
                         <img src={elem.mainImg} alt="img" />
                         <h4>{elem.title}</h4>
->>>>>>> b13be151462b245fc3fa5b61f8dce8e369ecba7f
                     </li>)
                 :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
                 </ul>

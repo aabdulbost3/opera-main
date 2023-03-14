@@ -30,11 +30,7 @@
         }
       ]
     },
-<<<<<<< HEAD
-        {
-=======
     {
->>>>>>> b13be151462b245fc3fa5b61f8dce8e369ecba7f
       "id": 3,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
@@ -64,11 +60,7 @@
         }
       ]
     },
-<<<<<<< HEAD
-        {
-=======
     {
->>>>>>> b13be151462b245fc3fa5b61f8dce8e369ecba7f
       "id": 5,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
@@ -98,8 +90,7 @@
         }
       ]
     },
-<<<<<<< HEAD
-        {
+    {
       "id": 7,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
@@ -129,12 +120,8 @@
         }
       ]
     },
-        {
-      "id": 9,
-=======
     {
-      "id": 7,
->>>>>>> b13be151462b245fc3fa5b61f8dce8e369ecba7f
+      "id": 9,
       "title": "Project 1",
       "mainImg": "https://picsum.photos/300?rand=1",
       "moreImg": [
@@ -147,7 +134,6 @@
           "img": "https://picsum.photos/300?rand=3"
         }
       ]
-<<<<<<< HEAD
     },
     {
       "id": 10,
@@ -163,8 +149,6 @@
           "img": "https://picsum.photos/300?rand=6"
         }
       ]
-=======
->>>>>>> b13be151462b245fc3fa5b61f8dce8e369ecba7f
     }
   ],
   "contact": [
@@ -182,8 +166,8 @@
     },
     {
       "title": "ok",
-      "phone": "000",
-      "text": "okok",
+      "phone": "8888",
+      "text": "jhgsgdfhgs",
       "id": 3
     }
   ],

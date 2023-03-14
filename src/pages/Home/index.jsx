@@ -8,11 +8,8 @@ import ProjectComponent from "../../components/projectComponent/index";
 import "./style.css"
 import { useRef } from 'react';
 import { PostMessage } from "../../redux/message";
-<<<<<<< HEAD
-=======
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
->>>>>>> b13be151462b245fc3fa5b61f8dce8e369ecba7f
 
  function Home() {
     const MesName = useRef()
