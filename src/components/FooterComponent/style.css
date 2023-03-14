@@ -104,7 +104,7 @@
         padding: 3% 10% !important;
         text-align: center;
     }
-    .FooterCompInbox input{
+    .FooterCompInbox input , .FooterCompInbox textarea{
         font-size: 4.5vw;
         margin: 1vw;
         width: 100%;
