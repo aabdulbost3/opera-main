@@ -6,7 +6,7 @@ function Select() {
         window.location.reload();
     }
     function GetLanguage() {
-        return window.localStorage.getItem("i18nextLng")
+        return window.localStorage.getItem("i18nextLng" )
     }
     return (
         <>

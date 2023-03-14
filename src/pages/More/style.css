@@ -1,0 +1,27 @@
+.MorePage{
+    width: 100%;
+}
+.MorePageBox{
+    padding: 3vw;
+    padding-top: 10vw;
+    width: 100%;
+}
+.MoreExitBox{
+    background-color: #1d1d1d;
+    width: fit-content;
+    color: white;
+    padding: 1.3vw 1.5vw;
+    border-radius: 50%;
+    font-size: 1.6vw;
+    cursor: pointer;
+}
+.MoreExitBox:hover{
+    background-color: var(--gold);
+    color: #1d1d1d;
+}
+@media screen and (max-width: 650px) {
+    .MoreExitBox{
+        font-size: 6vw;
+        padding: 2.5vw 3vw;
+    }
+}

@@ -6,6 +6,9 @@ import { API_URL } from "../../utils";
 export const GetProject = createAsyncThunk("project/get" , async () => {
     return await axios.get(`${API_URL}/project`).then(res => res.data)
 })
+export const GetProjectId = createAsyncThunk("projecter/get" , async (id) => {
+    return await axios.get(`${API_URL}/project/${id}`).then(res => res.data)
+})
 export const DeleteProject = createAsyncThunk("project/delete" , async (id) => {
     return await axios.delete(`${API_URL}/project/${id}`).then(res => res.data)
 })
@@ -19,6 +22,12 @@ const ProjectSlice = createSlice({
     name: "project",
     initialState:{
         getProject :{
+            Loading: false,
+            Error: false,
+            Success: false,
+            Data: []
+        },
+        getProjectId :{
             Loading: false,
             Error: false,
             Success: false,
@@ -60,6 +69,23 @@ const ProjectSlice = createSlice({
             state.getProject.Error = true;
             state.getProject.Success = false;
             state.getProject.Data = action.payload
+        },
+        [GetProjectId.pending] : (state, action) => {
+            state.getProjectId.Loading = true;
+            state.getProjectId.Error = false;
+            state.getProjectId.Success = false;
+        },
+        [GetProjectId.fulfilled] : (state, action) => {
+            state.getProjectId.Loading = false;
+            state.getProjectId.Error = false;
+            state.getProjectId.Success = true;
+            state.getProjectId.Data = action.payload
+        },
+        [GetProjectId.rejected] : (state, action) => {
+            state.getProjectId.Loading = false;
+            state.getProjectId.Error = true;
+            state.getProjectId.Success = false;
+            state.getProjectId.Data = action.payload
         },
         [DeleteProject.pending] : (state, action) => {
             state.deleteProject.Loading = true;

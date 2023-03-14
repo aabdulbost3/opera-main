@@ -28,14 +28,14 @@ import { useRef } from 'react';
         ModalTel.current.style.transform = 'scale(0)'
     }
     return (
-        <>
+        <div className="Home">
             <Navbar />
             <Header />
             <AboutComponent/>
             <ProjectComponent number="6" button="true" />
             <HelpComponent />
             <MensComponent />
-            <FooterComponent/>
+            <FooterComponent />
             <button onClick={OpenModal} ref={OpenModalUp} className='Tel'><i className='fa-solid fa-phone-volume'></i></button>
             <button onClick={CloseModal} ref={CloseModalUp} className='TelUp'><i className='fa-solid fa-xmark'></i></button>
             <form className='modalTel' onSubmit={HandleSubmt} ref={ModalTel}>
@@ -47,7 +47,7 @@ import { useRef } from 'react';
                 <p>Yoki siz bizga o'zingaz aloqaga chiqishingiz mumkin</p>
                 <h4>+99893 535 00 44</h4>
             </form>
-        </>
+        </div>
     )
 }
 

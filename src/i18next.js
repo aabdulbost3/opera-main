@@ -3,7 +3,7 @@ import {initReactI18next} from "react-i18next";
 import ru from "./locales/ru/transalation.json"
 import uz from "./locales/uz/transalation.json"
 import LanguageDetector from "i18next-browser-languagedetector"
-i18next
+i18next 
 .use(initReactI18next)
 .use(LanguageDetector)
 .init({
