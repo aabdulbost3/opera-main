@@ -1,6 +1,10 @@
 .Home{
     width: 100%;
 }
+textarea{
+    resize: vertical;
+    height: 20%;
+}
 .Tel {
     color: #FFF;
     background-color: rgb(26, 163, 26);
