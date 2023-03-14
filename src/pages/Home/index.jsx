@@ -60,7 +60,7 @@ import { useTranslation } from "react-i18next";
             <form className='modalTel' onSubmit={HandleSubmt} ref={ModalTel}>
                 <h3>{t("Message.3")}</h3>
                 <input ref={MesName} placeholder={t("Message.0")} required type="text" />
-                <input ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _' required type="tel" />
+                <input ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _ ' required type="tel" />
                 <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
                 <button type='submit' onClick={Post}>{t("Footer.4")}</button>
                 <p>{t("Message.2")}</p>
