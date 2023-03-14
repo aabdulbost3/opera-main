@@ -1,5 +1,5 @@
 .MorePage{
-    width: 100%;
+    width: 100vw;
 }
 .MorePageBox{
     padding: 3vw;
@@ -19,9 +19,32 @@
     background-color: var(--gold);
     color: #1d1d1d;
 }
+.MoreInbox{
+    margin-top: 5%;
+}
+.MoreInbox span{
+    display: flex;
+    align-items: center;
+}
+.MoreInbox span img {
+    width: 30%;
+    margin: 2%;
+}
+.MoreInbox span h2{
+    font-size: 5vw;
+}
+.MoreInbox .Photos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.MoreInbox .Photos img{
+    width: 100%;
+}
 @media screen and (max-width: 650px) {
     .MoreExitBox{
         font-size: 6vw;
         padding: 2.5vw 3vw;
+        margin-top: 10%;
     }
 }
