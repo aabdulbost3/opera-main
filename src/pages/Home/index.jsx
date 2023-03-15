@@ -30,12 +30,8 @@ import { useTranslation } from "react-i18next";
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
     }
-    const HandleSubmt = () => {
-        OpenModalUp.current.style.display = 'block'
-        CloseModalUp.current.style.display = 'none'
-        ModalTel.current.style.transform = 'scale(0)'
-    }
-    const Post = ()=>{
+    const HandleSubmt = (e) => {
+        e.preventDefault()
         const body = {
             title: MesName.current.value,
             phone: MesPhone.current.value,
@@ -45,6 +41,10 @@ import { useTranslation } from "react-i18next";
         MesName.current.value = null
         MesPhone.current.value = null
         MesMessage.current.value = null
+
+        OpenModalUp.current.style.display = 'block'
+        CloseModalUp.current.style.display = 'none'
+        ModalTel.current.style.transform = 'scale(0)'
     }
     return (
         <div className="Home">
@@ -62,7 +62,7 @@ import { useTranslation } from "react-i18next";
                 <input ref={MesName} placeholder={t("Message.0")} required type="text" />
                 <input ref={MesPhone} placeholder='+998 (__) _ _ _-_ _-_ _ ' required type="tel" />
                 <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
-                <button type='submit' onClick={Post}>{t("Footer.4")}</button>
+                <button type='submit'>{t("Footer.4")}</button>
                 <p>{t("Message.2")}</p>
                 <h4>+99893 535 00 44</h4>
             </form>

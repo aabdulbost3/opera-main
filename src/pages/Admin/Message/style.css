@@ -12,13 +12,12 @@
     position: fixed;
 }
 .Message ul{
-    margin-top: 2vw;
-    margin-left: 3vw;
+    margin-top: 7vw;
 }
 .Message li{
     padding: 0.3vw;
     border: 0.2vw solid white;
-    margin: 20px;
+    margin: 1vw;
     width: fit-content;
     border: 0.2vw solid #4d4d4d;
 }
