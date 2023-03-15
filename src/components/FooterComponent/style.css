@@ -63,7 +63,7 @@
     border: .1vw solid var(--black);
     padding: 1vw;
     margin: 1vw;
-    width:  130%;
+    width:  100%;
     
 }
 .FooterCompInbox input:hover,.FooterCompInbox textarea:hover{

@@ -1,43 +1,6 @@
-.helpComp .titleBox{ 
-    display: flex; 
-    align-items: center;
-    width: 100%;
-    height: 6vh; 
-    overflow: hidden; 
-    position: relative; 
-    margin: 1.5% 0;
-}
-.helpComp .titleBox h1{
-    position: absolute;
-    font-size: 3.5vw;
+marquee{
+    font-size: 4vw;
     color: var(--gray);
-    animation-iteration-count: infinite;
-    animation-duration: 15s;
-    animation-name: stText;
-    width: max-content;
-    right: -50%;
-}
-.helpComp .titleBox h1:nth-child(2){
-    animation-delay: 3s;
-}
-.helpComp .titleBox h1:nth-child(3){
-    animation-delay: 6s;
-}
-.helpComp .titleBox h1:nth-child(4){
-    animation-delay: 9s;
-}
-.helpComp .titleBox h1:nth-child(5){
-    animation-delay: 12s;
-}
-@keyframes stText {
-    from{
-        right: -50%;
-        display: block;
-    }
-    to{
-        right: 150%;
-        display: block;
-    }
 }
 .helpComp ul{
     width: 100%;
