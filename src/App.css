@@ -46,7 +46,7 @@ body{
     position: fixed;
     top: 1%;
     right: -45%;
-    background-color: lightgreen;
+    background-color: rgb(152, 236, 152);
     border: .2vw solid rgba(102, 233, 102, 0.481);
     border-radius: 1.5vw;
     padding-right: 3.5vw;

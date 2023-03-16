@@ -16,7 +16,7 @@ function FooterComponent() {
         navlink('admin')
     }
     const Post = (e) => {
-        e.preventdefault()
+        e.preventDefault()
         const body = {
             title: MesName.current.value,
             phone: MesPhone.current.value,
@@ -29,14 +29,14 @@ function FooterComponent() {
     }
     return (
         <div className="FooterComponent" id="2">
-            {dataMessage.getMessage.Success == true ?
+            {dataMessage.postMessage.Success == true ?
                 <div className="MessageModal">
-                    <div className="MessageModTextBox">
+                    <div className="MessageModTex   tBox">
                         <h3 className='MessageTitle'>{t("Message.4")}</h3>
                         <p className='MessageText'>{t("Message.5")}</p>
                     </div>
                     <i className="fa-sharp fa-regular fa-face-smile"></i>
-                </div> : dataMessage.getMessage.Error == true ?
+                </div> : dataMessage.postMessage.Error == true ?
                     <div className="ErrorMessageModal">
                         <div className="ErrorMessageModText">
                             <h3 className='ErrorMessageModalTitle'>{t("Message.6")}</h3>
