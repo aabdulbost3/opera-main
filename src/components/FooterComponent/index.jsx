@@ -27,9 +27,9 @@ function FooterComponent() {
         MesPhone.current.value = null
         MesMessage.current.value = null
     }
-  return (
-    <>
-    <div className="FooterComponent" id="2">
+    return(
+        <>
+        <div className="FooterComponent" id="2">
         <h1>{t("Footer.0")}</h1>
         <p>{t("Footer.1")}</p>
         <div className="FooterCompBox">
@@ -55,9 +55,10 @@ function FooterComponent() {
                 <textarea ref={MesMessage} className='ins' required placeholder={t("Message.1")}></textarea>
                 <button type="submit">{t("Footer.4")}</button>
             </form>
+            </div>
         </div>
         </>
     );
 }
 
-export default FooterComponent;
+export default FooterComponent
