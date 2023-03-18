@@ -83,7 +83,6 @@
 }
 .BarsSide ul{
     display: flex;
-    margin-left: auto;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -93,10 +92,10 @@
     color: var(--black);
 }
 .BarsSide li h3 button{
-    font-size: 5.5vw;
+    font-size: 6.5vw;
     font-weight: 450;
     color: var(--black);
-    margin: 3vw;
+    margin: 2.5vw;
 }
 .BarsSide li button{
     font-size: 5.5vw;

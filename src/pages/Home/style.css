@@ -144,6 +144,7 @@ textarea{
         font-size: 7vw;
         padding: 4vw 4.6vw;
         right: 5%;
+        z-index: 0;
     }
     .TelUp {
         font-size: 7vw;
