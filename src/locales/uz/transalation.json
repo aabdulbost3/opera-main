@@ -55,5 +55,10 @@
         "5": "Sizning Xabaringiz Muvofaqiyatli jo'natildi",
         "6": "Xatolik",
         "7": "Sizning Xabaringizda Xatolik aniqlandi. Iltimos qayta urinib ko'ring"
+    },
+    "NotFoundPage": {
+        "0": "404",
+        "1": "Saxifa Topilmadi",
+        "2": "Ortga Qayitsh"
     }
 }

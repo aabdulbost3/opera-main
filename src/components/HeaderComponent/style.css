@@ -1,13 +1,12 @@
 .Header{
     width: 100%;
-    padding: 2vw;
+    padding: 4vw 2.5vw;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
-    padding-top: 10%;
 }
 .HeaderBox{
     width: 100%;
@@ -49,13 +48,11 @@
         max-width: 98%;
         text-align: center;
         margin: 0 auto;
-        font-size: 3.8vw;
+        font-size: 4vw;
     }
     .HeaderInbox img{
-        width: 80%;
+        width: 75%;
         margin: 0 auto;
-        left: 20%;
-        top: -380%;
     }
     .HeaderImg{
         width: 100%;

@@ -7,14 +7,44 @@
     justify-content: center;
 }
 
-.NotFoundPagee h2 {
-    font-size: 2vw;
-    color: #000 !important;
-    padding: 1%;
+.NotFoundPagee h1 {
+    font-size: 12vw;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1%; */
+}
+.NotFoundPagee h3 {
+    font-size: 2.5vw;
+    color: #000;
+    /* padding: 1%; */
+}
+.NotFoundPagee button{
+    font-size: 1.6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 2vw;
+    border: .2vw solid var(--gold);
+    padding: 1vw;
+    margin-top: 1vw;
+}
+.NotFoundPagee button:hover{
+    background-color: var(--gold);
+    color: white;
+}
+.NotFoundPagee img{
+    width: 35%;
+}
+.NotFoundPagee button p{
+    margin-left: .5vw;
 }
 .NotFoundPage {
     padding-top: 8%;
-    width: 100vw;
+    width: 100%;
 }
 
 
@@ -25,17 +55,19 @@
     .NotFoundPagee {
         width: 100%;
     }    
-    .NotFoundPagee h2 {
+    .NotFoundPagee h1 {
+        font-size: 28vw;
+    }
+    .NotFoundPagee img{
+        width: 28%;
+    }
+    .NotFoundPagee h3{ 
         font-size: 6vw;
+        margin: 2vw;
     }
-}
-@media (max-width: 350px) {
-    .NotFoundPage {
-        margin-top: 15%;
-    }
-}
-@media (max-width: 300px) {
-    .NotFoundPage {
-        margin-top:0%;
+    .NotFoundPagee button{
+        font-size: 4.5vw;
+        padding: 2vw;
+        border-radius: 4vw;
     }
 }

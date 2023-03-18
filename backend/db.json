@@ -159,6 +159,7 @@
       "text": "Manga bitta Brend kere. lorem10 ishlamaskan botta shu yomon shuni to'g'irlash kere oka iloji bosa"
     },
     {
+<<<<<<< HEAD
       "id": 2,
       "title": "Dilshod",
       "phone": "+998 90 000 00 01",
@@ -181,6 +182,12 @@
       "phone": "fefaeg",
       "text": "weagegea",
       "id": 5
+=======
+      "title": "Asd",
+      "phone": "+998930704354",
+      "text": "Nma gaaaap!\n",
+      "id": 2
+>>>>>>> eebae0204ce5cbf79752e3097fb4f3fd5337287c
     }
   ],
   "admin": [

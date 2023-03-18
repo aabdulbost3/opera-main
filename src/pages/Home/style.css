@@ -58,7 +58,7 @@ textarea{
     padding: 2vw;
     z-index: 2;
     border-radius: 1vw;
-    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.3);
     position: fixed;
     right: 8%;
     bottom: 13%;
@@ -140,38 +140,39 @@ textarea{
 }
 
 @media screen and (max-width: 650px) {
-    .Tel {
-        font-size: 6vw;
-        padding: 3.5vw 3.6vw;
+    .Tel, .TelUp {
+        font-size: 7vw;
+        padding: 4vw 4.6vw;
         right: 5%;
+        z-index: 0;
     }
-
     .TelUp {
-        font-size: 6vw;
-        padding: 3.5vw 5vw;
+        font-size: 7vw;
+        padding: 4.5vw 6vw;
         right: 5%;
     }
-
     .modalTel {
-        width: 60%;
-        padding: 3vw;
-        right: 10%;
-        bottom: 14%;
+        width: 90%;
+        padding: 5vw;
+        right: 5%;
+        bottom: 16%;
+        border-radius: 4vw;
     }
 
     .modalTel h3 {
-        font-size: 3.7vw;
+        font-size: 4.8vw;
         text-align: center;
+        margin-bottom: 3vw;
     }
 
-    .modalTel input {
-        font-size: 3.5vw;
-        margin: 1vw 0;
+    .modalTel input , .modalTel input, .modalTel textarea{
+        font-size: 4.4vw;
+        margin: 1.5vw 0;
         color: black;
-        width: 80%;
+        width: 90%;
         border: .09vw solid black;
-        padding: 1.8vw;
-        border-radius: 1vw;
+        padding: 2.5vw;
+        border-radius: 2vw;
     }
 
     .modalTel input::placeholder {
@@ -181,7 +182,10 @@ textarea{
     .modalTel button {
         background-color: rgb(26, 163, 26);
         padding: 2vw;
-        font-size: 3.5vw;
+        border-radius: 2vw;
+        font-size: 5vw;
+        margin: 2vw 0;
+        width: 90%;
     }
 
     .modalTel button:hover {
@@ -189,13 +193,15 @@ textarea{
     }
 
     .modalTel p {
-        font-size: 3vw;
+        width: 90%;
+        font-size: 4.4vw;
         text-align: center;
         margin-top: 1.5vw;
     }
 
     .modalTel h4 {
-        font-size: 3.05vw;
+        font-size: 5vw;
+        margin-top: 1.5vw;
         text-align: center;
     }
 }

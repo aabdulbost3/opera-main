@@ -2,16 +2,13 @@ import "./style.css"
 import img from "../../../src/windows.jpg"
 import { useTranslation } from "react-i18next";
 export function HelpComponent() {
-const { t, i18n } = useTranslation();
+const { t } = useTranslation();
     return(
         <div className="helpComp">
             <div className="container">
-                <div className="titleBox">
-                    <h1>{t("HelpComponent.0")}</h1>
-                    <h1>{t("HelpComponent.0")}</h1>
-                    <h1>{t("HelpComponent.0")}</h1>
-                    <h1>{t("HelpComponent.0")}</h1>
-                </div>
+                    <marquee width="100%" direction="right" height="30%"  scrollamount="20">
+                    {t("HelpComponent.0")}
+                    </marquee>
                 <ul>
                     <li>
                         <img src={img} alt="img" />

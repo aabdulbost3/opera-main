@@ -48,15 +48,16 @@
     display: none;
     justify-content: center;
     align-items: center;
-    width: 88.4%;
+    width: 100%;
     position: fixed;
     box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.2);
-    padding: 1vw 2.5vw;
     background-color: var(--white);
     top: 0;
     left: 0;
+    right: 0;
     z-index: 2;
     transition: 1s;
+    padding: 1vw 3vw;
 }
 .BarsNav button{
     font-size: 6.5vw;
@@ -68,17 +69,20 @@
 .BarsSide{
     position: fixed;
     background-color: var(--white);
-    width: 88.4%;
+    width: 100%;
     height: 100%;
-    padding-top: 25vw;
     color: var(--black);
     transform: translateX(-200%);
     overflow-y: scroll;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .BarsSide ul{
     display: flex;
-    margin-left: auto;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -88,10 +92,10 @@
     color: var(--black);
 }
 .BarsSide li h3 button{
-    font-size: 5.5vw;
+    font-size: 6.5vw;
     font-weight: 450;
     color: var(--black);
-    margin: 3vw;
+    margin: 2.5vw;
 }
 .BarsSide li button{
     font-size: 5.5vw;
