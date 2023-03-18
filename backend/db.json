@@ -171,6 +171,7 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
       "title": "",
       "phone": "",
       "text": "",
@@ -277,6 +278,18 @@
       "phone": "asdas",
       "text": "dasfasfsd",
       "id": 21
+=======
+      "title": "O man",
+      "phone": "+998000000000",
+      "text": "none bruh none",
+      "id": 4
+    },
+    {
+      "title": "safsfea",
+      "phone": "fefaeg",
+      "text": "weagegea",
+      "id": 5
+>>>>>>> 2f36f081b1d64be96c04276c90981d8b5a463c91
     }
   ],
   "admin": [
