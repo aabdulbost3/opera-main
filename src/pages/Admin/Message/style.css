@@ -14,6 +14,10 @@
 }
 .Message ul{
     margin-top: 7vw;
+<<<<<<<<< Temporary merge branch 1
+    margin-left: 3vw;
+=========
+>>>>>>>>> Temporary merge branch 2
 }
 .Message li{
     padding: 0.3vw;

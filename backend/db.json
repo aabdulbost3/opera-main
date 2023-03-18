@@ -171,6 +171,10 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 65ffd65fb037147398909ef9f3cfc46b9af52785
       "title": "O man",
       "phone": "+998000000000",
       "text": "none bruh none",
@@ -181,6 +185,75 @@
       "phone": "fefaeg",
       "text": "weagegea",
       "id": 5
+<<<<<<< HEAD
+=======
+=======
+      "title": "",
+      "phone": "",
+      "text": "",
+      "id": 4
+    },
+    {
+      "title": "Ad",
+      "phone": "12314124",
+      "text": "qweasd",
+      "id": 5
+    },
+    {
+      "title": "Asd",
+      "phone": "93482942",
+      "text": "sdfsdfwe",
+      "id": 6
+    },
+    {
+      "title": "Alooooo",
+      "phone": "asdasd",
+      "text": "asdasda",
+      "id": 7
+    },
+    {
+      "title": "Asd",
+      "phone": "34232342",
+      "text": "sdfsdfsf",
+      "id": 8
+    },
+    {
+      "title": "",
+      "phone": "",
+      "text": "",
+      "id": 9
+    },
+    {
+      "title": "zxd",
+      "phone": "",
+      "text": "",
+      "id": 10
+    },
+    {
+      "title": "",
+      "phone": "",
+      "text": "asd",
+      "id": 11
+    },
+    {
+      "title": "asdasd",
+      "phone": "",
+      "text": "asdadsa",
+      "id": 12
+    },
+    {
+      "title": "asdasd",
+      "phone": "asdas",
+      "text": "asdas",
+      "id": 13
+    },
+    {
+      "title": "asdasd",
+      "phone": "asdasas",
+      "text": "asdsad",
+      "id": 14
+>>>>>>> e6e2e287774176e541e300c777daa6c329db569b
+>>>>>>> 65ffd65fb037147398909ef9f3cfc46b9af52785
     }
   ],
   "admin": [

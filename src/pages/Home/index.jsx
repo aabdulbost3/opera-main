@@ -30,8 +30,18 @@ import { useTranslation } from "react-i18next";
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
     }
+<<<<<<<<< Temporary merge branch 1
+    const HandleSubmt = () => {
+        OpenModalUp.current.style.display = 'block'
+        CloseModalUp.current.style.display = 'none'
+        ModalTel.current.style.transform = 'scale(0)'
+        PostMessage()
+    }
+    const Post = ()=>{
+=========
     const HandleSubmt = (e) => {
         e.preventDefault()
+>>>>>>>>> Temporary merge branch 2
         const body = {
             title: MesName.current.value,
             phone: MesPhone.current.value,

@@ -1,3 +1,6 @@
+.projectComp{
+    width: 100%;
+}
 .projectComp h1{
     font-size: 2.7vw;
     color: var(--black);
@@ -10,7 +13,6 @@
     flex-wrap: wrap;
 }
 .projectComp ul li{
-    animation-name: excample;
     animation-duration: 1s;
     width: 31%;
     margin: 1.5% 1%;
@@ -24,16 +26,6 @@
     position: absolute;
     z-index: 1;
 }
-@keyframes excample{
-    from{
-        margin-top: 240px;
-        overflow: scroll;
-        opacity: 0.2;
-    }
-    to{
-        opacity: 1;
-    }
-}
 .projectComp ul li:hover{
     box-shadow: var(--box-shadow);
     transform: scale(1.01);
@@ -41,22 +33,7 @@
 .projectComp ul li img{
     height: 100%;
     width: 97.5%;
-    padding: 0 0 0 2.5%;  
-    animation-name: excamplee;
-    animation-duration: 5s; 
-}
-@keyframes excamplee{
-    from{
-
-        overflow: scroll;
-        opacity: 0.2;
-    }
-    to{
-        opacity: 1;
-    }
-}
-.projectComp button{
-    
+    padding: 0 0 0 2.5%; 
 }
 .projectComp ul li h4{
     font-size: 2vw;

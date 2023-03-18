@@ -7,7 +7,6 @@
     align-items: center;
     flex-direction: column;
     color: white;
-    padding-top: 10%;
 }
 .HeaderBox{
     width: 100%;
@@ -52,10 +51,8 @@
         font-size: 3.8vw;
     }
     .HeaderInbox img{
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
-        left: 20%;
-        top: -380%;
     }
     .HeaderImg{
         width: 100%;
