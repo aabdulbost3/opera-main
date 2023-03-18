@@ -18,9 +18,6 @@ function FooterComponent() {
     let sendtelegram = function() {
         ready();
         axios.post("https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage", {"chat_id": chat_id,"text": message})
-        MesName.current.value = null
-        MesPhone.current.value = null
-        MesMessage.current.value = null
         return false;
     };
     const { t, i18n } = useTranslation();
