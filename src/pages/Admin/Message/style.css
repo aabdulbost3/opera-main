@@ -2,6 +2,7 @@
     width: 100%;
 }
 .Message h1{
+    z-index: 2;
     padding: 1.3vw;
     width: 100%;
     background-color: #2d2d2d;
@@ -13,6 +14,10 @@
 }
 .Message ul{
     margin-top: 7vw;
+<<<<<<< HEAD
+=======
+    margin-left: 3vw;
+>>>>>>> e6e2e287774176e541e300c777daa6c329db569b
 }
 .Message li{
     padding: 0.3vw;

@@ -8,7 +8,7 @@
     font-size: 3vw;
     margin: 1vw;
 }
-.FooterComponent p{
+.FooterComP{
     font-size: 1.4vw;
     padding: 0 10%;
     text-align: center;
@@ -32,7 +32,7 @@
     display: flex;
     text-align: left;
     margin: 1vw 0;
-    padding: 0 10% 0 0 !important;
+    padding: 0 10% 0 0;
     justify-content: flex-start;
 }
 .FooterCompTexts{
@@ -80,7 +80,6 @@
     background: var(--gold);
     color: var(--white);
 }
-
 @media screen and (max-width: 650px) {
     .FooterCompBox{
         flex-direction: column;

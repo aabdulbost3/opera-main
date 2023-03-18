@@ -48,7 +48,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
     position: fixed;
     box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.2);
     background-color: var(--white);
@@ -68,7 +68,7 @@
 .BarsSide{
     position: fixed;
     background-color: var(--white);
-    width: 100%;
+    width: 80%;
     height: 100%;
     padding-top: 25vw;
     color: var(--black);

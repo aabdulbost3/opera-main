@@ -41,3 +41,85 @@ body{
     --gold: rgb(255, 187, 0);
     --box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
+.MessageModal{
+    z-index: 10;
+    position: fixed;
+    top: 1%;
+    right: -45%;
+    background-color: lightgreen;
+    border: .2vw solid rgba(102, 233, 102, 0.481);
+    border-radius: 1.5vw;
+    padding-right: 3.5vw;
+    padding: 1vw;
+    color: white;
+    box-shadow: 10 0 10 0 black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: MessageModalAnimation;
+    animation-duration: 10s;
+}
+.MessageTitle{
+    font-size: 1.9vw;
+}
+.MessageModTextBox{
+    border-top-left-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+}
+.MessageText{
+    font-size: 1.35vw;
+}
+.MessageModal i{
+    font-size: 5vw;
+    padding-left: 0.8vw;
+}
+
+.ErrorMessageModal{
+    z-index: 10;
+    position: fixed;
+    top: 1%;
+    right: -45%;
+    background-color: rgb(252, 52, 52);
+    border: .2vw solid red;
+    border-radius: 1.5vw;
+    padding-right: 3.5vw;
+    padding: 1vw;
+    color: white;
+    box-shadow: 10 0 10 0 black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: MessageModalAnimation;
+    animation-duration: 10s;
+    width: 35%;
+}
+.ErrorMessageModalTitle{
+    font-size: 1.9vw;
+}
+.ErrorMessageModText{
+    border-top-left-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    width: 80%;
+}
+.ErrorMessageModalText{
+    font-size: 1.35vw;
+}
+.ErrorMessageModal i{
+    font-size: 5vw;
+    padding-left: 0.8vw;
+}
+@keyframes MessageModalAnimation {
+    0% {
+        right: -45%;
+    }
+    15% {
+        right: 1%;
+    }
+    85% {
+        right: 1%;
+    }
+    100%{
+        right: -45%;
+        display: none;
+    }
+}

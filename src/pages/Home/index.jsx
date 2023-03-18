@@ -30,8 +30,18 @@ import { useTranslation } from "react-i18next";
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
     }
+<<<<<<< HEAD
     const HandleSubmt = (e) => {
         e.preventDefault()
+=======
+    const HandleSubmt = () => {
+        OpenModalUp.current.style.display = 'block'
+        CloseModalUp.current.style.display = 'none'
+        ModalTel.current.style.transform = 'scale(0)'
+        PostMessage()
+    }
+    const Post = ()=>{
+>>>>>>> e6e2e287774176e541e300c777daa6c329db569b
         const body = {
             title: MesName.current.value,
             phone: MesPhone.current.value,

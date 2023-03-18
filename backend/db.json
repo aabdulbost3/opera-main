@@ -104,6 +104,51 @@
           "img": "https://picsum.photos/300?rand=3"
         }
       ]
+    },
+    {
+      "id": 8,
+      "title": "Project 2",
+      "mainImg": "https://picsum.photos/300?rand=4",
+      "moreImg": [
+        {
+          "id": 1,
+          "img": "https://picsum.photos/300?rand=5"
+        },
+        {
+          "id": 2,
+          "img": "https://picsum.photos/300?rand=6"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Project 1",
+      "mainImg": "https://picsum.photos/300?rand=1",
+      "moreImg": [
+        {
+          "id": 1,
+          "img": "https://picsum.photos/300?rand=2"
+        },
+        {
+          "id": 2,
+          "img": "https://picsum.photos/300?rand=3"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Project 2",
+      "mainImg": "https://picsum.photos/300?rand=4",
+      "moreImg": [
+        {
+          "id": 1,
+          "img": "https://picsum.photos/300?rand=5"
+        },
+        {
+          "id": 2,
+          "img": "https://picsum.photos/300?rand=6"
+        }
+      ]
     }
   ],
   "contact": [
@@ -121,11 +166,12 @@
     },
     {
       "title": "ok",
-      "phone": "000",
-      "text": "okok",
+      "phone": "8888",
+      "text": "jhgsgdfhgs",
       "id": 3
     },
     {
+<<<<<<< HEAD
       "title": "O man",
       "phone": "+998000000000",
       "text": "none bruh none",
@@ -136,6 +182,72 @@
       "phone": "fefaeg",
       "text": "weagegea",
       "id": 5
+=======
+      "title": "",
+      "phone": "",
+      "text": "",
+      "id": 4
+    },
+    {
+      "title": "Ad",
+      "phone": "12314124",
+      "text": "qweasd",
+      "id": 5
+    },
+    {
+      "title": "Asd",
+      "phone": "93482942",
+      "text": "sdfsdfwe",
+      "id": 6
+    },
+    {
+      "title": "Alooooo",
+      "phone": "asdasd",
+      "text": "asdasda",
+      "id": 7
+    },
+    {
+      "title": "Asd",
+      "phone": "34232342",
+      "text": "sdfsdfsf",
+      "id": 8
+    },
+    {
+      "title": "",
+      "phone": "",
+      "text": "",
+      "id": 9
+    },
+    {
+      "title": "zxd",
+      "phone": "",
+      "text": "",
+      "id": 10
+    },
+    {
+      "title": "",
+      "phone": "",
+      "text": "asd",
+      "id": 11
+    },
+    {
+      "title": "asdasd",
+      "phone": "",
+      "text": "asdadsa",
+      "id": 12
+    },
+    {
+      "title": "asdasd",
+      "phone": "asdas",
+      "text": "asdas",
+      "id": 13
+    },
+    {
+      "title": "asdasd",
+      "phone": "asdasas",
+      "text": "asdsad",
+      "id": 14
+>>>>>>> e6e2e287774176e541e300c777daa6c329db569b
     }
   ],
   "admin": [
