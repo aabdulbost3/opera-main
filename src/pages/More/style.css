@@ -3,7 +3,7 @@
 }
 .MorePageBox{
     padding: 3vw;
-    padding-top: 10vw;
+    padding-top: 14vw;
     width: 100%;
 }
 .MoreExitBox{
@@ -46,5 +46,8 @@
         font-size: 6vw;
         padding: 2.5vw 3vw;
         margin-top: 10%;
+    }
+    .MoreInbox span h2{
+        font-size: 7vw;
     }
 }

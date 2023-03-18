@@ -57,7 +57,7 @@ function Portfolio() {
         MesMessage.current.value = null
     }
     return (
-        <div>
+        <div className='Portifolio'>
             <Navbar/>
             <ProjectComponent button="false"/>
             <FooterComponent/>

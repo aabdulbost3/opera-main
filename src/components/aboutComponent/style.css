@@ -16,7 +16,7 @@
     width: 60%; 
     margin: 3% auto; 
     color: var(--black); 
-    font-size: 1.2vw; 
+    font-size: 1.6vw; 
 } 
 .overP{ 
     display: none; 
@@ -30,7 +30,7 @@
     border: 0.2vw solid var(--gold); 
     padding: 1.5% 4%; 
     border-radius: 2vw; 
-    font-size: 1.3vw; 
+    font-size: 1.45vw; 
 } 
 .aboutComp button:hover{ 
     background: var(--gold); 
@@ -51,7 +51,7 @@
     z-index: 4; 
     width: 40%; 
     animation-duration: 2s; 
-    height: 80vh; 
+    height: 90vh; 
     overflow-y: scroll;
 } 
 .aboutComp .aboutModal img{ 
@@ -79,29 +79,35 @@
 }
 @media(max-width: 650px){ 
     .aboutComp h1{ 
-        font-size: 7vw; 
+        font-size: 8vw; 
     } 
     .aboutComp p{ 
-        font-size: 3.5vw; 
+        font-size: 4vw; 
+        width: 95%;
     } 
     .aboutComp button{ 
-        font-size: 3.5vw; 
-        font-weight:700; 
+        font-size: 5vw; 
+        font-weight: 400;
+        padding: 2.3vw 5vw; 
+        margin-top: 2vw;
     } 
     .aboutComp .aboutModal{ 
-        width: 80%; 
+        width: 85%; 
+        height: 90vh;
     }
     .aboutComp .aboutModal h1{ 
-    font-size: 4.6vw; 
+    font-size: 6vw; 
     }
     .aboutComp .aboutModal h2{ 
-        font-size: 4.1vw; 
+        font-size: 5vw; 
     } 
     .aboutComp .aboutModal p{ 
         width: 80%; 
-        font-size: 3.2vw; 
+        font-size: 3.8vw; 
     } 
     .aboutComp i{ 
-        font-size: 6vw; 
+        font-size: 8vw;
+        top: 3%;
+        right: 5%; 
     } 
 }

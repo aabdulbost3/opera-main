@@ -38,15 +38,18 @@ marquee{
     color: var(--gray);
 }
 @media (max-width: 650px) {
+    marquee{
+        font-size: 7vw;
+    }
     .helpComp ul li img{
-        width: 25vw;
-        height: 25vw;
+        width: 40vw;
+        height: 40vw;
     }
     .helpComp ul li h3{
-        font-size: 4vw;
+        font-size: 6vw;
     }
     .helpComp ul li p{
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
     .helpComp .titleBox h1{
         font-size: 5vw;

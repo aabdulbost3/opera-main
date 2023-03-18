@@ -5,11 +5,11 @@
 .FooterComponent h1{
     color: var(--black);
     text-align: center;
-    font-size: 3vw;
+    font-size: 4vw;
     margin: 1vw;
 }
 .FooterComP{
-    font-size: 1.4vw;
+    font-size: 1.5vw;
     padding: 0 10%;
     text-align: center;
     margin-bottom: 2vw;
@@ -21,14 +21,14 @@
     padding: 2vw;
 }
 .FooterCompBox h2{
-    font-size: 2vw;
+    font-size: 2.2vw;
     font-weight: 400;
 }
 .FooterCompBox h4{
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 .FooterCompBox p{
-    font-size: 1.3vw;
+    font-size: 1.4vw;
     display: flex;
     text-align: left;
     margin: 1vw 0;
@@ -43,12 +43,21 @@
     align-items: center;
 }
 .FooterCompIcons i{
-    font-size: 2.5vw;
-    padding: .4vw;
+    font-size: 3vw;
+    padding: .3vw .4vw;
+    border-radius: 30%;
     cursor: pointer;
+    margin: .4vw;
 }
-.FooterCompIcons i:hover{
-    transform: scale(1.1);
+.FooterCompIcons i:nth-child(1):hover{
+    color: #4267B2;
+}
+.FooterCompIcons i:nth-child(2):hover{
+    color: white;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.FooterCompIcons i:nth-child(3):hover{
+    color: #0088cc;
 }
 .FooterCompInbox{
     display: flex;
@@ -72,7 +81,7 @@
 .FooterCompInbox button{
     color: var(--black);
     border: 0.2vw solid var(--gold);
-    padding: 3.5% 4%;
+    padding: 4.5% 6%;
     border-radius: 2vw;
     font-size: 1.5vw;
 }
@@ -89,39 +98,44 @@
         margin-right: 0;
     }
     .FooterComponent p{
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
     .FooterComponent h1{
-        font-size: 8vw;
+        font-size: 8.5vw;
         padding: 2% 0;
     }
     .FooterCompBox h2{
-        font-size: 5.5vw;
+        font-size: 6.5vw;
         text-align: center;
         margin-top: 2vw;
     }
     .FooterCompBox p {
         padding: 3% 10% !important;
         text-align: center;
+        font-size: 4.5vw;
     }
     .FooterCompInbox input , .FooterCompInbox textarea{
-        font-size: 4.5vw;
-        margin: 1vw;
+        font-size: 5vw;
+        margin: 1.5vw;
         width: 100%;
+        padding: 2.5vw;
+        border-radius: 3vw;
     }
     .FooterCompInbox button{
         font-size: 5vw;
         margin: 2vw;
+        padding: 2vw -4vw;
+        border-radius: 3vw;
     }
     .FooterCompIcons {
         justify-content: center;
     }
     .FooterCompIcons i{
-        font-size: 7vw;
-        margin: 1.5vw;
+        font-size: 10vw;
+        margin: 2.5vw;
     }
     .FooterCompBox h4{
-        font-size: 5vw;
+        font-size: 6vw;
         text-align: center;
         margin: 1vw;
     }

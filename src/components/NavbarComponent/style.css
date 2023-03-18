@@ -71,15 +71,18 @@
     background-color: var(--white);
     width: 100%;
     height: 100%;
-    padding-top: 25vw;
     color: var(--black);
     transform: translateX(-200%);
     overflow-y: scroll;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .BarsSide ul{
     display: flex;
-    margin-left: auto;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -89,10 +92,10 @@
     color: var(--black);
 }
 .BarsSide li h3 button{
-    font-size: 5.5vw;
+    font-size: 6.5vw;
     font-weight: 450;
     color: var(--black);
-    margin: 3vw;
+    margin: 2.5vw;
 }
 .BarsSide li button{
     font-size: 5.5vw;
