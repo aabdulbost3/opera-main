@@ -30,7 +30,7 @@ import { useTranslation } from "react-i18next";
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
     }
-    const HandleSubmt = (e) => {
+    const HandleSubmt = ()=>{
         e.preventDefault()
         const body = {
             title: MesName.current.value,

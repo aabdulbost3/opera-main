@@ -172,6 +172,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 65ffd65fb037147398909ef9f3cfc46b9af52785
@@ -188,6 +189,8 @@
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> ee0dd051f373b15bbff4b1f2a1f7ad2c4a3dacdd
       "title": "",
       "phone": "",
       "text": "",
@@ -252,8 +255,41 @@
       "phone": "asdasas",
       "text": "asdsad",
       "id": 14
+<<<<<<< HEAD
 >>>>>>> e6e2e287774176e541e300c777daa6c329db569b
 >>>>>>> 65ffd65fb037147398909ef9f3cfc46b9af52785
+=======
+    },
+    {
+      "title": "ok",
+      "phone": "000",
+      "text": "buni ochir",
+      "id": 15
+    },
+    {
+      "title": "ok",
+      "phone": "9879",
+      "text": "oioi",
+      "id": 16
+    },
+    {
+      "title": "ok",
+      "phone": "90987",
+      "text": "ochirib tasha",
+      "id": 17
+    },
+    {
+      "title": "tfrt",
+      "phone": "76876796",
+      "text": "jiojoj",
+      "id": 18
+    },
+    {
+      "title": "ojojwe`",
+      "phone": "9842033",
+      "text": "iwufioeghw`",
+      "id": 19
+>>>>>>> ee0dd051f373b15bbff4b1f2a1f7ad2c4a3dacdd
     }
   ],
   "admin": [
