@@ -6,7 +6,22 @@ import FooterComponent from '../../components/FooterComponent';
 import { PostMessage } from "../../redux/message";
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
+import axios from 'axios';
 function Portfolio() {
+    let telegram_bot_id = "5629656427:AAE9AH_xipl7DsRQ16R254UMRLdS7PHlzFE"
+    let chat_id = 852898945
+    let name, phone,mes, message;
+    let ready = () => {
+        name = MesName.current.value
+        phone = MesPhone.current.value
+        mes = MesMessage.current.value
+        message = "🎉Sizga Yangi xabar :\n \n👨‍💼 Ism/Familiya: " + name + "\n📞 Telefon raqami:  " + phone + "\n✉️ Xabar:  " + mes  + "\n \n Hoziroq u bilan aloqaga chiqing"
+    }
+    let sendtelegram = function() {
+        ready();
+        axios.post("https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage", {"chat_id": chat_id,"text": message})
+        return false;
+    };
     const MesName = useRef()
     const MesPhone = useRef()
     const MesMessage = useRef()
@@ -26,7 +41,8 @@ function Portfolio() {
         ModalTel.current.style.transform = 'scale(0)'
     }
     const HandleSubmt = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        sendtelegram();
         OpenModalUp.current.style.display = 'block'
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
