@@ -51,7 +51,7 @@ import { useTranslation } from "react-i18next";
             <Navbar />
             <Header />
             <AboutComponent/>
-            <ProjectComponent number="6" button="true" />
+            {/* <ProjectComponent number="6" button="true" /> */}
             <HelpComponent />
             <MensComponent />
             <FooterComponent />
