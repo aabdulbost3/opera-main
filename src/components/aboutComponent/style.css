@@ -16,7 +16,7 @@
     width: 60%; 
     margin: 3% auto; 
     color: var(--black); 
-    font-size: 1.2vw; 
+    font-size: 1.6vw; 
 } 
 .overP{ 
     display: none; 
@@ -30,7 +30,7 @@
     border: 0.2vw solid var(--gold); 
     padding: 1.5% 4%; 
     border-radius: 2vw; 
-    font-size: 1.3vw; 
+    font-size: 1.45vw; 
 } 
 .aboutComp button:hover{ 
     background: var(--gold); 
@@ -51,7 +51,7 @@
     z-index: 4; 
     width: 40%; 
     animation-duration: 2s; 
-    height: 80vh; 
+    height: 90vh; 
     overflow-y: scroll;
 } 
 .aboutComp .aboutModal img{ 

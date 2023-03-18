@@ -14,7 +14,7 @@ function AboutComponent() {
     }
     const closeModal = () => {
         modal.current.style.top = '100%'
-        modal.current.style.display = 'block'
+        // modal.current.style.display = 'block'
         closeModalBtn.current.style.display = 'none'
         closeOverlayBtn.current.style.display = 'none'
     }

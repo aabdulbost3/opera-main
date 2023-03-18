@@ -32,9 +32,9 @@ function FooterComponent() {
     <div className="FooterComponent" id="2">
     {dataMessage.postMessage.Success == true ?
         <div className="MessageModal">
-            <div className="MessageModTex   tBox">
+            <div className="MessageModTextBox">
                 <h3 className='MessageTitle'>{t("Message.4")}</h3>
-                <p className='MessageText'>{t("Message.5")}</p>
+                <p className='MessageModText'>{t("Message.5")}</p>
             </div>
             <i className="fa-sharp fa-regular fa-face-smile"></i>
         </div> : dataMessage.postMessage.Error == true ?
