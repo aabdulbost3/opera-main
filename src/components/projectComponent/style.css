@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .projectComp ul li{
     animation-duration: 1s;
@@ -46,7 +47,7 @@
     padding: 1.5% 3.8%;
     border-radius: 2vw;
     font-size: 1.4vw;
-    margin: 2% 43%;
+    margin: 2% 0;
     width: max-content;
 }
 .projectComp .NavLink:hover{
@@ -55,8 +56,8 @@
 }
 .Error, .loading{
     color: #2d2d2d;
-    margin: 0 auto;
-    font-size: 1.5vw;
+    margin: 0 45%;
+    font-size: 2vw;
 }
 @media (max-width: 650px) {
     .projectComp ul li{

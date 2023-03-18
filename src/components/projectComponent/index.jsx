@@ -28,8 +28,8 @@ function ProjectComponent(props) {
                         <h4>{elem.title}</h4>
                     </li>)
                 :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
-                </ul>
                 {props.button == "true" ? <button onClick={() => window.location.href = '/Portfolio'} class="NavLink" to="/portfolio">{t("ProjectComponent.0")}</button> : null}
+                </ul>
         </div>
     )
 }
