@@ -65,13 +65,14 @@
         width: 48%;
     }
     .projectComp ul li h4{
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
     .projectComp h1{
         font-size: 6vw;
         margin-top: 5%;
     }
     .projectComp .NavLink{
-        font-size: 2.5vw;
+        font-size: 4.5vw;
+        padding: 3vw;
     }
 }
