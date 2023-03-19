@@ -14,7 +14,10 @@
 }
 .Message ul{
     margin-top: 7vw;
+<<<<<<< HEAD
+=======
     margin-left: 3vw;
+>>>>>>> eebae0204ce5cbf79752e3097fb4f3fd5337287c
 }
 .Message li{
     padding: 0.3vw;
