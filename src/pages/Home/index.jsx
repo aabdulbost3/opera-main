@@ -67,7 +67,7 @@ import axios from "axios";
             <Navbar />
             <Header />
             <AboutComponent/>
-            {/* <ProjectComponent number="6" button="true" /> */}
+            <ProjectComponent number="6" button="true" />
             <HelpComponent />
             <MensComponent />
             <FooterComponent />
