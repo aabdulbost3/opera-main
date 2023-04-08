@@ -14,15 +14,22 @@ function SignPage() {
     const intName = namePass.current.value
     const intPass = namePassUp.current.value
       const api = await axios.get(`${API_URL}/admin/?name=${intName}`)
+      const Pwapi = await axios.get(`${API_URL}/admin/?password=${intName}`)
       if(api.data.length == 0){
         setError(0)
       }
       if(api.data.length !== 0){
         setError(null)
       }
+      if(Pwapi.data.length == 0){
+        setError(0)
+      }
+      if(Pwapi.data.length !== 0){
+        setError(null)
+      }
       api.data.map(e => {
         if(e.password == intPass){
-          window.localStorage.setItem('Auth', e)
+          window.localStorage.setItem('Auth', e.name)
           navlink('/admin')
         }
       })

@@ -65,8 +65,8 @@ const HandleSubmit1 = (e) => {
       {dataBlog.getBlog.Success == true ? dataBlog.getBlog?.Data.map((elem, index) => 
         <li key={index}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>{elem.name}</h3>
-            <p>{elem.password}</p>
+            <h3>Name: {elem.name}</h3>
+            <p>Password: {elem.password}</p>
             <div className="AdBtnBox">
                 <button value={elem.id} onClick={blogDelete}><i className="fa-solid fa-trash"></i>Delete</button>
                 <button value={elem.id} ref={editor1} onClick={() => {SetBlogModal1(true);BlogOverlay.current.style.display="block";}}><i className="fa-solid fa-edit"></i>Edit</button>

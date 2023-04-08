@@ -59,3 +59,19 @@
     font-size: 2vw;
     margin-right: .5vw;
 }
+.sidebarBot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+.sidebarBot i{
+    background-color: #1d1d1d;
+    padding: 1vw 1.1vw;
+    font-size: 1.4vw;
+    border-radius: 50%;
+}
+.sidebarBot h2{
+    font-size: 1.4vw;
+    margin-left: .5vw;
+}
