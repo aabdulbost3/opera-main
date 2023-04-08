@@ -106,49 +106,9 @@
       ]
     },
     {
-      "id": 8,
-      "title": "Project 2",
-      "mainImg": "https://picsum.photos/300?rand=4",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=5"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=6"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "title": "Project 1",
-      "mainImg": "https://picsum.photos/300?rand=1",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=2"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=3"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "title": "Project 2",
-      "mainImg": "https://picsum.photos/300?rand=4",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=5"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=6"
-        }
-      ]
+      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1680948568/ctg1ran2mtlipnggrj7v.jpg",
+      "title": "Project 1202",
+      "id": 8
     }
   ],
   "contact": [
@@ -175,6 +135,12 @@
       "phone": "+998000000000",
       "text": "none bruh none",
       "id": 4
+    },
+    {
+      "title": "Unknown",
+      "phone": "+998 00000000",
+      "text": "Abdulbosit oka qale",
+      "id": 5
     }
   ],
   "admin": [

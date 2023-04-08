@@ -16,6 +16,10 @@ function Sidebar() {
           <li onClick={HandleLi} id="Messages"><i className="fa-solid fa-message"></i> <p id="Messages" onClick={HandleLi} className='SideText'>Messages</p></li>
           <li onClick={HandleLi} id="Blogs"><i className="fa-solid fa-folder"></i> <p id="Blogs" onClick={HandleLi} className='SideText'>Admins</p></li>
       </ul>
+      <div className="sidebarBot">
+        <i className='fa-solid fa-user'></i>
+        <h2>{window.localStorage.getItem('Auth')}</h2>
+      </div>
     </div>
   );
 }

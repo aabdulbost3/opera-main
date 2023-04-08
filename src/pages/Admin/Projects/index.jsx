@@ -65,7 +65,7 @@ function Projects() {
         e.preventDefault();
         const body = {
             mainImg: imgUpload,
-            name: name.current.value
+            title: name.current.value
         }
         const id = editor.current.value
         dispatch(PutProject({body, id}))
