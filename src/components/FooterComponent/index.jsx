@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
 function FooterComponent() {
     let telegram_bot_id = "5629656427:AAE9AH_xipl7DsRQ16R254UMRLdS7PHlzFE"
-    let chat_id = 852898945
+    let chat_id = 2065467965
     let name, phone,mes, message;
     let ready = () => {
         name = MesName.current.value
