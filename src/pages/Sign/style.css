@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: dimgrey;
     color: white;
     overflow: hidden;
 }
@@ -56,12 +55,12 @@
 }
 .SignPage button{
     color: var(--black);
-    border: 0.2vw solid var(--gold);
+    border: 0.18vw solid var(--gold);
     padding: .8vw 1.8vw;
     border-radius: 2vw;
     font-size: 1.5vw;
     color: var(--gold);
-    margin-top: .4vw;
+    margin-top: 1vw;
 }
 .SignPage button:hover{
     background: var(--gold);

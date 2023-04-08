@@ -13,9 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2vw;
 }
 .HeaderImg{
-    width: 60%;
+    width: 100%;
 }
 .HeaderInbox{
     position: relative;
@@ -36,7 +37,8 @@
         flex-direction: column;
     }
     .Header{
-        padding-top: 25%;
+        padding-top: 35%;
+        padding-bottom: 15%;
     }
     .HeaderInbox {
         display: flex;
