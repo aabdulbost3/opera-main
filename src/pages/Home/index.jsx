@@ -45,14 +45,9 @@ import axios from "axios";
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
     }
-<<<<<<< HEAD
-    const HandleSubmt = (e) => {
-        e.preventDefault()
-=======
     const HandleSubmt = (e)=>{
         e.preventDefault();
         sendtelegram();
->>>>>>> eebae0204ce5cbf79752e3097fb4f3fd5337287c
         const body = {
             title: MesName.current.value,
             phone: MesPhone.current.value,
