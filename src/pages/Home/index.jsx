@@ -45,7 +45,10 @@ import axios from "axios";
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ef1e5910f626166e16762dc67a5e20d97f46d290
     const HandleSubmt = (e)=>{
         e.preventDefault();
         sendtelegram();
@@ -68,7 +71,7 @@ import axios from "axios";
             <Navbar />
             <Header />
             <AboutComponent/>
-            {/* <ProjectComponent number="6" button="true" /> */}
+            <ProjectComponent number="6" button="true" />
             <HelpComponent />
             <MensComponent />
             <FooterComponent />
