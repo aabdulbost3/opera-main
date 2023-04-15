@@ -22,7 +22,7 @@ function Admin() {
         {window.localStorage.getItem('HandleLi') == "Projects" ? <Project/> :
         window.localStorage.getItem('HandleLi') == "Blogs" ? <Blogs/> :
         window.localStorage.getItem('HandleLi') == "Messages" ? <Message/> : null
-        }
+      }
       </div>
     </div>
   );

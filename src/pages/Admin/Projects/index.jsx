@@ -13,8 +13,31 @@ function Projects() {
     const projectOverlay = useRef(false)
     const [imgUpload, setImgUpload] = useState();
     const [loading, setLoading] = useState();
+    const [moreLoading, setMoreLoading] = useState();
     const dispatch = useDispatch()
     const dataProject = useSelector(state => state.project)
+    const [moreUploadImage, setmoreUploadImage] = useState([]);
+    const UploadFile = (e) => {
+        const imgsUpload = [];
+        for (let i = 0; i < e.target.files.length; i++) {
+          const element = e.target.files[i];
+          const formData = new FormData()
+          formData.append('file', element)
+          formData.append('upload_preset', 'aozyh8sm')
+          setMoreLoading(true);
+          const postImage = async () => {
+              try {
+                  const response = await axios.post(`${IMAGE_URL}`, formData)
+                  imgsUpload.push({img: response?.data.secure_url})
+                  setMoreLoading(false)
+              } catch (error) {
+                  console.log(error);
+              }
+            }
+            postImage()
+          }
+        setmoreUploadImage(imgsUpload)
+    }
     const HandleFile = (e) => {
         const formData = new FormData()
         formData.append('file', e.target.files[0])
@@ -47,19 +70,20 @@ function Projects() {
     const AddProject = () => {
         SetProjectModal(true)
         projectOverlay.current.style.display = "block"
-
     }
     const HandleSubmit = (e) => {
         e.preventDefault();
         const body = {
-            mainImg: imgUpload,//Logo uchun keyin qoshimcha bolishi kere moreImg db.jsonda yozilgan uni fayli bilan oladi
-            title: name.current.value
+            mainImg: imgUpload,
+            title: name.current.value,
+            moreImg: moreUploadImage
         }
         dispatch(PostProject(body))
         dispatch(GetProject())
         SetProjectModal(false)
         projectOverlay.current.style.display = "none"
-        setImgUpload(null)
+        setImgUpload(null);
+        setmoreUploadImage(null)
     }
     const HandleSubmit1 = (e) => {
         e.preventDefault();
@@ -76,11 +100,12 @@ function Projects() {
     }
   return (
     <div className="Projects">
-        <div className="overlay" ref={projectOverlay} onClick={() => {SetProjectModal(false);projectOverlay.current.style.display = "none";SetProjectModal1(false)}}></div>
+        <div className="overlay" ref={projectOverlay} onClick={() => {SetProjectModal(false);projectOverlay.current.style.display = "none";SetProjectModal1(false);setImgUpload(null);setmoreUploadImage(null);setLoading(null);setMoreLoading(null)}}></div>
         {projectModal ? <form onSubmit={HandleSubmit} className="projectModal">
             <h3>Add Project</h3>
             <input type="text" ref={name} placeholder='Enter Project Name' required/>
             {loading ? <p>Loading...</p> : <input type="file" onChange={HandleFile} />}
+            {moreLoading ? <p>Loading file(s)...</p> : <input type="file" onChange={UploadFile} multiple />}
             <button type="submit">Add </button>
         </form> :null}
         {projectModal1 ? <form onSubmit={HandleSubmit1} className="projectModal">
