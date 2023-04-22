@@ -93,7 +93,6 @@
 }
 .projectModal{
     width: 40vw;
-    padding: 2vw;
     background-color: var(--white);
     box-shadow: 0 2vw 2vw 0 rgba(0, 0, 0, 0.4);
     border-radius: 1vw;
@@ -104,10 +103,22 @@
     left: 33vw; 
     z-index: 4;
 }
+.projectModal div{
+    margin: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+}
 .projectModal h3{
     font-size: 2vw;
     margin-bottom: 1vw;
-    color: #1d1d1d;
+    color: #FFF;
+    padding: 2vw;
+    border-top-right-radius: 0.8vw;
+    border-top-left-radius: 0.8vw;
+    background: #2d2d2d;
+}
+.projectModal h4{
+    margin-top: 0.5vw;
 }
 .projectModal input{
     padding: 1vw;
@@ -127,4 +138,7 @@
 }
 .projectModal button:hover{
     opacity: .6;
+}
+.yellowLoading{
+    color: yellowgreen;
 }
