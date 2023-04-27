@@ -89,47 +89,6 @@
           "img": "https://picsum.photos/300?rand=6"
         }
       ]
-    },
-    {
-      "id": 7,
-      "title": "Project 1",
-      "mainImg": "https://picsum.photos/300?rand=1",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=2"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=3"
-        }
-      ]
-    },
-    {
-      "title": "ok",
-      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682184534/vsy6kvuqff1jhfr0ia9o.jpg",
-      "moreImg": [
-        {
-          "id": "1",
-          "img": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682181922/bhgqeexat1p0sziwimnd.jpg"
-        }
-      ],
-      "id": 8
-    },
-    {
-      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1681219718/lz0sjzh4zxqi55wqocvd.jpg",
-      "title": "ok",
-      "id": 9
-    },
-    {
-      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1681219752/ompxe7xgfkyuzbkr1d23.jpg",
-      "title": "nice",
-      "id": 10
-    },
-    {
-      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1681219783/ef816wsi2s5uided1pg3.jpg",
-      "title": "okbro",
-      "id": 11
     }
   ],
   "contact": [

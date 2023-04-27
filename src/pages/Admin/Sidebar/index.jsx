@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import OperaIco from "../../../operaIcon.ico"
 import './style.css';
 
 function Sidebar() {
@@ -9,7 +10,7 @@ function Sidebar() {
     }
   return (
     <div className="Sidebar">
-      <button>Opera</button>
+      <img src={OperaIco} />
       <ul>
           <li><NavLink to='/' className='Linker'><i className="fa-solid fa-house"></i> <p className='SideText'>Home</p></NavLink></li>
           <li onClick={HandleLi} id="Projects"><i className="fa-solid fa-file"></i> <p id="Projects" onClick={HandleLi} className='SideText'>Projects</p></li>
