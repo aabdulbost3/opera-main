@@ -109,6 +109,21 @@
       "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1680948568/ctg1ran2mtlipnggrj7v.jpg",
       "title": "Project 1202",
       "id": 8
+    },
+    {
+      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1681219718/lz0sjzh4zxqi55wqocvd.jpg",
+      "title": "ok",
+      "id": 9
+    },
+    {
+      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1681219752/ompxe7xgfkyuzbkr1d23.jpg",
+      "title": "nice",
+      "id": 10
+    },
+    {
+      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1681219783/ef816wsi2s5uided1pg3.jpg",
+      "title": "okbro",
+      "id": 11
     }
   ],
   "contact": [
@@ -141,6 +156,18 @@
       "phone": "+998 00000000",
       "text": "Abdulbosit oka qale",
       "id": 5
+    },
+    {
+      "title": "okoko",
+      "phone": "fjff",
+      "text": "yedhmyfmy",
+      "id": 6
+    },
+    {
+      "title": "iojoholo",
+      "phone": "543535",
+      "text": "dhdhfjfjv",
+      "id": 7
     }
   ],
   "admin": [

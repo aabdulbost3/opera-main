@@ -37,7 +37,7 @@ body{
 :root{
     --black: #000;
     --white: #FFF;
-    --gray: rgba(197, 179, 179, 0.767);
+    --gray: rgba(211, 146, 146, 0.767);
     --gold: rgb(255, 187, 0);
     --box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
