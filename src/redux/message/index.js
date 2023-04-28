@@ -4,10 +4,10 @@ import axios from "axios"
 import { API_URL } from "../../utils";
 
 export const GetMessage = createAsyncThunk("message/get" , async () => {
-    return await axios.get(`${API_URL}/contact`).then(res => res.data)
+    return await axios.get(`${API_URL}/message`).then(res => res.data)
 })
 export const PostMessage = createAsyncThunk("message/post" , async (body) => {
-    return await axios.post(`${API_URL}/contact`, body).then(res => res.data)
+    return await axios.post(`${API_URL}/message`, body).then(res => res.data)
 })
 
 const MessageSlice = createSlice({

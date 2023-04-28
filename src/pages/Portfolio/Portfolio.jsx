@@ -40,18 +40,18 @@ function Portfolio() {
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
     }
-    const HandleSubmt = (e) => {
+    const HandleSubmt = async (e) => {
         e.preventDefault();
         sendtelegram();
         OpenModalUp.current.style.display = 'block'
         CloseModalUp.current.style.display = 'none'
         ModalTel.current.style.transform = 'scale(0)'
         const body = {
-            title: MesName.current.value,
+            fullName: MesName.current.value,
             phone: MesPhone.current.value,
-            text: MesMessage.current.value
+            message: MesMessage.current.value
         }
-        dispatch(PostMessage(body))
+        await dispatch(PostMessage(body))
         MesName.current.value = null
         MesPhone.current.value = null
         MesMessage.current.value = null

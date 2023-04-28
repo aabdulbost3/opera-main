@@ -34,9 +34,9 @@ function FooterComponent() {
     e.preventDefault()
     sendtelegram();
     const body = {
-        title: MesName.current.value,
+        fullName: MesName.current.value,
         phone: MesPhone.current.value,
-        text: MesMessage.current.value
+        message: MesMessage.current.value
     }
     dispatch(PostMessage(body))
     MesName.current.value = null
