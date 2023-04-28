@@ -7,25 +7,28 @@
     color: white;
 }
 .BlogNav{
-    background-color: #2d2d2d;
-    width: 90%;
+    background-color: #1d1d1d;
+    width: 86%;
     display: flex;
     justify-content: space-between;
-    padding: 1.8vw;
+    padding: 1.6vw 2.5vw;
     top: 0;
-    left: 10%;
+    left: 14.5%;
     position: fixed;
 }
 .BlogNav h1{
     font-size: 2.6vw;
     color: #FFF;
 }
-.BlogNav button{
+.BlogNavBtn{
     color: var(--white);
-    background-color: #1d1d1d;
-    padding: 1vw 2vw;
-    font-size: 1.2vw;
+    background-color: #0d0d0d;
+    padding: 1vw 1.5vw;
+    font-size: 1.3vw;
     border-radius: 1vw;
+}
+.BlogNavBtn i{
+    margin-right: .3vw;
 }
 .BlogNav button:hover{
     opacity: .6;
@@ -34,21 +37,26 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin-left: 15%;
     justify-content: center;
     align-items: center;
     padding: 2vw;
-    margin-top: 3vw;
+    top: 10%;
 }
 .Blog li{
     display: flex;
     flex-direction: column;
     width: 300px;
-    background-color: #464646;
+    background-color: #2d2d2d;
     margin: 10px;
-    padding: 15px;
+    border-radius: 2vw;
+    padding: 1vw;
 }
 .Blog li:hover{
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+.Blog li img{
+    border-radius: 2vw;
 }
 .Blog li h3{
     margin: 0.5vw 0;
@@ -56,15 +64,4 @@
 }
 .Blog li p{
     font-size: 1vw;
-}
-.BlogDate{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1vw 0;
-}
-.BlogDate h5{
-    font-weight: 400;
-    font-size: 1.3vw;
-    color: #F1D9D9;
 }

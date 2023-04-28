@@ -1,38 +1,88 @@
 .Message{
     width: 100%;
 }
+.CopiedMessage{
+    position: fixed;
+    z-index: 2;
+    bottom: -20%;
+    right: 1%;
+    width: fit-content;
+    padding: 1vw 1.2vw;
+    background-color: #1d1d1d;
+    color: white;
+    font-size: 1.65vw;
+    border-radius: 1vw;
+    animation-name: CopiedAnimation;
+    animation-duration: 4s;
+    display: none;
+}
+@keyframes CopiedAnimation {
+    0%{
+        bottom: -20%;
+    }
+    15%{
+        bottom: 2%;
+    }
+    85%{
+        bottom: 2%;
+    }
+    100%{
+        bottom: -20%;
+    }
+}
 .Message h1{
     z-index: 2;
-    padding: 1.3vw;
+    padding: 1.6vw 2.5vw;
+    font-size: 3vw;
     width: 100%;
-    background-color: #2d2d2d;
-    margin-bottom: 30px;
+    background-color: #1d1d1d;
     color: #FFF;
     top: 0;
-    left: 10%;
+    left: 14.5%;
     position: fixed;
+    display: flex;
+    align-items: center;
+}
+.Message h1 i{
+    font-size: 3.1vw;
+    margin-right: 0.7vw;
+    margin-top: .4vw;
 }
 .Message ul{
-    margin-top: 7vw;
-    margin-left: 3vw;
+    margin-top: 18%;
+    margin-left: -3vw;
 }
 .Message li{
-    padding: 0.3vw;
-    border: 0.2vw solid white;
-    margin: 1vw;
+    border-radius: 2vw;
+    border-bottom-left-radius: .5vw;
+    border-top-left-radius: .5vw;
+    padding: 1.1vw;
+    margin: .3vw;
     width: fit-content;
-    border: 0.2vw solid #4d4d4d;
+    color: white;
+    background-color: #2d2d2d;
+}
+.Message li:first-child{
+    border-top-left-radius: 2vw;
+}
+.MessageTexts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .Message li h4{
     font-size: 2vw;
+    margin-right: 2vw;
 }
-.Message li h5{
-    font-size: 1.3vw;
+.Message li button{
+    color: white;
+    font-size: 1.4vw;
     opacity: .6;
-    margin-bottom: 0.5vw;
 }
 .Message li p{
     font-size: 1.3vw;
     opacity: .9;
-    margin: 1vw;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-bottom: .2vw;
 }

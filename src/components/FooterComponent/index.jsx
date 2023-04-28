@@ -28,7 +28,7 @@ function FooterComponent() {
     const dispatch = useDispatch()
     const dataMessage = useSelector(state => state.message)
     const HandleNav = () => {
-        navlink('admin')
+        navlink('/admin')
     }
     const Post = (e)=>{
     e.preventDefault()

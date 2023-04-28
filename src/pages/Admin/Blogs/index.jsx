@@ -58,8 +58,8 @@ const HandleSubmit1 = (e) => {
             <button type="submit">Edit</button>
         </form> :null}
         <div className="BlogNav">
-        <h1>Admins</h1>
-        <button onClick={() => {SetBlogModal(true);BlogOverlay.current.style.display="block"}}>+ Add Admin</button>
+        <h1> <i className='fa-solid fa-user'></i> Admins</h1>
+        <button className='BlogNavBtn' onClick={() => {SetBlogModal(true);BlogOverlay.current.style.display="block"}}>+<i className='fa-solid fa-user'></i>  Add Admin</button>
         </div>
       <ul>
       {dataBlog.getBlog.Success == true ? dataBlog.getBlog?.Data.map((elem, index) => 

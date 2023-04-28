@@ -173,8 +173,8 @@ function Projects() {
             </div>
         </form> :null}
         <div className="ProjectsNav">
-            <h1>Projects</h1>
-            <button onClick={AddProject}>+ Add Project</button>
+            <h1><i className='fa-solid fa-folder'></i> Projects</h1>
+            <button className='ProjectsNavBtn' onClick={AddProject}>+<i className='fa-solid fa-folder'></i> Add Project</button>
         </div>
         <ul>
             {dataProject.getProject.Success == true ? dataProject.getProject?.Data.map((elem, index) => 
