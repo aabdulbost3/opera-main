@@ -23,6 +23,7 @@ function Projects() {
     const dataProject = useSelector(state => state.project)
     const [moreUploadImage, setmoreUploadImage] = useState();
     const input = useRef(null)
+    const inputMain = useRef(null)
     const [imgId, setImgId] = useState();
     useEffect(() => {
       dispatch(GetProject())
@@ -176,7 +177,14 @@ function Projects() {
                 <h4>Edit Project Title</h4>
                 <input type="text" onChange={handleChange}  value={editTitle}/>
                 <h4>Edit Project Main Photo</h4>
-                {loading ? <p className='yellowLoading'>Loading...</p> : <input type="file" id="noneId" onChange={HandleFile} />}
+                {loading ? <p className='yellowLoading'>Loading...</p> :
+                <div className="editImageBox">
+                <img src={moreEdit.data.img} alt="img" />
+                    <div>
+                        <button onClick={() => inputMain.current.click()} type="button"><i className="fa-solid fa-edit"></i></button>
+                        <input ref={inputMain} type="file" onChange={HandleFile}/>
+                    </div>
+                </div>}
                 <h4>Edit Project More Photos</h4>
                 {moreEdit.data.images.length > 0 ?
                  moreEdit.data.images.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p>
