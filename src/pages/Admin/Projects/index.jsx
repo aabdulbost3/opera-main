@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useRef, useState } from 'react';
 import { IMAGE_URL } from '../../../utils';
 import axios from 'axios';
-import { PostImage } from '../../../redux/image';
+import { DeleteImage, PostImage, PutImage } from '../../../redux/image';
 
 function Projects() {
     const name = useRef();
@@ -22,6 +22,12 @@ function Projects() {
     const dispatch = useDispatch()
     const dataProject = useSelector(state => state.project)
     const [moreUploadImage, setmoreUploadImage] = useState();
+    const input = useRef(null)
+    const [imgId, setImgId] = useState();
+    useEffect(() => {
+      dispatch(GetProject())
+    }, [1])
+    
     const UploadFile = async(e) => {
         const imgsUpload = [];
         for (let i = 0; i < e.target.files.length; i++) {
@@ -33,7 +39,7 @@ function Projects() {
           const postImage = async () => {
               try {
                   const response = await axios.post(`${IMAGE_URL}`, formData)
-                  imgsUpload.push({img: response?.data.secure_url})
+                  imgsUpload.push(response?.data.secure_url)
                   setMoreLoading(false)
               } catch (error) {
                   console.log(error);
@@ -42,6 +48,11 @@ function Projects() {
             postImage()
           }
         setmoreUploadImage(imgsUpload)
+    }
+    const deleteImage = async(e) => {
+        const config = {headers:{Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}`}}
+        let id = e.target.id
+        await dispatch(DeleteImage({id, config}))
     }
     const HandleFile = (e) => {
         const formData = new FormData()
@@ -68,18 +79,17 @@ function Projects() {
         const postImage = async () => {
             try {
                 const response = await axios.post(`${IMAGE_URL}`, formData)
-                console.log(response?.data.secure_url);
-                moreImages.current.value.push({id: e.target.id,img: response?.data.secure_url})
+                const config = {headers:{Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}`}}
+                const body = {image: response?.data.secure_url}
+                const id = imgId
+                await dispatch(PutImage({id,body,config}))
                 setImgesLoading(false)
             } catch (error) {
                 console.log(error);
             }
         }
         postImage()
-    }  
-    useEffect(() => {
-        dispatch(GetProject())
-    },[])
+    }
     const projectDelete = async(e) => {
         const config = {
             headers:{
@@ -92,8 +102,8 @@ function Projects() {
     }
     const projectEdit = async(e) => {
         const data = await dispatch(GetProjectId(e.target.id))
-        console.log(data);
-        setMoreEdit(data.payload);
+        await setMoreEdit(data.payload);
+        console.log(moreEdit);
         setEditTitle(data.payload.data.title)
         setEditMainImages(data.payload.data.img)
         moreImages.current.value = []
@@ -130,26 +140,12 @@ function Projects() {
             title: editTitle,
             img: editMainImages
         }
-        //
-        let moreData = []
-        let data = null
-        moreImages.current.value.length > 0 ? moreEdit.data.images.map(e => {
-            moreImages.current.value.map(el => {
-                if(e.id == el.id){moreData.push(el)}
-                else{moreData.push(e)}
-        })
-        }) : moreData = moreEdit.data.images
-        if(moreUploadImage) {
-            data = moreData.concat(moreUploadImage)
-        } else { data = moreData}
-        //
         let id = moreEdit.data.id
-        const config = {
-            headers:{
-                Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}` 
-            }
+        const config = {headers:{Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}`}}
+        const data = {
+            images: moreUploadImage
         }
-        console.log(data);
+        console.log(data);  
         await dispatch(PostImage({id, data,config}))
         await dispatch(PutProject({body, id, config}))
         dispatch(GetProject())
@@ -160,7 +156,7 @@ function Projects() {
     }
     const handleChange = event => {
         setEditTitle(event.target.value);
-    };
+    }
   return (
     <div className="Projects">
         <div className="overlay" ref={projectOverlay} onClick={() => {SetProjectModal(false);projectOverlay.current.style.display = "none";SetProjectModal1(false);setImgUpload(null);setmoreUploadImage(null);setLoading(null);setMoreLoading(null)}}></div>
@@ -183,7 +179,16 @@ function Projects() {
                 {loading ? <p className='yellowLoading'>Loading...</p> : <input type="file" id="noneId" onChange={HandleFile} />}
                 <h4>Edit Project More Photos</h4>
                 {moreEdit.data.images.length > 0 ?
-                 moreEdit.data.images.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p> :<input key={i} id={e.id} type="file" onChange={HandleEditImagesFile}/>}</span>)
+                 moreEdit.data.images.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p>
+                     :<div className="editImageBox">
+                        <img src={e.img} alt="img" />
+                        <div>
+                            <button id={e.id} onClick={deleteImage} type="button"><i className="fa-solid fa-trash" id={e.id} onClick={deleteImage}></i></button>
+                            <button id={e.id} onClick={(el) => {setImgId(el.target.id);input.current.click();}} type="button"><i className="fa-solid fa-edit" id={e.id}></i></button>
+                            <input ref={input} id={e.id} type="file" onChange={HandleEditImagesFile}/>
+                        </div>
+                    </div>
+                    }</span>)
                  : <p>No Photos here yet</p>}
                 <h4>Add Other More Photo</h4>
                 {moreLoading ? <p className='yellowLoading'>Loading ...</p> :<input type="file" onChange={UploadFile} multiple />}

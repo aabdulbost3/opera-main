@@ -4,13 +4,13 @@ import axios from "axios";
 import { API_URL } from "../../utils";
 
 export const PostImage = createAsyncThunk("image/post", async({id, data, config}) => {
-    return await axios.get(`${API_URL}/image/${id}`, data, config).then(res => res.data)
+    return await axios.post(`${API_URL}/image/${id}`, data, config).then(res => res.data)
 })
-export const PutImage = createAsyncThunk("image/put", async({id, body}) => {
-    return await axios.put(`${API_URL}/image/${id}`, body)
+export const PutImage = createAsyncThunk("image/put", async({id, body,config}) => {
+    return await axios.put(`${API_URL}/image/${id}`, body, config)
 })
-export const DeleteImage = createAsyncThunk("image/delete", async(id) => {
-    return await axios.delete(`${API_URL}/image/${id}`)
+export const DeleteImage = createAsyncThunk("image/delete", async({id,config}) => {
+    return await axios.delete(`${API_URL}/image/${id}`,config)
 })
 const ImageSlice = createSlice({
     name: "image",
