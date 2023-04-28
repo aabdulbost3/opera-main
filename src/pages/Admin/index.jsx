@@ -9,11 +9,7 @@ import './style.css';
 function Admin() {
   const navigate = useNavigate();
   useEffect(() => {
-    if(window.localStorage.getItem("Auth")){
-      console.log('token');
-    }else{
-      navigate('/sign')
-    }
+    !window.localStorage.getItem("AuthToken") ? navigate("/sign") : console.log("ok"); 
   }, [])
   return (
     <div className="Admin">

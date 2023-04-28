@@ -14,7 +14,8 @@ function Blog() {
   const dataBlog = useSelector(state => state.blog)
   useEffect(() => {
       dispatch(GetBlog())
-  },[])
+    },[])
+    console.log(dataBlog.getBlog?.Data);
   const blogDelete = (e) => {
     dispatch(DeleteBlog(e.target.value))
     dispatch(GetBlog())
@@ -62,7 +63,7 @@ const HandleSubmit1 = (e) => {
         <button onClick={() => {SetBlogModal(true);BlogOverlay.current.style.display="block"}}>+ Add Admin</button>
         </div>
       <ul>
-      {dataBlog.getBlog.Success == true ? dataBlog.getBlog?.Data.map((elem, index) => 
+      {dataBlog.getBlog.Success == true ? dataBlog.getBlog?.Data.data.data.map((elem, index) => 
         <li key={index}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
             <h3>Name: {elem.name}</h3>

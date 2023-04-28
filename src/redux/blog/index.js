@@ -7,7 +7,7 @@ export const GetBlogMore = createAsyncThunk("bloger/get" , async (id) => {
     return await axios.get(`${API_URL}/admin/${id}`).then(res => res.data)
 })
 export const GetBlog = createAsyncThunk("blog/get" , async () => {
-    return await axios.get(`${API_URL}/admin`).then(res => res.data)
+    return await axios.get(`${API_URL}/admin/all`).then(res => res.data)
 })
 export const DeleteBlog = createAsyncThunk("blog/delete" , async (id) => {
     return await axios.delete(`${API_URL}/admin/${id}`).then(res => res.data)

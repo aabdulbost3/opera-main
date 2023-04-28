@@ -1,12 +1,11 @@
 .projectComp{
     width: 100%;
-    margin-top: 13%;
 }
 .projectComp h1{
     font-size: 3vw;
     color: var(--black);
     margin: 5%;
-    margin-top: 10%;
+    margin-top: 0;
 }
 .projectComp ul{
     display: flex;
@@ -69,7 +68,7 @@
     }
     .projectComp h1{
         font-size: 6vw;
-        margin-top: 5%;
+        margin-top: 10%;
     }
     .projectComp .NavLink{
         font-size: 4.5vw;

@@ -99,7 +99,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 3vw;
+    top: 0.3vw;
     left: 33vw; 
     z-index: 4;
 }
@@ -109,10 +109,10 @@
     flex-direction: column;
 }
 .projectModal h3{
-    font-size: 2vw;
-    margin-bottom: 1vw;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
     color: #FFF;
-    padding: 2vw;
+    padding: 1vw;
     border-top-right-radius: 0.8vw;
     border-top-left-radius: 0.8vw;
     background: #2d2d2d;
@@ -121,16 +121,16 @@
     margin-top: 0.5vw;
 }
 .projectModal input{
-    padding: 1vw;
+    padding: 0.5vw;
     margin: 1vw 0;
     color: black;
     font-size: 1vw;
     border-radius: 1vw;
-    border: 0.2vw solid #2d2d2d;
+    border: 0.1vw solid #2d2d2d;
 }
 .projectModal button{
     background-color: #2d2d2d;
-    padding: 1vw 2vw;
+    padding: 0.5vw 2vw;
     font-size: 1vw;
     border-radius: 1vw;
     margin-top: 1vw;

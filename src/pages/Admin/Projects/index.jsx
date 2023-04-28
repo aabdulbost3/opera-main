@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useRef, useState } from 'react';
 import { IMAGE_URL } from '../../../utils';
 import axios from 'axios';
+import { PostImage } from '../../../redux/image';
 
 function Projects() {
     const name = useRef();
@@ -20,8 +21,8 @@ function Projects() {
     const [moreLoading, setMoreLoading] = useState();
     const dispatch = useDispatch()
     const dataProject = useSelector(state => state.project)
-    const [moreUploadImage, setmoreUploadImage] = useState([]);
-    const UploadFile = (e) => {
+    const [moreUploadImage, setmoreUploadImage] = useState();
+    const UploadFile = async(e) => {
         const imgsUpload = [];
         for (let i = 0; i < e.target.files.length; i++) {
           const element = e.target.files[i];
@@ -79,59 +80,78 @@ function Projects() {
     useEffect(() => {
         dispatch(GetProject())
     },[])
-    const projectDelete = (e) => {
-        dispatch(DeleteProject(e.target.value))
+    const projectDelete = async(e) => {
+        const config = {
+            headers:{
+                Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}` 
+            }
+        }
+        let id = e.target.value
+        await dispatch(DeleteProject({id, config}))
         dispatch(GetProject())
     }
     const projectEdit = async(e) => {
-        setMoreEdit(null);
         const data = await dispatch(GetProjectId(e.target.id))
-        setMoreEdit(data);
-        setEditTitle(data.payload.title)
-        setEditMainImages(data.payload.mainImg)
+        console.log(data);
+        setMoreEdit(data.payload);
+        setEditTitle(data.payload.data.title)
+        setEditMainImages(data.payload.data.img)
         moreImages.current.value = []
         projectOverlay.current.style.display = "block"
-        setmoreUploadImage([])
+        setmoreUploadImage(null)
         SetProjectModal1(true)
     }
     const AddProject = () => {
         SetProjectModal(true)
+        setmoreUploadImage(null)
         projectOverlay.current.style.display = "block"
     }
-    const HandleSubmit = (e) => {
+    const HandleSubmit = async(e) => {
         e.preventDefault();
         const body = {
-            mainImg: imgUpload,
             title: name.current.value,
-            moreImg: moreUploadImage
+            img: imgUpload
         }
-        dispatch(PostProject(body))
+        const config = {
+            headers:{
+                Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}` 
+            }
+        }
+        await dispatch(PostProject({body, config}))
         dispatch(GetProject())
         SetProjectModal(false)
         projectOverlay.current.style.display = "none"
         setImgUpload(null);
         setmoreUploadImage(null)
     }
-    const HandleSubmit1 = (e) => {
+    const HandleSubmit1 = async(e) => {
         e.preventDefault();
+        const body = {
+            title: editTitle,
+            img: editMainImages
+        }
+        //
         let moreData = []
-        moreImages.current.value.length > 0 ? moreEdit.payload.moreImg.map(e => {
+        let data = null
+        moreImages.current.value.length > 0 ? moreEdit.data.images.map(e => {
             moreImages.current.value.map(el => {
                 if(e.id == el.id){moreData.push(el)}
                 else{moreData.push(e)}
         })
-        }) : moreData = moreEdit.payload.moreImg
-        console.log(moreUploadImage);
-        moreUploadImage.map(e => {
-            moreData.push(e)
-        })
-        const body = {
-            title: editTitle,
-            mainImg: editMainImages,
-            moreImg: moreData
+        }) : moreData = moreEdit.data.images
+        if(moreUploadImage) {
+            data = moreData.concat(moreUploadImage)
+        } else { data = moreData}
+        //
+        let id = moreEdit.data.id
+        const config = {
+            headers:{
+                Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}` 
+            }
         }
-        const id = moreEdit.payload.id
-        dispatch(PutProject({body, id}))
+        console.log(data);
+        await dispatch(PostImage({id, data,config}))
+        await dispatch(PutProject({body, id, config}))
         dispatch(GetProject())
         SetProjectModal1(false)
         projectOverlay.current.style.display = "none"
@@ -151,8 +171,6 @@ function Projects() {
                 <input type="text" ref={name} placeholder='Enter Project Name' required/>
                 <h4>Choose Project Main Photo</h4>
                 {loading ? <p className='yellowLoading'>Loading...</p> : <input type="file" id="noneId" onChange={HandleFile} />}
-                <h4>Choose Project More Photos</h4>
-                {moreLoading ? <p className='yellowLoading'>Loading file(s)...</p> : <input type="file" onChange={UploadFile} multiple />}
                 <button type="submit">Add</button>
             </div>
         </form> :null}
@@ -164,11 +182,11 @@ function Projects() {
                 <h4>Edit Project Main Photo</h4>
                 {loading ? <p className='yellowLoading'>Loading...</p> : <input type="file" id="noneId" onChange={HandleFile} />}
                 <h4>Edit Project More Photos</h4>
-                {moreEdit.payload.moreImg ?
-                 moreEdit.payload.moreImg.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p> :<input key={i} id={e.id} type="file" onChange={HandleEditImagesFile}/>}</span>)
+                {moreEdit.data.images.length > 0 ?
+                 moreEdit.data.images.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p> :<input key={i} id={e.id} type="file" onChange={HandleEditImagesFile}/>}</span>)
                  : <p>No Photos here yet</p>}
                 <h4>Add Other More Photo</h4>
-                {moreLoading ? <p className='yellowLoading'>Loading ...</p> :<input id={moreEdit.payload.moreImg.length + 1} type="file" onChange={UploadFile} multiple />}
+                {moreLoading ? <p className='yellowLoading'>Loading ...</p> :<input type="file" onChange={UploadFile} multiple />}
                 <button type="submit">Edit</button>
             </div>
         </form> :null}
@@ -177,9 +195,9 @@ function Projects() {
             <button onClick={AddProject}>+ Add Project</button>
         </div>
         <ul>
-            {dataProject.getProject.Success == true ? dataProject.getProject?.Data.map((elem, index) => 
+            {dataProject.getProject.Success == true ? dataProject.getProject?.Data.data.data.map((elem, index) => 
             <li key={index}>
-                <img src={elem.mainImg} alt="img" />
+                <img src={elem.img} alt="img" />
                 <h3>{elem.title}</h3>
                 <div className="AdBtnBox">
                     <button value={elem.id} onClick={projectDelete}><i className="fa-solid fa-trash"></i>Delete</button>

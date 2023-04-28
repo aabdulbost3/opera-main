@@ -25,11 +25,11 @@ function MorePage() {
                     {dataGetProject.getProjectId.Success == true ?
                     <div className="MoreInbox">
                         <span>
-                            <img src={dataGetProject.getProjectId?.Data.mainImg} alt="img" />
-                            <h2>{dataGetProject.getProjectId?.Data.title}</h2>
+                            <img src={dataGetProject.getProjectId?.Data.data.img} alt="img" />
+                            <h2>{dataGetProject.getProjectId?.Data.data.title}</h2>
                         </span>
                             <div className="Photos">
-                                {dataGetProject.getProjectId?.Data.moreImg.map(elem => 
+                                {dataGetProject.getProjectId?.Data.data.images.map(elem => 
                                     <img key={elem.id} src={elem.img} alt="img" />
                                 )}
                             </div>

@@ -1,111 +1,6 @@
 {
   "project": [
     {
-      "title": "Project 001",
-      "mainImg": "https://picsum.photos/300?rand=1",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=2"
-        },
-        {
-          "id": "2",
-          "img": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682183060/jujckalhevt0nzkoopph.jpg"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "id": 2,
-      "title": "Project 2",
-      "mainImg": "https://picsum.photos/300?rand=4",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=5"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=6"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Project 1",
-      "mainImg": "https://picsum.photos/300?rand=1",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=2"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=3"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Project 2",
-      "mainImg": "https://picsum.photos/300?rand=4",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=5"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=6"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Project 1",
-      "mainImg": "https://picsum.photos/300?rand=1",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=2"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=3"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Project 2",
-      "mainImg": "https://picsum.photos/300?rand=4",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=5"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=6"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "title": "Project 1",
-      "mainImg": "https://picsum.photos/300?rand=1",
-      "moreImg": [
-        {
-          "id": 1,
-          "img": "https://picsum.photos/300?rand=2"
-        },
-        {
-          "id": 2,
-          "img": "https://picsum.photos/300?rand=3"
-        }
-      ]
-    },
-    {
       "title": "ok",
       "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682184534/vsy6kvuqff1jhfr0ia9o.jpg",
       "moreImg": [
@@ -115,6 +10,32 @@
         }
       ],
       "id": 8
+    },
+    {
+      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682515925/dtvdqz4sgbtsf9htrz9i.png",
+      "title": "odaf",
+      "moreImg": [
+        {
+          "img": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682515951/qicyloalvvj9rcqltefm.png"
+        },
+        {
+          "img": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682515951/nylmsf6utxkfb0affyh6.png"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "mainImg": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682588336/pngugs0bbwmpguexyohf.png",
+      "title": "ghj",
+      "moreImg": [
+        {
+          "img": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682588339/dhftslkr6siqjysxtyzb.png"
+        },
+        {
+          "img": "https://res.cloudinary.com/dbmxmzwaz/image/upload/v1682588340/k475gji57lygjn5fexcu.png"
+        }
+      ],
+      "id": 10
     }
   ],
   "contact": [
