@@ -11,28 +11,18 @@ function SignPage() {
   const [error, setError] = useState()
   const HandleSubmit = async (e) => {
     e.preventDefault()
-    const intName = namePass.current.value
-    const intPass = namePassUp.current.value
-      const api = await axios.get(`${API_URL}/admin/?name=${intName}`)
-      const Pwapi = await axios.get(`${API_URL}/admin/?password=${intName}`)
-      if(api.data.length == 0){
-        setError(0)
-      }
-      if(api.data.length !== 0){
-        setError(null)
-      }
-      if(Pwapi.data.length == 0){
-        setError(0)
-      }
-      if(Pwapi.data.length !== 0){
-        setError(null)
-      }
-      api.data.map(e => {
-        if(e.password == intPass){
-          window.localStorage.setItem('Auth', e.name)
-          navlink('/admin')
-        }
-      })
+    const body = {
+      name: namePass.current.value,
+      password: namePassUp.current.value
+    }
+    try {
+      const res =  await axios.post("https://opera-mini-production.up.railway.app/auth/login", body)
+      setError(false)
+      window.localStorage.setItem("AuthToken", res.data.data)
+      navlink("/admin")
+    } catch (error) {
+      setError(true)
+    }
     }
     const HandleNav = () => {
         navlink('/')
@@ -42,8 +32,8 @@ function SignPage() {
       <div className="SignPagePath" onClick={HandleNav}><i className='fa-solid fa-arrow-left'></i></div>
         <form onSubmit={HandleSubmit} className="SignModal">
             <h1>Log in</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea omnis cumque reprehenderit dolores quo ullam magnam nam, numquam molestiae.</p>
-            {error == 0 ? <p className='SignP'>Ism yoki parolda xatolik mavjud!</p> : null}
+            <p>Siz bu yerdan Admin panlega o'ta olasiz.Iltimos ism va parolni to'g'ri holatda kiriting!</p>
+            {error ? <p className='SignP'>Ism yoki parolda xatolik mavjud!</p> : null}
             <input type="text" ref={namePass} placeholder='Ismingizni kiriting' className='ins'/>
             <input type="text" ref={namePassUp} placeholder='Parolingizni kiritng' className='ins'/>
             <button type='submit'>Sign in</button>

@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useRef, useState } from 'react';
 import { IMAGE_URL } from '../../../utils';
 import axios from 'axios';
+import { DeleteImage, PostImage, PutImage } from '../../../redux/image';
 
 function Projects() {
     const name = useRef();
@@ -20,8 +21,15 @@ function Projects() {
     const [moreLoading, setMoreLoading] = useState();
     const dispatch = useDispatch()
     const dataProject = useSelector(state => state.project)
-    const [moreUploadImage, setmoreUploadImage] = useState([]);
-    const UploadFile = (e) => {
+    const [moreUploadImage, setmoreUploadImage] = useState();
+    const input = useRef(null)
+    const inputMain = useRef(null)
+    const [imgId, setImgId] = useState();
+    useEffect(() => {
+      dispatch(GetProject())
+    }, [1])
+    
+    const UploadFile = async(e) => {
         const imgsUpload = [];
         for (let i = 0; i < e.target.files.length; i++) {
           const element = e.target.files[i];
@@ -32,7 +40,7 @@ function Projects() {
           const postImage = async () => {
               try {
                   const response = await axios.post(`${IMAGE_URL}`, formData)
-                  imgsUpload.push({img: response?.data.secure_url})
+                  imgsUpload.push(response?.data.secure_url)
                   setMoreLoading(false)
               } catch (error) {
                   console.log(error);
@@ -41,6 +49,11 @@ function Projects() {
             postImage()
           }
         setmoreUploadImage(imgsUpload)
+    }
+    const deleteImage = async(e) => {
+        const config = {headers:{Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}`}}
+        let id = e.target.id
+        await dispatch(DeleteImage({id, config}))
     }
     const HandleFile = (e) => {
         const formData = new FormData()
@@ -67,71 +80,75 @@ function Projects() {
         const postImage = async () => {
             try {
                 const response = await axios.post(`${IMAGE_URL}`, formData)
-                console.log(response?.data.secure_url);
-                moreImages.current.value.push({id: e.target.id,img: response?.data.secure_url})
+                const config = {headers:{Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}`}}
+                const body = {image: response?.data.secure_url}
+                const id = imgId
+                await dispatch(PutImage({id,body,config}))
                 setImgesLoading(false)
             } catch (error) {
                 console.log(error);
             }
         }
         postImage()
-    }  
-    useEffect(() => {
-        dispatch(GetProject())
-    },[])
-    const projectDelete = (e) => {
-        dispatch(DeleteProject(e.target.value))
+    }
+    const projectDelete = async(e) => {
+        const config = {
+            headers:{
+                Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}` 
+            }
+        }
+        let id = e.target.value
+        await dispatch(DeleteProject({id, config}))
         dispatch(GetProject())
     }
     const projectEdit = async(e) => {
-        setMoreEdit(null);
         const data = await dispatch(GetProjectId(e.target.id))
-        setMoreEdit(data);
-        setEditTitle(data.payload.title)
-        setEditMainImages(data.payload.mainImg)
+        await setMoreEdit(data.payload);
+        console.log(moreEdit);
+        setEditTitle(data.payload.data.title)
+        setEditMainImages(data.payload.data.img)
         moreImages.current.value = []
         projectOverlay.current.style.display = "block"
-        setmoreUploadImage([])
+        setmoreUploadImage(null)
         SetProjectModal1(true)
     }
     const AddProject = () => {
         SetProjectModal(true)
+        setmoreUploadImage(null)
         projectOverlay.current.style.display = "block"
     }
-    const HandleSubmit = (e) => {
+    const HandleSubmit = async(e) => {
         e.preventDefault();
         const body = {
-            mainImg: imgUpload,
             title: name.current.value,
-            moreImg: moreUploadImage
+            img: imgUpload
         }
-        dispatch(PostProject(body))
+        const config = {
+            headers:{
+                Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}` 
+            }
+        }
+        await dispatch(PostProject({body, config}))
         dispatch(GetProject())
         SetProjectModal(false)
         projectOverlay.current.style.display = "none"
         setImgUpload(null);
         setmoreUploadImage(null)
     }
-    const HandleSubmit1 = (e) => {
+    const HandleSubmit1 = async(e) => {
         e.preventDefault();
-        let moreData = []
-        moreImages.current.value.length > 0 ? moreEdit.payload.moreImg.map(e => {
-            moreImages.current.value.map(el => {
-                if(e.id == el.id){moreData.push(el)}
-                else{moreData.push(e)}
-        })
-        }) : moreData = moreEdit.payload.moreImg
-        console.log(moreUploadImage);
-        moreUploadImage.map(e => {
-            moreData.push(e)
-        })
         const body = {
             title: editTitle,
-            mainImg: editMainImages,
-            moreImg: moreData
+            img: editMainImages
         }
-        const id = moreEdit.payload.id
-        dispatch(PutProject({body, id}))
+        let id = moreEdit.data.id
+        const config = {headers:{Authorization: `Bearer ${window.localStorage.getItem("AuthToken")}`}}
+        const data = {
+            images: moreUploadImage
+        }
+        console.log(data);  
+        await dispatch(PostImage({id, data,config}))
+        await dispatch(PutProject({body, id, config}))
         dispatch(GetProject())
         SetProjectModal1(false)
         projectOverlay.current.style.display = "none"
@@ -140,7 +157,7 @@ function Projects() {
     }
     const handleChange = event => {
         setEditTitle(event.target.value);
-    };
+    }
   return (
     <div className="Projects">
         <div className="overlay" ref={projectOverlay} onClick={() => {SetProjectModal(false);projectOverlay.current.style.display = "none";SetProjectModal1(false);setImgUpload(null);setmoreUploadImage(null);setLoading(null);setMoreLoading(null)}}></div>
@@ -151,8 +168,6 @@ function Projects() {
                 <input type="text" ref={name} placeholder='Enter Project Name' required/>
                 <h4>Choose Project Main Photo</h4>
                 {loading ? <p className='yellowLoading'>Loading...</p> : <input type="file" id="noneId" onChange={HandleFile} />}
-                <h4>Choose Project More Photos</h4>
-                {moreLoading ? <p className='yellowLoading'>Loading file(s)...</p> : <input type="file" onChange={UploadFile} multiple />}
                 <button type="submit">Add</button>
             </div>
         </form> :null}
@@ -162,13 +177,29 @@ function Projects() {
                 <h4>Edit Project Title</h4>
                 <input type="text" onChange={handleChange}  value={editTitle}/>
                 <h4>Edit Project Main Photo</h4>
-                {loading ? <p className='yellowLoading'>Loading...</p> : <input type="file" id="noneId" onChange={HandleFile} />}
+                {loading ? <p className='yellowLoading'>Loading...</p> :
+                <div className="editImageBox">
+                <img src={moreEdit.data.img} alt="img" />
+                    <div>
+                        <button onClick={() => inputMain.current.click()} type="button"><i className="fa-solid fa-edit"></i></button>
+                        <input ref={inputMain} type="file" onChange={HandleFile}/>
+                    </div>
+                </div>}
                 <h4>Edit Project More Photos</h4>
-                {moreEdit.payload.moreImg ?
-                 moreEdit.payload.moreImg.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p> :<input key={i} id={e.id} type="file" onChange={HandleEditImagesFile}/>}</span>)
+                {moreEdit.data.images.length > 0 ?
+                 moreEdit.data.images.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p>
+                     :<div className="editImageBox">
+                        <img src={e.img} alt="img" />
+                        <div>
+                            <button id={e.id} onClick={deleteImage} type="button"><i className="fa-solid fa-trash" id={e.id} onClick={deleteImage}></i></button>
+                            <button id={e.id} onClick={(el) => {setImgId(el.target.id);input.current.click();}} type="button"><i className="fa-solid fa-edit" id={e.id}></i></button>
+                            <input ref={input} id={e.id} type="file" onChange={HandleEditImagesFile}/>
+                        </div>
+                    </div>
+                    }</span>)
                  : <p>No Photos here yet</p>}
                 <h4>Add Other More Photo</h4>
-                {moreLoading ? <p className='yellowLoading'>Loading ...</p> :<input id={moreEdit.payload.moreImg.length + 1} type="file" onChange={UploadFile} multiple />}
+                {moreLoading ? <p className='yellowLoading'>Loading ...</p> :<input type="file" onChange={UploadFile} multiple />}
                 <button type="submit">Edit</button>
             </div>
         </form> :null}
@@ -177,16 +208,16 @@ function Projects() {
             <button className='ProjectsNavBtn' onClick={AddProject}>+<i className='fa-solid fa-folder'></i> Add Project</button>
         </div>
         <ul>
-            {/* {dataProject.getProject.Success == true ? dataProject.getProject?.Data.map((elem, index) => 
+            {dataProject.getProject.Success == true ? dataProject.getProject?.Data.data.data.map((elem, index) => 
             <li key={index}>
-                <img src={elem.mainImg} alt="img" />
+                <img src={elem.img} alt="img" />
                 <h3>{elem.title}</h3>
                 <div className="AdBtnBox">
                     <button value={elem.id} onClick={projectDelete}><i className="fa-solid fa-trash"></i>Delete</button>
                     <button id={elem.id} onClick={projectEdit}><i className="fa-solid fa-edit"></i>Edit</button>
                 </div>
             </li>)
-            :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null} */}
+            :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
             <li>
                 <img src="https://picsum.photos/300" alt="img" />
                 <h3>HEh lol</h3>
@@ -195,7 +226,6 @@ function Projects() {
                     <button><i className="fa-solid fa-edit"></i>Edit</button>
                 </div>
             </li>
-            
         </ul>
     </div>
   );

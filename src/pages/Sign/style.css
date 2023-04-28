@@ -25,7 +25,7 @@
     background-color: #1d1d1d;
     padding: 2vw 3vw;
     border-radius: 2vw;
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +33,7 @@
 }
 .SignModal h1{
     font-size: 3vw;
+    margin-bottom: 2vw;
     text-align: center;
 }
 .SignModal p{

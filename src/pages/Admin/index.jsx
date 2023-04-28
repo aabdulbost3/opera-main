@@ -7,33 +7,10 @@ import OperaIco from "../../operaIcon.ico"
 import './style.css';
 
 function Admin() {
-  const [handleLi, setHandleLi] = useState('')
-  // const [matches, setMatches] = useState(
-    // window.matchMedia('(max-width: 650px)').matches
-  // )
-  // const sideEdres = useRef()
-    // const HandleCloseSide = () => {
-    //   sideEdres.current.style.left = '-100%'
-    // }
-    // useEffect(() => {
-    //   window
-    //   .matchMedia('(max-width: 650px)')
-    //   .addEventListener('change', e => setMatches(e.matches))
-    // }, [])
-    const HandleLi = (e) => {
-      setHandleLi(e.target.id)
-      // if(matches){
-      //   HandleCloseSide();
-      // }
-    }
-  // const navigate = useNavigate();
-  // useEffect(() => {
-  //   if(window.localStorage.getItem("Auth")){
-  //     console.log('token');
-  //   }else{
-  //     navigate('/sign')
-  //   }
-  // }, [])
+  const navigate = useNavigate();
+  useEffect(() => {
+    !window.localStorage.getItem("AuthToken") ? navigate("/sign") : console.log("ok"); 
+  }, [])
   return (
     <div className="Admin"> 
       <div className="Sidebar">
