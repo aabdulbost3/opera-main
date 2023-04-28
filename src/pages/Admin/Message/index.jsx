@@ -47,80 +47,24 @@ function Message() {
               <h4>Abdulloh</h4>
               <button onClick={HandleCopy} value="+998903985853">+998903985853</button>
             </div>
-            <p>Nima Gapdsfsdfsdfdfsgsdf</p>
+            <p>Nima Gapds fsd fsdfdf sgsdf</p>
           </li>
           <li>
             <div className="MessageTexts">
               <h4>Abdulloh</h4>
               <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
             </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
+            <p>Nima Gapf   sd gsd fsdhk ghdk jghj shfjk asdgf jksd fgsd kjg</p>
           </li>
           <li>
             <div className="MessageTexts">
               <h4>Abdulloh</h4>
               <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
             </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
-          </li>
-          <li>
-            <div className="MessageTexts">
-              <h4>Abdulloh</h4>
-              <button onClick={HandleCopy} value="+998930704354">+998930704354</button>
-            </div>
-            <p>Nima Gapfsdgsdfsdhkghdkjghjshfjkasdgfjksdfgsdkjg</p>
+            <p>Nima Gapf sdgs dfs dhkg hdk jghj  s h f  jk asd gfjksd fgsdkjg</p>
           </li>
       </ul>
-      <div ref={CopiedMes} className="CopiedMessage"><i className="fa-solid fa-file"></i> Text copied to clipboard.</div>
+      <div ref={CopiedMes} className="CopiedMessage"><i className="fa-solid fa-file"></i> Number copied to clipboard.</div>
     </div>
   );
 }

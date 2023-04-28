@@ -177,7 +177,7 @@ function Projects() {
             <button className='ProjectsNavBtn' onClick={AddProject}>+<i className='fa-solid fa-folder'></i> Add Project</button>
         </div>
         <ul>
-            {dataProject.getProject.Success == true ? dataProject.getProject?.Data.map((elem, index) => 
+            {/* {dataProject.getProject.Success == true ? dataProject.getProject?.Data.map((elem, index) => 
             <li key={index}>
                 <img src={elem.mainImg} alt="img" />
                 <h3>{elem.title}</h3>
@@ -186,7 +186,16 @@ function Projects() {
                     <button id={elem.id} onClick={projectEdit}><i className="fa-solid fa-edit"></i>Edit</button>
                 </div>
             </li>)
-            :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
+            :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null} */}
+            <li>
+                <img src="https://picsum.photos/300" alt="img" />
+                <h3>HEh lol</h3>
+                <div className="AdBtnBox">
+                    <button><i className="fa-solid fa-trash"></i>Delete</button>
+                    <button><i className="fa-solid fa-edit"></i>Edit</button>
+                </div>
+            </li>
+            
         </ul>
     </div>
   );

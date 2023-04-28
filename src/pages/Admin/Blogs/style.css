@@ -11,6 +11,7 @@
     width: 86%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.6vw 2.5vw;
     top: 0;
     left: 14.5%;
@@ -36,19 +37,19 @@
 .Blog ul{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 85%;
     margin-left: 15%;
     justify-content: center;
     align-items: center;
     padding: 2vw;
-    top: 10%;
+    margin-top: 8%;
 }
 .Blog li{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 28%;
     background-color: #2d2d2d;
-    margin: 10px;
+    margin: 1vw;
     border-radius: 2vw;
     padding: 1vw;
 }
@@ -56,6 +57,7 @@
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 .Blog li img{
+    width: 100%;
     border-radius: 2vw;
 }
 .Blog li h3{

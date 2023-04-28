@@ -10,6 +10,7 @@
     width: 85%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.8vw;
     top: 0;
     left: 15%;
@@ -35,7 +36,7 @@
 .Projects ul{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 85%;
     margin-left: 15%;
     justify-content: center;
     align-items: center;
@@ -43,6 +44,7 @@
     margin-top: 8%;
 }
 .Projects li{
+    width: 20%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -58,35 +60,12 @@
 .Projects li img{
     border-top-left-radius: .7vw;
     border-top-right-radius: .7vw;
-    width: 23vw;
+    width: 100%;
     margin-bottom: 1vw;
 }
 .Projects li h3{
     margin-left: 1vw;
     font-size: 2.3vw;
-}
-.AdBtnBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.3vw;
-}
-.AdBtnBox button{
-    font-size: 1.4vw;
-    padding: .7vw 1.2vw;
-    background-color: #1d1d1d;
-    margin: 0 0.5vw;
-    color: white;
-    border-radius: 1vw;
-}
-.AdBtnBox button i{
-    margin-right: .3vw;
-}
-.AdBtnBox button:nth-child(1):hover{
-    background: red;
-}
-.AdBtnBox button:nth-child(2):hover{
-    background: greenyellow;
 }
 .loading{
     color: white;

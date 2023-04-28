@@ -8,7 +8,8 @@
 }
 
 .Sidebar{
-    z-index: 3;
+    position: fixed;
+    z-index: 2;
     width: 15%;
     padding: 2vw;
     background: #1d1d1d;
@@ -17,7 +18,6 @@
     height: 100%;
     top: 0;
     left: 0;
-    position: fixed;
     color: white;
 }
 .Sidebar img{
@@ -77,6 +77,30 @@
     font-size: 1.4vw;
     margin-left: .5vw;
 }
+
+.AdBtnBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.3vw;
+}
+.AdBtnBox button{
+    font-size: 1.4vw;
+    padding: .7vw 1.2vw;
+    background-color: #1d1d1d;
+    margin: 0 0.5vw;
+    color: white;
+    border-radius: 1vw;
+}
+.AdBtnBox button i{
+    margin-right: .3vw;
+}
+.AdBtnBox button:nth-child(1):hover{
+    background: red;
+}
+.AdBtnBox button:nth-child(2):hover{
+    background: greenyellow;
+}
 /* .test_upload{
     display: inline-flex;
     align-items: center;
@@ -98,6 +122,7 @@
 
 @media screen and (max-width: 650px) {
     .Sidebar{
+        position: fixed;
         width: 20%;
         padding: 2vw;
         display: flex;
@@ -125,13 +150,108 @@
     }
 
     .Message h1{
-        width: 100%;
-        left: 0%;
-        font-size: 6.5vw;
-        padding: 3vw;
+        width: 80%;
+        font-size: 8vw;
+        padding: 4.5vw;
+        left: 20%;
     }
     .Message h1 i{
-        font-size: 7vw;
+        font-size: 8.4vw;
         margin-right: 3vw;
+    }
+    .Message ul{
+        width: 100%;
+        margin-top: 30%;
+        margin-left: 12%;
+    }
+    .Message li{
+        border-radius: 6vw;
+        border-bottom-left-radius: 2.4vw;
+        border-top-left-radius: 2.4vw;
+        padding: 3vw;
+        margin: 1vw;
+        width: fit-content;
+    }
+    .Message li:first-child{
+        border-top-left-radius: 6vw;
+    }
+    .Message li h4{
+        font-size: 6.2vw;
+        margin-right: 4vw;
+    }
+    .Message li button{
+        font-size: 4vw;
+    }
+    .Message li p{
+        font-size: 5vw;
+        max-width: 65vw;
+        margin-top: 1.6vw;
+        margin-left: 1.6vw;
+    }
+    .CopiedMessage{
+        text-align: center;
+        right: 4%;
+        width: 92%;
+        font-size: 5.6\vw;
+        padding: 3.4vw;
+        border-radius: 4vw;
+    }
+
+    .BlogNav{
+        width: 80%;
+        font-size: 8vw;
+        padding: 4.5vw;
+        left: 20%;
+    }
+    .BlogNav h1{
+        font-size: 7vw;
+    }
+    .BlogNavBtn{
+        font-size: 4vw;
+        padding: 3vw;
+        border-radius: 2.4vw;
+    }
+    .Blog ul{
+        width: 80%;
+        margin-top: 25%;
+        margin-left: 20%;
+    }
+    .Blog li{
+        margin: 2vw;
+        width: 80%;
+        border-radius: 4vw;
+        padding: 3vw;
+    }
+    .Blog li img{
+        border-radius: 4vw;
+    }
+    .Blog li h3{
+        margin: .5vw 0;
+        margin-top: 4vw;
+        font-size: 6.4vw;
+    }
+    .Blog li p{
+        font-size: 4.4vw;
+    }
+
+    .AdBtnBox button{
+        font-size: 4vw;
+        padding: 2.4vw;
+        margin: 1vw 2vw;
+        border-radius: 2.4vw;
+    }
+
+    .ProjectsNav{
+        width: 80%;
+        left: 20%;
+        padding: 4.5vw;
+    }
+    .ProjectsNav h1{
+        font-size: 7vw;
+    }
+    .ProjectsNavBtn{
+        font-size: 4vw;
+        padding: 3vw;
+        border-radius: 2.4vw;
     }
 }

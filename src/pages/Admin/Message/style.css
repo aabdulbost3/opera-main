@@ -3,12 +3,12 @@
 }
 .CopiedMessage{
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     bottom: -20%;
     right: 1%;
     width: fit-content;
     padding: 1vw 1.2vw;
-    background-color: #1d1d1d;
+    background-color: #0d0d0d;
     color: white;
     font-size: 1.65vw;
     border-radius: 1vw;
@@ -49,8 +49,8 @@
     margin-top: .4vw;
 }
 .Message ul{
-    margin-top: 18%;
-    margin-left: -3vw;
+    margin-top: 15%;
+    margin-left: -5%;
 }
 .Message li{
     border-radius: 2vw;
