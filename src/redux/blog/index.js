@@ -3,20 +3,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios"
 import { API_URL } from "../../utils";
 
-export const GetBlogMore = createAsyncThunk("bloger/get" , async (id) => {
-    return await axios.get(`${API_URL}/admin/${id}`).then(res => res.data)
+export const GetBlogMore = createAsyncThunk("b|loger/get" , async ({id,config}) => {
+    return await axios.get(`${API_URL}/admin/${id}`,config).then(res => res.data)
 })
-export const GetBlog = createAsyncThunk("blog/get" , async () => {
-    return await axios.get(`${API_URL}/admin/all`).then(res => res.data)
+export const GetBlog = createAsyncThunk("blog/get" , async (config) => {
+    return await axios.get(`${API_URL}/admin/all`, config).then(res => res.data)
 })
-export const DeleteBlog = createAsyncThunk("blog/delete" , async (id) => {
-    return await axios.delete(`${API_URL}/admin/${id}`).then(res => res.data)
+export const DeleteBlog = createAsyncThunk("blog/delete" , async ({config,id}) => {
+    return await axios.delete(`${API_URL}/admin/${id}`,config).then(res => res.data)
 })
-export const PostBlog = createAsyncThunk("admin/post" , async (body) => {
-    return await axios.post(`${API_URL}/admin`,body).then(res => res.data)
+export const PostBlog = createAsyncThunk("admin/post" , async ({config,body}) => {
+    return await axios.post(`${API_URL}/admin`,body,config).then(res => res.data)
 })
-export const PutBlog = createAsyncThunk("blog/put" , async ({body, id}) => {
-    return await axios.put(`${API_URL}/admin/${id}`,body).then(res => res.data)
+export const PutBlog = createAsyncThunk("blog/put" , async ({config,body, id}) => {
+    return await axios.put(`${API_URL}/admin/${id}`,body,config).then(res => res.data)
 })
 const BlogSlice = createSlice({
     name: "blog",
