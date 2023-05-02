@@ -10,6 +10,17 @@ function Message() {
   useEffect(() => {
     dispatch(GetMessage())
   },[])
+  const HandleCopy = (e) => {
+    var textField = document.createElement('textarea')
+    textField.innerText = e.target.value
+    document.body.appendChild(textField)
+    textField.select()
+    document.execCommand('copy')
+    textField.remove()
+    CopiedMes.current.style.display = 'block'
+    setTimeout(() => {
+      CopiedMes.current.style.display = 'none'
+    }, 4000)
   console.log(dataMessage.getMessage?.Data);
   return (
     <div className="Message">
@@ -56,6 +67,6 @@ function Message() {
       <div ref={CopiedMes} className="CopiedMessage"><i className="fa-solid fa-file"></i> Number copied to clipboard.</div>
     </div>
   );
-}
+}}
 
 export default Message;

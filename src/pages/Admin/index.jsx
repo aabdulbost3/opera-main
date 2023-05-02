@@ -2,15 +2,19 @@ import Project from './Projects';
 import Blogs from './Blogs';
 import Message from './Message';
 import { useEffect, useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import OperaIco from "../../operaIcon.ico"
 import './style.css';
 
 function Admin() {
   const navigate = useNavigate();
-  useEffect(() => {
-    !window.localStorage.getItem("AuthToken") ? navigate("/sign") : console.log("ok"); 
-  }, [])
+  const [handleLi, setHandleLi] = useState('')
+  // useEffect(() => {
+  //   !window.localStorage.getItem("AuthToken") ? navigate("/sign") : console.log("ok"); 
+  // }, [])
+  const HandleLi = (e) => {
+    setHandleLi(e.target.id)
+  }
   return (
     <div className="Admin"> 
       <div className="Sidebar">
