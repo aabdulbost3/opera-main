@@ -16,8 +16,8 @@ function SignPage() {
       password: namePassUp.current.value
     }
     try {
-      const res =  await axios.post("https://opera-mini-production.up.railway.app/auth/login", body)
-      setError(false)
+      const res =  await axios.post(`${API_URL}/auth/login`, body)
+      setError(false) 
       window.localStorage.setItem("AuthToken", res.data.data)
       navlink("/admin")
     } catch (error) {
@@ -33,7 +33,7 @@ function SignPage() {
         <form onSubmit={HandleSubmit} className="SignModal">
             <h1>Log in</h1>
             <p>Siz bu yerdan Admin panlega o'ta olasiz.Iltimos ism va parolni to'g'ri holatda kiriting!</p>
-            {error ? <p className='SignP'>Ism yoki parolda xatolik mavjud!</p> : null}
+            {error ? <p className='SignP'>Internet, ism yoki parolda xatolik mavjud!</p> : null}
             <input type="text" ref={namePass} placeholder='Ismingizni kiriting' className='ins'/>
             <input type="text" ref={namePassUp} placeholder='Parolingizni kiritng' className='ins'/>
             <button type='submit'>Sign in</button>
