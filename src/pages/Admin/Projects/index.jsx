@@ -133,7 +133,7 @@ function Projects() {
         SetProjectModal(false)
         projectOverlay.current.style.display = "none"
         setImgUpload(null);
-        setmoreUploadImage(null)
+        setmoreUploadImage(null);
     }
     const HandleSubmit1 = async(e) => {
         e.preventDefault();
