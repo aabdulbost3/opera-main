@@ -10,7 +10,7 @@ function Admin() {
   const navigate = useNavigate();
   const [handleLi, setHandleLi] = useState('')
   // useEffect(() => {
-  //   !window.localStorage.getItem("AuthToken") ? navigate("/sign") : console.log("ok"); 
+  //   !window.localStorage.getItem("AuthToken") ? navigate("/sign") : null; 
   // }, [])
   const HandleLi = (e) => {
     setHandleLi(e.target.id)
@@ -22,7 +22,7 @@ function Admin() {
         <ul>
             <li><NavLink to='/' className='Linker'><i className="fa-solid fa-house"></i> <p  className='SideText'>Home</p></NavLink></li>
             <li onClick={HandleLi} id="Projects"><i onClick={HandleLi} id="Projects" className="fa-solid fa-folder"></i> <p  id="Projects" onClick={HandleLi} className='SideText'>Projects</p></li>
-            <li onClick={HandleLi} id="Messages"><i onClick={HandleLi} id="Messages" className="fa-solid fa-message"></i> <p  id="Messages" onClick={HandleLi} className='SideText'>Messages</p></li>
+            <li onClick={HandleLi} id="Message"><i onClick={HandleLi} id="Messages" className="fa-solid fa-message"></i> <p  id="Messages" onClick={HandleLi} className='SideText'>Messages</p></li>
             <li onClick={HandleLi} id="Blogs"><i onClick={HandleLi} id="Blogs" className="fa-solid fa-user"></i> <p  id="Blogs" onClick={HandleLi} className='SideText'>Admins</p></li>
         </ul>
         {/* <div className="sidebarBot">
@@ -33,7 +33,7 @@ function Admin() {
       <div className="AdminMain">
         {handleLi == "Projects" ? <Project/> :
         handleLi == "Blogs" ? <Blogs/> :
-        handleLi == "Messages" ? <Message/> : null
+        handleLi == "Message" ? <Message/> : null
       }
       </div>
     </div>
