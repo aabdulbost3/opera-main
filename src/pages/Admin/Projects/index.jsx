@@ -133,7 +133,7 @@ function Projects() {
         SetProjectModal(false)
         projectOverlay.current.style.display = "none"
         setImgUpload(null);
-        setmoreUploadImage(null)
+        setmoreUploadImage(null);
     }
     const HandleSubmit1 = async(e) => {
         e.preventDefault();
@@ -180,7 +180,7 @@ function Projects() {
                 {loading ? <p className='yellowLoading'>Loading...</p> :
                 <div className="editImageBox">
                 <img src={moreEdit.data.img} alt="img" />
-                    <div>
+                    <div className='AdBtnBox'>
                         <button onClick={() => inputMain.current.click()} type="button"><i className="fa-solid fa-edit"></i></button>
                         <input ref={inputMain} type="file" onChange={HandleFile}/>
                     </div>
@@ -190,7 +190,7 @@ function Projects() {
                  moreEdit.data.images.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p>
                      :<div className="editImageBox">
                         <img src={e.img} alt="img" />
-                        <div>
+                        <div className='AdBtnBox'>
                             <button id={e.id} onClick={deleteImage} type="button"><i className="fa-solid fa-trash" id={e.id} onClick={deleteImage}></i></button>
                             <button id={e.id} onClick={(el) => {setImgId(el.target.id);input.current.click();}} type="button"><i className="fa-solid fa-edit" id={e.id}></i></button>
                             <input ref={input} id={e.id} type="file" onChange={HandleEditImagesFile}/>

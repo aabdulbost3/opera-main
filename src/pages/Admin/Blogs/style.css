@@ -6,6 +6,13 @@
     align-items: center;
     color: white;
 }
+.BlogSecP{
+    margin-top: 10%;
+    color: #0d0d0d;
+    left: 0;
+    text-align: center;
+    font-size: 1.4vw;
+}
 .BlogNav{
     background-color: #1d1d1d;
     width: 86%;
@@ -37,17 +44,16 @@
 .Blog ul{
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    width: 100%;
     margin-left: 15%;
     justify-content: center;
     align-items: center;
     padding: 2vw;
-    margin-top: 8%;
+    margin-top: 12%;
 }
 .Blog li{
     display: flex;
     flex-direction: column;
-    width: 28%;
     background-color: #2d2d2d;
     margin: 1vw;
     border-radius: 2vw;

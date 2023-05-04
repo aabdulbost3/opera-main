@@ -212,7 +212,7 @@
         border-radius: 2.4vw;
     }
     .Blog ul{
-        width: 80%;
+        width: 100%;
         margin-top: 25%;
         margin-left: 20%;
     }
@@ -253,5 +253,64 @@
         font-size: 4vw;
         padding: 3vw;
         border-radius: 2.4vw;
+    }
+    .Projects ul{
+        margin-left: 0;
+        padding-left: 15%;
+        padding-right: 0;
+        width: 100%;
+    }
+    .Projects li{
+        width: 65%;
+        border-radius: 4.2vw;
+        border: 0.6vw solid black;
+    }
+    .Projects li img{
+        border-top-left-radius: 3.7vw;
+        border-top-right-radius: 3.7vw;
+    }
+    .Projects li h3{
+        font-size: 6vw;
+    }
+
+    .overlay{
+        height: 100%;
+    }
+    .projectModal{
+        width: 80%;
+        left: 10%;
+        border-radius: 4vw;
+    }
+    .projectModal div{
+        margin: 2vw 3vw;
+        padding: 1vw;
+    }
+    .projectModal h3{
+        font-size: 6.6vw;
+        padding: 3.5vw;
+    }
+    .projectModal h4{
+        font-size: 5.4vw;
+        margin-top: 2.8vw;
+        margin-bottom: 1vw;
+    }
+    .projectModal input{
+        font-size: 5vw;
+        padding: 2.4vw;
+        border-radius: 4.2vw;
+    }
+    .projectModal button{
+        font-size: 5vw;
+        padding: 2vw;
+        margin-top: 5vw;
+        border-radius: 4.2vw;
+    }
+    .editImageBox div button{
+        font-size: 4.6vw;
+        padding: 3vw 4vw;
+        margin: .4vw;
+    }
+    .editImageBox img{
+        width: 100%;
     }
 }

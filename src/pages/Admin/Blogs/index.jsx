@@ -61,15 +61,23 @@ function Blog() {
       <div className="overlay" ref={BlogOverlay} onClick={() => {SetBlogModal(false);BlogOverlay.current.style.display = "none";SetBlogModal1(false)}}></div>
         { BlogModal ? <form onSubmit={HandleSubmit} className="projectModal">
             <h3>Add Admin</h3>
-            <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
-            <input ref={Password} type="text" placeholder='Enter Admin Password' required/>
-            <button type="submit">Add</button>
+            <div>
+                <h4>Enter Admin Title</h4>
+                <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
+                <h4>Enter Admin Password</h4>
+                <input ref={Password} type="text" placeholder='Enter Admin Password' required/>
+                <button type="submit">Add</button>
+            </div>
         </form> :null}
         {BlogModal1 ? <form onSubmit={HandleSubmit1} className="projectModal">
             <h3>Edit Admin</h3>
-            <input ref={Title} type="text" placeholder='Enter New Admin Title' required/>
-            <input ref={Password} type="text" placeholder='Enter New Admin Password' required/>
-            <button type="submit">Edit</button>
+            <div>
+                <h4>Edit Admin Title</h4>
+                <input ref={Title} type="text" placeholder='Enter New Admin Title' required/>
+                <h4>Edit Admin Password</h4>
+                <input ref={Password} type="text" placeholder='Enter New Admin Password' required/>
+                <button type="submit">Edit</button>
+            </div>
         </form> :null}
         <div className="BlogNav">
         <h1> <i className='fa-solid fa-user'></i> Admins</h1>
