@@ -61,15 +61,23 @@ function Blog() {
       <div className="overlay" ref={BlogOverlay} onClick={() => {SetBlogModal(false);BlogOverlay.current.style.display = "none";SetBlogModal1(false)}}></div>
         { BlogModal ? <form onSubmit={HandleSubmit} className="projectModal">
             <h3>Add Admin</h3>
-            <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
-            <input ref={Password} type="text" placeholder='Enter Admin Password' required/>
-            <button type="submit">Add</button>
+            <div>
+                <h4>Enter Admin Title</h4>
+                <input ref={Title} type="text" placeholder='Enter Admin Title' required/>
+                <h4>Enter Admin Password</h4>
+                <input ref={Password} type="text" placeholder='Enter Admin Password' required/>
+                <button type="submit">Add</button>
+            </div>
         </form> :null}
         {BlogModal1 ? <form onSubmit={HandleSubmit1} className="projectModal">
             <h3>Edit Admin</h3>
-            <input ref={Title} type="text" placeholder='Enter New Admin Title' required/>
-            <input ref={Password} type="text" placeholder='Enter New Admin Password' required/>
-            <button type="submit">Edit</button>
+            <div>
+                <h4>Edit Admin Title</h4>
+                <input ref={Title} type="text" placeholder='Enter New Admin Title' required/>
+                <h4>Edit Admin Password</h4>
+                <input ref={Password} type="text" placeholder='Enter New Admin Password' required/>
+                <button type="submit">Edit</button>
+            </div>
         </form> :null}
         <div className="BlogNav">
         <h1> <i className='fa-solid fa-user'></i> Admins</h1>
@@ -86,87 +94,6 @@ function Blog() {
             </div>
         </li>)
         :dataBlog.getBlog.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataBlog.getBlog.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
-        <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9tjaExsY-srL4VsHNE_OKGVCJ-eIFNBktw&usqp=CAU" alt="" />
-            <h3>Name: Abdulbosit</h3>
-            <p>Password: 0000</p>
-            <div className="AdBtnBox">
-                <button><i className="fa-solid fa-trash"></i>Delete</button>
-                <button><i className="fa-solid fa-edit"></i>Edit</button>
-            </div>
-        </li>
       </ul>
     </div>
   );

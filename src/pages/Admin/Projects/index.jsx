@@ -180,7 +180,7 @@ function Projects() {
                 {loading ? <p className='yellowLoading'>Loading...</p> :
                 <div className="editImageBox">
                 <img src={moreEdit.data.img} alt="img" />
-                    <div>
+                    <div className='AdBtnBox'>
                         <button onClick={() => inputMain.current.click()} type="button"><i className="fa-solid fa-edit"></i></button>
                         <input ref={inputMain} type="file" onChange={HandleFile}/>
                     </div>
@@ -190,7 +190,7 @@ function Projects() {
                  moreEdit.data.images.map((e,i) => <span key={i}>{imagesLoading ? <p className='yellowLoading'>Loading ...</p>
                      :<div className="editImageBox">
                         <img src={e.img} alt="img" />
-                        <div>
+                        <div className='AdBtnBox'>
                             <button id={e.id} onClick={deleteImage} type="button"><i className="fa-solid fa-trash" id={e.id} onClick={deleteImage}></i></button>
                             <button id={e.id} onClick={(el) => {setImgId(el.target.id);input.current.click();}} type="button"><i className="fa-solid fa-edit" id={e.id}></i></button>
                             <input ref={input} id={e.id} type="file" onChange={HandleEditImagesFile}/>
@@ -218,14 +218,6 @@ function Projects() {
                 </div>
             </li>)
             :dataProject.getProject.Loading == true ? <i className="loading fa-solid fa-spinner fa-spin-pulse"></i> : dataProject.getProject.Error == true ? <h3 className='Error'><i className="fa-solid fa-triangle-exclamation fa-fade"></i> Error 500</h3> : null}
-            <li>
-                <img src="https://picsum.photos/300" alt="img" />
-                <h3>HEh lol</h3>
-                <div className="AdBtnBox">
-                    <button><i className="fa-solid fa-trash"></i>Delete</button>
-                    <button><i className="fa-solid fa-edit"></i>Edit</button>
-                </div>
-            </li>
         </ul>
     </div>
   );
