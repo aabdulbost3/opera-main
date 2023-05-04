@@ -162,7 +162,7 @@
     .Message ul{
         width: 100%;
         margin-top: 30%;
-        margin-left: 12%;
+        margin-left: 0;
     }
     .Message li{
         border-radius: 6vw;

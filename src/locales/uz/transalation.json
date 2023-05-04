@@ -51,10 +51,10 @@
         "1": "Xabaringizni kiriting ...",
         "2": "Yoki siz bizga o'zingiz aloqaga chiqishingiz mumkin",
         "3": "Telefon raqamingizni qoldiring va biz sizga tez orada aloqaga chiqamiz",
-        "4": "Muvofaqiyat",
-        "5": "Sizning Xabaringiz Muvofaqiyatli jo'natildi",
+        "4": "Muvaffaqiyat",
+        "5": "Sizning Xabaringiz Muvaffaqiyatli jo'natildi",
         "6": "Xatolik",
-        "7": "Sizning Xabaringizda Xatolik aniqlandi. Iltimos qayta urinib ko'ring"
+        "7": "Sizning Xabaringizda Xatolik aniqlandi. Iltimos qayta urinib ko'ring!"
     },
     "NotFoundPage": {
         "0": "404",
